@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { NavLink, Outlet, useLocation, useNavigationType } from 'react-router';
-import { GlobalBanners, StatusStrip } from './StatusStrip';
+import { ConnectionIndicator, GlobalBanners } from './StatusStrip';
 
 /**
  * A new page starts at the top. Without this the browser keeps the previous
@@ -69,9 +69,11 @@ export function AppShell() {
               </NavLink>
             ))}
           </nav>
+          <div className="ml-auto">
+            <ConnectionIndicator />
+          </div>
         </div>
       </header>
-      <StatusStrip />
       <GlobalBanners />
       <main id="main" className="mx-auto w-full max-w-[1400px] flex-1 px-4 py-6" tabIndex={-1}>
         <Outlet />

@@ -50,7 +50,8 @@ async function apiPost(request: APIRequestContext, path: string, data: unknown) 
 
 test('human guarded session: nothing is sent before permission; then one live request per click, with accounting', async ({ page, request }) => {
   await createGuardedHuman(page);
-  await expect(page.getByText('Live LLM scoring available · per-session permission required')).toBeVisible();
+  await expect(page.getByRole('status', { name: 'Backend status' })).toHaveText('Live backend connected');
+  await expect(page.getByText('Live LLM scoring available · per-session permission required')).toHaveCount(0);
   const get1 = page.getByRole('button', { name: 'Get recommendation for turn 1 (may send 1 live provider request)' });
   await expect(get1).toBeDisabled();
   const before = (await caps(request)).fake_provider_calls;

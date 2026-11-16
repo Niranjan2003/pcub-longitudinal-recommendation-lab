@@ -37,7 +37,7 @@ No monetary cost is computed.
 
 ## 3. What the interface does when the backend is live-capable
 
-- **Status.** The status strip shows **Backend connected** with the label **Live LLM scoring available · per-session permission required** (an offline backend shows **Offline mode** instead). Until the presentation pass of 15 November 2026 this was a red *LIVE PROVIDER MODE* banner; the real run recorded in section 8 was made with that earlier interface. The permission gate below did not change.
+- **Status.** A small indicator at the end of the header shows **Live backend connected** (an offline backend shows **Backend connected**). It carries no other live-LLM text: the guarded LLM and its per-session permission are introduced on the Live Session page, and the System page lists the backend's capabilities. Until the presentation pass of 15 November 2026 a red *LIVE PROVIDER MODE* banner took this place, and until 16 November 2026 a full-width status strip; the real run recorded in section 8 was made with the banner interface. The permission gate below did not change.
 - **Live Session form.** The guarded LLM scorer can be chosen, with a note that live scoring is available and that the session asks for permission first. Creating a session sends nothing to the provider.
 - **Session page.** A *Live guarded LLM scoring* panel explains the points above. **Nothing that could reach the provider is sent until the user ticks the acknowledgement and presses *Allow live provider requests for this session*.**
   - The permission is per session and held in memory only. A reload, a new tab or another session asks again, and it can be withdrawn at any time.

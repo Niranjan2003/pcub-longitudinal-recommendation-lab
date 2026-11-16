@@ -8,6 +8,7 @@
   "interface_refinement": "2026-11-15",
   "presentation_update": "2026-11-15",
   "publication_update": "2026-11-16",
+  "status_indicator_update": "2026-11-16",
   "method": "Read-only extraction. Frontend files taken from Git objects with core.autocrlf=false (committed bytes); backend files byte-copied. Neither source directory was modified. Frontend files changed or added for publication are listed in frontend.modified and frontend.added, each with its reason; every backend file is byte-identical to its source."
  },
  "frontend": {
@@ -33,8 +34,8 @@
     "path": "docs/OPERATOR_VERIFICATION_CHECKLIST.md",
     "source_git_blob": "424674fa9571c0ea12b0648e2efade409d33acee",
     "source_sha256": "1d87ab98661dc888e3c5bb7b01cf40416520da1b08fd084dc7c57ead2d177dcc",
-    "published_sha256": "98d18589c67ae7476bf56622c38bc5c94d6df379b700a7a2db50b705e97cb095",
-    "reason": "Expected test counts updated to 117 / 32; development re-run row reworded (not an independent run); publication verification row added. Live guarded release (2026-11-15): live checks L1-L8, live-fake suites, counts 132 / 54 / 32 and the live verification record. Interface refinement (2026-11-15): unit count 144, step H1 without allergy inputs, and the acceptance record. Presentation update (2026-11-15): status-strip wording for offline and live checks."
+    "published_sha256": "49be32d43942858e0ed605ec3cbdee5fba4912a027d7dbc59959a5543be197aa",
+    "reason": "Expected test counts updated to 117 / 32; development re-run row reworded (not an independent run); publication verification row added. Live guarded release (2026-11-15): live checks L1-L8, live-fake suites, counts 132 / 54 / 32 and the live verification record. Interface refinement (2026-11-15): unit count 144, step H1 without allergy inputs, and the acceptance record. Presentation update (2026-11-15): status-strip wording for offline and live checks. Status indicator update (2026-11-16): header-indicator wording for the offline start check and step L1."
    },
    {
     "path": "docs/RUNNING_LOCALLY.md",
@@ -103,15 +104,15 @@
     "path": "src/app/AppShell.tsx",
     "source_git_blob": "df10f1bb0884479ea11ff6e0ff6ed2dbde201ebb",
     "source_sha256": "d6b58a2a93ad887686762b23664c2f0d0886e5299e7c0b5df96f88910f5cccb7",
-    "published_sha256": "64215f513beab0cba216b16f6dddc72ff9b595233bd071caf26b60b51820bf2e",
-    "reason": "Demo interface update (2026-11-15): navigation label \"Lab\" renamed \"Live Session\" (route /lab unchanged). Interface refinement (2026-11-15): a new page starts at the top (the scroll offset of the previous page was kept, so a new session opened past its header)."
+    "published_sha256": "f7a168b6058138a74325e376d4bf52d66758c5b019ebaeea4bce97c4efedec95",
+    "reason": "Demo interface update (2026-11-15): navigation label \"Lab\" renamed \"Live Session\" (route /lab unchanged). Interface refinement (2026-11-15): a new page starts at the top (the scroll offset of the previous page was kept, so a new session opened past its header). Status indicator update (2026-11-16): the connection indicator sits at the end of the header, and the full-width status strip below the header is removed."
    },
    {
     "path": "src/app/StatusStrip.tsx",
     "source_git_blob": "1d1420539fa4cad0d240a23a070f8a054f2ccc43",
     "source_sha256": "f4ee9b576bc65c1f283624f961f809cef3207ecc80a60b3637d54c33919e73b8",
-    "published_sha256": "58cfe520e9900605b60d98f4b27aa48b8cf0097b2c372f14edecf591c339e099",
-    "reason": "Live guarded release (2026-11-15): LIVE banner text describes the gated live workflow instead of a blanket block. Interface refinement (2026-11-15): shorter LIVE banner on narrow screens. Presentation update (2026-11-15): the red live banner is replaced by a neutral status label that still distinguishes offline, live-capable and unreachable backends."
+    "published_sha256": "ae0e6c9da9c3142402e3665c54c421bf3c2d722c75663057b5666ae9f8d4c48b",
+    "reason": "Live guarded release (2026-11-15): LIVE banner text describes the gated live workflow instead of a blanket block. Interface refinement (2026-11-15): shorter LIVE banner on narrow screens. Presentation update (2026-11-15): the red live banner is replaced by a neutral status label that still distinguishes offline, live-capable and unreachable backends. Status indicator update (2026-11-16): the full-width status strip (capability label, API version, asset fingerprint and re-check control) is replaced by a small header connection indicator: \"Live backend connected\" for a live-capable backend, \"Backend connected\" offline, and the existing short error states. The error banners are unchanged."
    },
    {
     "path": "src/components/comparison/EstimatesPanel.tsx",
@@ -306,8 +307,8 @@
     "path": "tests/unit/statusStrip.test.tsx",
     "source_git_blob": "7d3820ccceeff6fa22b6996d322adcf674da3041",
     "source_sha256": "2d8c4b3037776e9dab5113c0f543179d7abd2c6dc59a394228b83a367e7e785d",
-    "published_sha256": "8630fdb5441ea9d5d2224ad8bfde4282ea214e4bab1845889f65833d49ef5091",
-    "reason": "Presentation update (2026-11-15): asserts the neutral live and offline labels and no alert banner."
+    "published_sha256": "b3d582e1825bb476f83c5a24e4acad3516a2340e4a91eecfaf69ed7212dbb690",
+    "reason": "Presentation update (2026-11-15): asserts the neutral live and offline labels and no alert banner. Status indicator update (2026-11-16): asserts the header indicator labels and the absence of the API version, asset fingerprint, capability text and re-check control."
    },
    {
     "path": "tests/unit/synthetic.test.tsx",
@@ -366,8 +367,8 @@
    },
    {
     "path": "tests/unit/liveMode.test.tsx",
-    "sha256": "4afc6aefce162c5be076f21b0e6d2cf4a038318bd950b00734f3aca52f2aacf8",
-    "reason": "Live guarded release (2026-11-15): unit tests of the live workflow (banner, permission gate, accounting views, unknown completion, synthetic single turns, Live Session form, Branch Explorer, recovery note). Interface refinement (2026-11-15): Overview live label and collapsed live panel. Presentation update (2026-11-15): neutral live status and updated wording."
+    "sha256": "e116028ca61acc84e9517844b388b18e8f3f301cb8956662ce4cfa532c510ae3",
+    "reason": "Live guarded release (2026-11-15): unit tests of the live workflow (banner, permission gate, accounting views, unknown completion, synthetic single turns, Live Session form, Branch Explorer, recovery note). Interface refinement (2026-11-15): Overview live label and collapsed live panel. Presentation update (2026-11-15): neutral live status and updated wording. Status indicator update (2026-11-16): expects the header indicator \"Live backend connected\" instead of the live capability label."
    },
    {
     "path": "tests/live-fake/live_guarded.test.ts",
@@ -376,8 +377,8 @@
    },
    {
     "path": "e2e/live-fake/live.spec.ts",
-    "sha256": "73d8f33e7ba3b81b453842c74fb8bdda1f052e61df3b8490761c93609e9ec48e",
-    "reason": "Live guarded release (2026-11-15): browser tests of the live workflow against the fake-provider harness. Presentation update (2026-11-15): expects the neutral live status label and the reworded guarded-policy note."
+    "sha256": "bd03b704c2a32fbacd79a60638cc295543f4296fb2042fbe0b08d78af5352989",
+    "reason": "Live guarded release (2026-11-15): browser tests of the live workflow against the fake-provider harness. Presentation update (2026-11-15): expects the neutral live status label and the reworded guarded-policy note. Status indicator update (2026-11-16): expects the header indicator \"Live backend connected\" and no live capability label."
    },
    {
     "path": "vitest.live-fake.config.ts",
@@ -681,8 +682,8 @@
    "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/docs/OPERATOR_VERIFICATION_CHECKLIST.md": {
-   "sha256": "98d18589c67ae7476bf56622c38bc5c94d6df379b700a7a2db50b705e97cb095",
-   "size": 20527,
+   "sha256": "49be32d43942858e0ed605ec3cbdee5fba4912a027d7dbc59959a5543be197aa",
+   "size": 20510,
    "source_git_blob": "424674fa9571c0ea12b0648e2efade409d33acee",
    "origin": "frontend@989acf6, modified for publication"
   },
@@ -825,14 +826,14 @@
    "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/src/app/AppShell.tsx": {
-   "sha256": "64215f513beab0cba216b16f6dddc72ff9b595233bd071caf26b60b51820bf2e",
-   "size": 3285,
+   "sha256": "f7a168b6058138a74325e376d4bf52d66758c5b019ebaeea4bce97c4efedec95",
+   "size": 3360,
    "source_git_blob": "df10f1bb0884479ea11ff6e0ff6ed2dbde201ebb",
    "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/src/app/StatusStrip.tsx": {
-   "sha256": "58cfe520e9900605b60d98f4b27aa48b8cf0097b2c372f14edecf591c339e099",
-   "size": 6011,
+   "sha256": "ae0e6c9da9c3142402e3665c54c421bf3c2d722c75663057b5666ae9f8d4c48b",
+   "size": 3896,
    "source_git_blob": "1d1420539fa4cad0d240a23a070f8a054f2ccc43",
    "origin": "frontend@989acf6, modified for publication"
   },
@@ -1383,8 +1384,8 @@
    "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/tests/unit/statusStrip.test.tsx": {
-   "sha256": "8630fdb5441ea9d5d2224ad8bfde4282ea214e4bab1845889f65833d49ef5091",
-   "size": 4946,
+   "sha256": "b3d582e1825bb476f83c5a24e4acad3516a2340e4a91eecfaf69ed7212dbb690",
+   "size": 5321,
    "source_git_blob": "7d3820ccceeff6fa22b6996d322adcf674da3041",
    "origin": "frontend@989acf6, modified for publication"
   },
@@ -1450,8 +1451,8 @@
    "origin": "added for publication"
   },
   "frontend/tests/unit/liveMode.test.tsx": {
-   "sha256": "4afc6aefce162c5be076f21b0e6d2cf4a038318bd950b00734f3aca52f2aacf8",
-   "size": 14887,
+   "sha256": "e116028ca61acc84e9517844b388b18e8f3f301cb8956662ce4cfa532c510ae3",
+   "size": 14968,
    "origin": "added for publication"
   },
   "frontend/tests/live-fake/live_guarded.test.ts": {
@@ -1460,8 +1461,8 @@
    "origin": "added for publication"
   },
   "frontend/e2e/live-fake/live.spec.ts": {
-   "sha256": "73d8f33e7ba3b81b453842c74fb8bdda1f052e61df3b8490761c93609e9ec48e",
-   "size": 9580,
+   "sha256": "bd03b704c2a32fbacd79a60638cc295543f4296fb2042fbe0b08d78af5352989",
+   "size": 9688,
    "origin": "added for publication"
   },
   "frontend/vitest.live-fake.config.ts": {

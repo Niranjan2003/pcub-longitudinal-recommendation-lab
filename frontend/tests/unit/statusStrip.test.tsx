@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { http, HttpResponse } from 'msw';
 import { server } from '../msw/server';
-import { GlobalBanners, StatusStrip } from '@/app/StatusStrip';
+import { ConnectionIndicator, GlobalBanners } from '@/app/StatusStrip';
 import { createQueryClient } from '@/state/queryClient';
 import { deriveBackendStatus, isLiveCapable } from '@/state/backendStatus';
 import { ApiError } from '@/api/errors';
@@ -18,31 +18,34 @@ function mount() {
   qc.setDefaultOptions({ queries: { retry: false } });
   return render(
     <QueryClientProvider client={qc}>
-      <StatusStrip />
+      <ConnectionIndicator />
       <GlobalBanners />
     </QueryClientProvider>,
   );
 }
 
-describe('backend status strip and banners', () => {
-  it('shows offline mode, API version and a short asset fingerprint', async () => {
+describe('header connection indicator and banners', () => {
+  it('offline backend: only "Backend connected"; no API version, asset fingerprint, capability text or re-check', async () => {
     server.use(http.get(`${B}/v1/capabilities`, () => HttpResponse.json(capabilities)));
     mount();
-    expect(await screen.findByText('Offline mode')).toBeInTheDocument();
-    expect(screen.getByText('Backend connected')).toBeInTheDocument();
-    expect(screen.getByText(/guarded LLM uses recorded decisions only/)).toBeInTheDocument();
-    expect(screen.getByText(/API v/)).toBeInTheDocument();
-    expect(screen.getByText(/9ec70f/)).toBeInTheDocument();
-    expect(screen.queryByText(/Live LLM/)).not.toBeInTheDocument();
+    expect(await screen.findByText('Backend connected')).toBeInTheDocument();
+    expect(screen.getByRole('status', { name: 'Backend status' })).toHaveTextContent(/^Backend connected$/);
+    expect(screen.queryByText(/Live backend connected/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Offline mode|recorded decisions only/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/API v/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/9ec70f/)).not.toBeInTheDocument();
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
   });
 
-  it('shows the live capability as a neutral status, distinct from offline, with no alarm banner', async () => {
+  it('live-capable backend: only "Live backend connected", with no secondary live-LLM text and no alarm banner', async () => {
     server.use(http.get(`${B}/v1/capabilities`, () => HttpResponse.json({ ...capabilities, mode: 'live_opt_in', live_guarded: true })));
     mount();
-    expect(await screen.findByText('Live LLM available')).toBeInTheDocument();
-    expect(screen.getByText(/Live LLM scoring available · per-session permission required/)).toBeInTheDocument();
-    expect(screen.getByText('Backend connected')).toBeInTheDocument();
-    expect(screen.queryByText('Offline mode')).not.toBeInTheDocument();
+    expect(await screen.findByText('Live backend connected')).toBeInTheDocument();
+    expect(screen.getByRole('status', { name: 'Backend status' })).toHaveTextContent(/^Live backend connected$/);
+    expect(screen.queryByText(/Live LLM|per-session permission required/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/API v/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/9ec70f/)).not.toBeInTheDocument();
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
     expect(screen.queryByRole('alert')).not.toBeInTheDocument();
   });
 

@@ -81,9 +81,10 @@ const humanPath = `/lab/sessions/${(session0 as { id: string }).id}`;
 afterEach(() => liveConsent.revokeAll());
 
 describe('live-capable backend: banner and guarded session gate', () => {
-  it('the status strip shows live capability neutrally; the permission panel says the model only scores the safe shortlist and nothing is retried', async () => {
+  it('the header only says the live backend is connected; the permission panel says the model only scores the safe shortlist and nothing is retried', async () => {
     mount(humanPath, { session: { ...(session0 as object), policy: GUARDED } });
-    expect(await screen.findByText(/Live LLM scoring available · per-session permission required/)).toBeInTheDocument();
+    expect(await screen.findByText('Live backend connected')).toBeInTheDocument();
+    expect(screen.queryByText(/Live LLM scoring available|per-session permission required/)).not.toBeInTheDocument();
     expect(screen.queryByText(/LIVE PROVIDER MODE/)).not.toBeInTheDocument();
     expect(await screen.findByText(/It only scores the safe shortlist\./)).toBeInTheDocument();
     expect(screen.getByText(/Nothing is retried automatically/)).toBeInTheDocument();

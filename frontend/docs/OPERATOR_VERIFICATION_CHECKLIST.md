@@ -25,7 +25,7 @@ seed namespace. They are therefore never given as pass criteria.
 - [ ] In PowerShell, `Invoke-RestMethod http://127.0.0.1:8765/v1/capabilities` shows `mode` = `offline` and
       `live_guarded` = `False`.
 - [ ] The backend was started **without** `--live`, a provider token, or the existing provider-journal path.
-- [ ] The app's status strip says **Offline mode**, not **Live LLM scoring available**. If it says live, stop.
+- [ ] The header indicator says **Backend connected**, not **Live backend connected**. If it says live, stop.
 - [ ] Decide which database the backend uses. Every check below **creates sessions and comparison jobs** in it. Prefer
       a disposable dev database (see `RUNNING_LOCALLY.md`).
 
@@ -108,7 +108,7 @@ deliberately.
 
 | # | Do | Pass when | Verified by |
 |---|---|---|---|
-| L1 | Open the app | Status strip **Backend connected** with **Live LLM scoring available · per-session permission required** (no alarm banner); in a guarded session the permission panel says the model only scores the safe shortlist | Mock, Fake (E2E) |
+| L1 | Open the app | Header indicator **Live backend connected** only (no status strip, no other live-LLM text, no alarm banner); in a guarded session the permission panel says the model only scores the safe shortlist | Mock, Fake (E2E) |
 | L2 | Live Session → Human → choose **Guarded LLM scorer** → *Create scenario* | The policy carries a **LIVE** note; the session shows the *Live guarded LLM scoring* panel; *Get recommendation … (may send 1 live provider request)* is **disabled** | Mock, Fake (E2E), Real (UI) |
 | L3 | Tick the acknowledgement → *Allow live provider requests for this session* → *Get recommendation* | One request. Provider work panel: **New live provider decision**, `live_guarded`, live calls 1, new tokens = this decision's total; journal totals; provenance chip *live guarded* | Mock, Fake (API, E2E), Real (UI: 2 decisions; stored responses checked through the API) |
 | L4 | The same decision context again (identical persona, request, state and position) | **Live decision reused from the provider journal**, live calls 0, cache reuse *yes: journaled live decision*; same fingerprint and ranking | Fake (API, E2E), Real (API, UI; before and after a backend restart) |

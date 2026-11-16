@@ -1,20 +1,20 @@
-import { useBackendStatus, useCapabilities } from '@/state/hooks';
+import { useBackendStatus } from '@/state/hooks';
 import type { BackendStatus } from '@/state/backendStatus';
-import { shortHash } from '@/domain/format';
 import { ErrorPanel } from '@/components/ui/ErrorPanel';
 import { Notice } from '@/components/ui/Notice';
 
 function Dot({ tone }: { tone: 'ok' | 'warn' | 'danger' | 'idle' }) {
   const color = { ok: 'bg-ok', warn: 'bg-warn', danger: 'bg-danger', idle: 'bg-muted' }[tone];
-  return <span aria-hidden="true" className={`inline-block h-2.5 w-2.5 rounded-full ${color}`} />;
+  return <span aria-hidden="true" className={`inline-block h-2 w-2 rounded-full ${color}`} />;
 }
 
 function describe(s: BackendStatus): { tone: 'ok' | 'warn' | 'danger' | 'idle'; text: string } {
   switch (s.kind) {
     case 'loading':
       return { tone: 'idle', text: 'Connecting to backend…' };
-    case 'offline':
     case 'live':
+      return { tone: 'ok', text: 'Live backend connected' };
+    case 'offline':
       return { tone: 'ok', text: 'Backend connected' };
     case 'unreachable':
       return { tone: 'danger', text: 'Backend not reachable' };
@@ -32,62 +32,22 @@ function describe(s: BackendStatus): { tone: 'ok' | 'warn' | 'danger' | 'idle'; 
 }
 
 /**
- * The guarded-LLM capability reported by the connected backend. Neutral styling:
- * a healthy live-capable backend is not an alarm. Live provider requests still
- * need explicit per-session permission (LiveGuardedPanel).
+ * Small connection indicator in the header: a dot and one short label. It shows
+ * no API version, asset fingerprint or guarded-LLM capability text; the guarded
+ * LLM and its per-session permission are introduced on the Live Session page
+ * (LiveGuardedPanel), and the System page lists the backend's capabilities.
  */
-function Capability({ live }: { live: boolean }) {
+export function ConnectionIndicator() {
+  const d = describe(useBackendStatus());
   return (
-    <span
-      className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-medium ${live ? 'border-teal bg-teal-soft text-teal' : 'border-rule-strong bg-card text-muted'}`}
-      title={
-        live
-          ? 'This backend was started with live guarded scoring. A guarded-LLM session asks for your permission before any provider request; requests are never retried, and the operator’s call limit applies.'
-          : 'This backend is offline-only. The guarded LLM answers only the recorded contexts shipped with the backend; no provider request is possible.'
-      }
-    >
-      <span className="sm:hidden">{live ? 'Live LLM available' : 'Offline mode'}</span>
-      <span className="hidden sm:inline">
-        {live ? 'Live LLM scoring available · per-session permission required' : 'Offline mode · guarded LLM uses recorded decisions only'}
-      </span>
+    <span className="inline-flex items-center gap-1.5 text-xs text-muted" role="status" aria-live="polite" aria-label="Backend status">
+      <Dot tone={d.tone} />
+      {d.text}
     </span>
   );
 }
 
-/** Persistent strip: backend reachability, guarded-LLM capability, API version, asset fingerprint. */
-export function StatusStrip() {
-  const status = useBackendStatus();
-  const { refetch, isFetching } = useCapabilities();
-  const d = describe(status);
-  const caps = status.kind === 'offline' || status.kind === 'live' ? status.capabilities : undefined;
-
-  return (
-    <div className="border-b border-rule bg-paper-2" role="status" aria-live="polite" aria-label="Backend status">
-      <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-x-4 gap-y-1 px-4 py-1.5 text-sm">
-        <span className="inline-flex items-center gap-2 font-medium">
-          <Dot tone={d.tone} />
-          {d.text}
-        </span>
-        {caps && (
-          <>
-            <Capability live={status.kind === 'live'} />
-            <span className="hidden text-xs text-muted md:inline">
-              API v<span className="mono">{caps.api_version}</span>
-            </span>
-            <span className="hidden text-xs text-muted md:inline" title={caps.asset_manifest_fingerprint}>
-              assets <span className="mono">{shortHash(caps.asset_manifest_fingerprint, 6)}</span>
-            </span>
-          </>
-        )}
-        <button type="button" className="ml-auto text-xs text-teal underline underline-offset-2 disabled:opacity-50" onClick={() => void refetch()} disabled={isFetching}>
-          {isFetching ? 'Checking…' : 'Re-check'}
-        </button>
-      </div>
-    </div>
-  );
-}
-
-/** Error banners that must stay visible whenever they apply. Live capability is shown in the status strip, not as an alarm. */
+/** Error banners that must stay visible whenever they apply. Live capability is never shown as an alarm. */
 export function GlobalBanners() {
   const status = useBackendStatus();
   return (
