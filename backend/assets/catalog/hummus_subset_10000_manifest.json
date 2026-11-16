@@ -1,0 +1,3338 @@
+{
+  "allow_smaller_subset": false,
+  "ambiguous_food_classification_count": 1245,
+  "command_options": {
+    "allow_smaller_subset": false,
+    "dry_run": false,
+    "food_only": true,
+    "max_detailed_rejections": 10000,
+    "max_duration_minutes": 480,
+    "max_fiber_g": 100.0,
+    "max_protein_g": 150.0,
+    "max_servings": 100,
+    "max_sodium_mg": 5000.0,
+    "max_total_fat_g": 250.0,
+    "output_formats": [
+      "csv",
+      "parquet"
+    ],
+    "seed": 20260713,
+    "source_zip": "C:\\temp\\hummus_migration\\raw\\pp_recipes.zip",
+    "strict_instruction_quality": false,
+    "subset_size": 10000,
+    "workspace": "C:\\temp\\hummus_migration"
+  },
+  "counts_after_deduplication": 458003,
+  "counts_after_parsing": 507335,
+  "counts_after_sampling": 10000,
+  "counts_after_validation": 458752,
+  "dataset_name": "HUMMUS",
+  "duplicate_counts": {
+    "duplicate_recipe_id_removed": 0,
+    "duplicate_title_ingredients_removed": 749,
+    "duplicate_title_only_count": 75710
+  },
+  "duration_distributions": {
+    "total_time_minutes": {
+      "count": 10000,
+      "max": 480.0,
+      "median": 40.0,
+      "min": 1.0
+    }
+  },
+  "eligibility_thresholds": {
+    "calories_per_serving_max": 1200,
+    "duration_minutes_max": 480,
+    "fiber_per_serving_g_max": 100.0,
+    "protein_per_serving_g_max": 150.0,
+    "servings_max": 100,
+    "sodium_per_serving_mg_max": 5000.0,
+    "total_fat_per_serving_g_max": 250.0
+  },
+  "filtering_rules": [
+    "Reject missing recipe_id, title, valid http(s) recipe_url, parsed ingredients, or parsed directions.",
+    "Reject missing, non-finite, or negative core nutrition values.",
+    "Reject calories_per_serving <= 0 or > 1200.",
+    "Reject total_time_minutes outside [1, max_duration_minutes].",
+    "Reject servings outside [1, max_servings].",
+    "Reject sodium, protein, fiber, or total fat values above configured per-serving thresholds.",
+    "When food_only is enabled, reject non_food and pet_food recipe-like records and retain ambiguous records.",
+    "Keep language filtering diagnostic only.",
+    "Keep health_score unresolved; preserve HUMMUS who_score, fsa_score, and nutri_score."
+  ],
+  "food_only_classification_counts": {
+    "ambiguous_requires_review": 1245,
+    "human_food": 505505,
+    "non_food": 259,
+    "pet_food": 326
+  },
+  "food_only_filter_enabled": true,
+  "food_only_filter_rules": [
+    "Classify pet_food when strong title, description, direction, ingredient, or tag evidence identifies dogs/cats/pets as the intended consumer.",
+    "Classify non_food when a high-confidence non-food title phrase is present, unless protected food/beverage evidence applies.",
+    "Classify non_food when non-food action/use phrases are present without strong food-positive evidence.",
+    "Classify soap records as non_food only when soap/cosmetic context is present and no protected food/beverage evidence applies.",
+    "Retain ambiguous_requires_review records; do not reject them during automatic filtering.",
+    "Protect ambiguous human-food titles such as corn dog, hot dog, chili dog, hush puppies, puppy chow, Polish sausage, Bisi Bela Bath, Salty Dog cocktails, and restaurant/person-name dog/cat terms.",
+    "Do not reject incidental pet references inside otherwise human recipes, such as using discarded scraps in dog food."
+  ],
+  "food_only_filter_version": "food_only_v2",
+  "generation_timestamp": "2026-07-14T22:21:24.096103+00:00",
+  "health_score_mapping_status": "unresolved",
+  "human_food_classification_count": 505505,
+  "input_row_count": 507335,
+  "instruction_count_distributions": {
+    "1": 484,
+    "2": 686,
+    "3": 1071,
+    "4": 1292,
+    "5": 1285,
+    "6": 1115,
+    "7": 957,
+    "8": 703,
+    "9": 575,
+    "10": 421,
+    "11": 349,
+    "12": 262,
+    "13": 185,
+    "14": 126,
+    "15": 114,
+    "16": 80,
+    "17": 78,
+    "18": 54,
+    "19": 35,
+    "20": 32,
+    "21": 25,
+    "22": 8,
+    "23": 10,
+    "24": 12,
+    "25": 7,
+    "26": 8,
+    "27": 3,
+    "28": 4,
+    "29": 4,
+    "30": 5,
+    "31": 1,
+    "32": 2,
+    "33": 1,
+    "34": 1,
+    "35": 1,
+    "36": 1,
+    "40": 1,
+    "44": 1,
+    "58": 1
+  },
+  "known_limitations": [
+    "No explicit preparation-time/cooking-time split; duration is total time.",
+    "No explicit allergen labels.",
+    "No recipe image URLs in pp_recipes.csv.",
+    "Health score mapping remains unresolved.",
+    "Language filtering is diagnostic only.",
+    "Selected recipe membership and ordering are deterministic for the same source/rules/seed, but timestamps make full manifest bytes differ across runs."
+  ],
+  "language_filtering": "diagnostic_only",
+  "license_use_notes": [
+    "Food.com data may only be used for educational or scientific purposes according to the HUMMUS repository README.",
+    "Repository code is licensed under GPLv3 according to the HUMMUS repository README."
+  ],
+  "missingness": {
+    "Unnamed: 0": 0,
+    "author_id": 0,
+    "average_rating": 0,
+    "calories [cal]": 0,
+    "caloriesFromFat [cal]": 0,
+    "cholesterol [mg]": 0,
+    "description": 10107,
+    "dietaryFiber [g]": 0,
+    "direction_size": 0,
+    "directions": 0,
+    "duration": 7338,
+    "food_kg_locator": 0,
+    "fsa_score": 15504,
+    "ingredient_food_kg_names": 85085,
+    "ingredient_food_kg_urls": 85085,
+    "ingredients": 2,
+    "ingredients_sizes": 0,
+    "last_changed_date": 0,
+    "new_author_id": 0,
+    "new_recipe_id": 0,
+    "normalization_comment": 492958,
+    "number_of_ratings": 0,
+    "nutri_score": 0,
+    "protein [g]": 0,
+    "recipe_id": 0,
+    "recipe_url": 0,
+    "saturatedFat [g]": 0,
+    "serves": 71398,
+    "servingSize [g]": 0,
+    "servingsPerRecipe": 0,
+    "sodium [mg]": 0,
+    "sugars [g]": 0,
+    "tags": 276686,
+    "title": 0,
+    "totalCarbohydrate [g]": 0,
+    "totalFat [g]": 0,
+    "who_score": 1127
+  },
+  "non_food_classification_count": 259,
+  "non_food_rejection_count": 259,
+  "nutrition_distributions": {
+    "calories_per_serving": {
+      "count": 10000,
+      "max": 1196.9,
+      "median": 305.1,
+      "min": 0.1
+    },
+    "fiber_per_serving_g": {
+      "count": 10000,
+      "max": 90.5,
+      "median": 2.0,
+      "min": 0.0
+    },
+    "protein_per_serving_g": {
+      "count": 10000,
+      "max": 146.3,
+      "median": 8.5,
+      "min": 0.0
+    },
+    "sodium_per_serving_mg": {
+      "count": 10000,
+      "max": 4925.9,
+      "median": 327.9,
+      "min": 0.0
+    },
+    "total_fat_per_serving_g": {
+      "count": 10000,
+      "max": 126.8,
+      "median": 13.0,
+      "min": 0.0
+    }
+  },
+  "output_file_paths": {
+    "csv": "C:\\temp\\hummus_migration\\final\\hummus_subset_10000.csv",
+    "parquet": "C:\\temp\\hummus_migration\\final\\hummus_subset_10000.parquet"
+  },
+  "output_hashes": {
+    "csv": "0d226d46078a7720e7f8f4f431dcae7e550ad03ef28361b5aa016f50b754dc95",
+    "parquet": "7738a1f4d54847e1e1e316f32527e14f770d19b89c2f4e609ec306ecb510d5ea"
+  },
+  "parquet_available": true,
+  "parquet_requested": true,
+  "parquet_written": true,
+  "pet_food_classification_count": 326,
+  "pet_food_rejection_count": 326,
+  "random_seed": 20260713,
+  "rejection_reason_counts": {
+    "calories_above_strict_max": 28554,
+    "calories_below_or_equal_zero": 2950,
+    "duration_above_upper_bound": 8245,
+    "duration_below_lower_bound": 7338,
+    "empty_ingredients": 3,
+    "fiber_above_max": 205,
+    "non_food_recipe": 259,
+    "pet_food_recipe": 326,
+    "protein_above_max": 1514,
+    "servings_above_upper_bound": 354,
+    "sodium_above_max": 6013,
+    "total_fat_above_max": 3264
+  },
+  "repository_commit": "eb67259",
+  "repository_url": "https://gitlab.com/felix134/connected-recipe-data-set",
+  "requested_size_met": true,
+  "sampling_strata": {
+    "collapse_logic": "full strata used; sparse strata receive deterministic minimum floors when feasible",
+    "primary_dimensions": [
+      "duration_bucket",
+      "who_score_quantile",
+      "broad_dietary_or_tag_category",
+      "instruction_count_bucket"
+    ],
+    "sampling_mode": "stratified",
+    "secondary_diagnostics": {
+      "calorie_quantiles": {
+        "calories_q1": 91681,
+        "calories_q2": 91579,
+        "calories_q3": 91582,
+        "calories_q4": 91561,
+        "calories_q5": 91600
+      },
+      "protein_quantiles": {
+        "protein_q1": 94489,
+        "protein_q2": 89187,
+        "protein_q3": 91559,
+        "protein_q4": 91250,
+        "protein_q5": 91518
+      },
+      "rating_count_buckets": {
+        "0": 209469,
+        "1_5": 200085,
+        "21_plus": 8960,
+        "6_20": 39489
+      },
+      "sodium_quantiles": {
+        "sodium_q1": 91607,
+        "sodium_q2": 91621,
+        "sodium_q3": 91592,
+        "sodium_q4": 91597,
+        "sodium_q5": 91586
+      }
+    },
+    "sparse_strata_collapse": "full protein/sodium/calorie/rating cross-product removed from allocation key and recorded as diagnostics",
+    "strata": {
+      "001_015|who_q1|low_sodium|1": {
+        "available": 100,
+        "selected": 2
+      },
+      "001_015|who_q1|low_sodium|11_plus": {
+        "available": 18,
+        "selected": 1
+      },
+      "001_015|who_q1|low_sodium|2_3": {
+        "available": 315,
+        "selected": 6
+      },
+      "001_015|who_q1|low_sodium|4_6": {
+        "available": 307,
+        "selected": 6
+      },
+      "001_015|who_q1|low_sodium|7_10": {
+        "available": 108,
+        "selected": 2
+      },
+      "001_015|who_q1|no_tags|1": {
+        "available": 1465,
+        "selected": 31
+      },
+      "001_015|who_q1|no_tags|11_plus": {
+        "available": 183,
+        "selected": 3
+      },
+      "001_015|who_q1|no_tags|2_3": {
+        "available": 3254,
+        "selected": 71
+      },
+      "001_015|who_q1|no_tags|4_6": {
+        "available": 3056,
+        "selected": 66
+      },
+      "001_015|who_q1|no_tags|7_10": {
+        "available": 996,
+        "selected": 21
+      },
+      "001_015|who_q1|other_tags|1": {
+        "available": 733,
+        "selected": 16
+      },
+      "001_015|who_q1|other_tags|11_plus": {
+        "available": 133,
+        "selected": 2
+      },
+      "001_015|who_q1|other_tags|2_3": {
+        "available": 2037,
+        "selected": 44
+      },
+      "001_015|who_q1|other_tags|4_6": {
+        "available": 2062,
+        "selected": 45
+      },
+      "001_015|who_q1|other_tags|7_10": {
+        "available": 754,
+        "selected": 16
+      },
+      "001_015|who_q1|vegan|1": {
+        "available": 27,
+        "selected": 1
+      },
+      "001_015|who_q1|vegan|11_plus": {
+        "available": 1,
+        "selected": 1
+      },
+      "001_015|who_q1|vegan|2_3": {
+        "available": 65,
+        "selected": 1
+      },
+      "001_015|who_q1|vegan|4_6": {
+        "available": 62,
+        "selected": 1
+      },
+      "001_015|who_q1|vegan|7_10": {
+        "available": 16,
+        "selected": 1
+      },
+      "001_015|who_q1|vegetarian|1": {
+        "available": 78,
+        "selected": 1
+      },
+      "001_015|who_q1|vegetarian|11_plus": {
+        "available": 17,
+        "selected": 1
+      },
+      "001_015|who_q1|vegetarian|2_3": {
+        "available": 301,
+        "selected": 6
+      },
+      "001_015|who_q1|vegetarian|4_6": {
+        "available": 322,
+        "selected": 7
+      },
+      "001_015|who_q1|vegetarian|7_10": {
+        "available": 96,
+        "selected": 2
+      },
+      "001_015|who_q2|low_sodium|1": {
+        "available": 118,
+        "selected": 2
+      },
+      "001_015|who_q2|low_sodium|11_plus": {
+        "available": 22,
+        "selected": 1
+      },
+      "001_015|who_q2|low_sodium|2_3": {
+        "available": 337,
+        "selected": 7
+      },
+      "001_015|who_q2|low_sodium|4_6": {
+        "available": 342,
+        "selected": 7
+      },
+      "001_015|who_q2|low_sodium|7_10": {
+        "available": 113,
+        "selected": 2
+      },
+      "001_015|who_q2|no_tags|1": {
+        "available": 847,
+        "selected": 18
+      },
+      "001_015|who_q2|no_tags|11_plus": {
+        "available": 142,
+        "selected": 3
+      },
+      "001_015|who_q2|no_tags|2_3": {
+        "available": 2393,
+        "selected": 52
+      },
+      "001_015|who_q2|no_tags|4_6": {
+        "available": 2411,
+        "selected": 52
+      },
+      "001_015|who_q2|no_tags|7_10": {
+        "available": 790,
+        "selected": 17
+      },
+      "001_015|who_q2|other_tags|1": {
+        "available": 387,
+        "selected": 8
+      },
+      "001_015|who_q2|other_tags|11_plus": {
+        "available": 128,
+        "selected": 2
+      },
+      "001_015|who_q2|other_tags|2_3": {
+        "available": 1327,
+        "selected": 28
+      },
+      "001_015|who_q2|other_tags|4_6": {
+        "available": 1746,
+        "selected": 38
+      },
+      "001_015|who_q2|other_tags|7_10": {
+        "available": 669,
+        "selected": 14
+      },
+      "001_015|who_q2|vegan|1": {
+        "available": 18,
+        "selected": 1
+      },
+      "001_015|who_q2|vegan|11_plus": {
+        "available": 3,
+        "selected": 1
+      },
+      "001_015|who_q2|vegan|2_3": {
+        "available": 82,
+        "selected": 1
+      },
+      "001_015|who_q2|vegan|4_6": {
+        "available": 78,
+        "selected": 1
+      },
+      "001_015|who_q2|vegan|7_10": {
+        "available": 20,
+        "selected": 1
+      },
+      "001_015|who_q2|vegetarian|1": {
+        "available": 61,
+        "selected": 1
+      },
+      "001_015|who_q2|vegetarian|11_plus": {
+        "available": 12,
+        "selected": 1
+      },
+      "001_015|who_q2|vegetarian|2_3": {
+        "available": 302,
+        "selected": 6
+      },
+      "001_015|who_q2|vegetarian|4_6": {
+        "available": 352,
+        "selected": 7
+      },
+      "001_015|who_q2|vegetarian|7_10": {
+        "available": 101,
+        "selected": 2
+      },
+      "001_015|who_q3|low_sodium|1": {
+        "available": 233,
+        "selected": 5
+      },
+      "001_015|who_q3|low_sodium|11_plus": {
+        "available": 23,
+        "selected": 1
+      },
+      "001_015|who_q3|low_sodium|2_3": {
+        "available": 643,
+        "selected": 14
+      },
+      "001_015|who_q3|low_sodium|4_6": {
+        "available": 541,
+        "selected": 11
+      },
+      "001_015|who_q3|low_sodium|7_10": {
+        "available": 168,
+        "selected": 3
+      },
+      "001_015|who_q3|no_tags|1": {
+        "available": 1195,
+        "selected": 26
+      },
+      "001_015|who_q3|no_tags|11_plus": {
+        "available": 141,
+        "selected": 3
+      },
+      "001_015|who_q3|no_tags|2_3": {
+        "available": 3024,
+        "selected": 66
+      },
+      "001_015|who_q3|no_tags|4_6": {
+        "available": 2724,
+        "selected": 59
+      },
+      "001_015|who_q3|no_tags|7_10": {
+        "available": 759,
+        "selected": 16
+      },
+      "001_015|who_q3|other_tags|1": {
+        "available": 539,
+        "selected": 11
+      },
+      "001_015|who_q3|other_tags|11_plus": {
+        "available": 92,
+        "selected": 2
+      },
+      "001_015|who_q3|other_tags|2_3": {
+        "available": 1539,
+        "selected": 33
+      },
+      "001_015|who_q3|other_tags|4_6": {
+        "available": 1597,
+        "selected": 34
+      },
+      "001_015|who_q3|other_tags|7_10": {
+        "available": 548,
+        "selected": 11
+      },
+      "001_015|who_q3|vegan|1": {
+        "available": 47,
+        "selected": 1
+      },
+      "001_015|who_q3|vegan|11_plus": {
+        "available": 6,
+        "selected": 1
+      },
+      "001_015|who_q3|vegan|2_3": {
+        "available": 162,
+        "selected": 3
+      },
+      "001_015|who_q3|vegan|4_6": {
+        "available": 179,
+        "selected": 3
+      },
+      "001_015|who_q3|vegan|7_10": {
+        "available": 30,
+        "selected": 1
+      },
+      "001_015|who_q3|vegetarian|1": {
+        "available": 73,
+        "selected": 1
+      },
+      "001_015|who_q3|vegetarian|11_plus": {
+        "available": 16,
+        "selected": 1
+      },
+      "001_015|who_q3|vegetarian|2_3": {
+        "available": 377,
+        "selected": 8
+      },
+      "001_015|who_q3|vegetarian|4_6": {
+        "available": 383,
+        "selected": 8
+      },
+      "001_015|who_q3|vegetarian|7_10": {
+        "available": 125,
+        "selected": 2
+      },
+      "001_015|who_q4|low_sodium|1": {
+        "available": 320,
+        "selected": 6
+      },
+      "001_015|who_q4|low_sodium|11_plus": {
+        "available": 28,
+        "selected": 1
+      },
+      "001_015|who_q4|low_sodium|2_3": {
+        "available": 952,
+        "selected": 20
+      },
+      "001_015|who_q4|low_sodium|4_6": {
+        "available": 756,
+        "selected": 16
+      },
+      "001_015|who_q4|low_sodium|7_10": {
+        "available": 236,
+        "selected": 5
+      },
+      "001_015|who_q4|no_tags|1": {
+        "available": 1526,
+        "selected": 33
+      },
+      "001_015|who_q4|no_tags|11_plus": {
+        "available": 172,
+        "selected": 3
+      },
+      "001_015|who_q4|no_tags|2_3": {
+        "available": 3799,
+        "selected": 82
+      },
+      "001_015|who_q4|no_tags|4_6": {
+        "available": 3308,
+        "selected": 72
+      },
+      "001_015|who_q4|no_tags|7_10": {
+        "available": 954,
+        "selected": 20
+      },
+      "001_015|who_q4|other_tags|1": {
+        "available": 539,
+        "selected": 11
+      },
+      "001_015|who_q4|other_tags|11_plus": {
+        "available": 101,
+        "selected": 2
+      },
+      "001_015|who_q4|other_tags|2_3": {
+        "available": 1887,
+        "selected": 41
+      },
+      "001_015|who_q4|other_tags|4_6": {
+        "available": 1808,
+        "selected": 39
+      },
+      "001_015|who_q4|other_tags|7_10": {
+        "available": 566,
+        "selected": 12
+      },
+      "001_015|who_q4|vegan|1": {
+        "available": 105,
+        "selected": 2
+      },
+      "001_015|who_q4|vegan|11_plus": {
+        "available": 18,
+        "selected": 1
+      },
+      "001_015|who_q4|vegan|2_3": {
+        "available": 321,
+        "selected": 7
+      },
+      "001_015|who_q4|vegan|4_6": {
+        "available": 291,
+        "selected": 6
+      },
+      "001_015|who_q4|vegan|7_10": {
+        "available": 65,
+        "selected": 1
+      },
+      "001_015|who_q4|vegetarian|1": {
+        "available": 150,
+        "selected": 3
+      },
+      "001_015|who_q4|vegetarian|11_plus": {
+        "available": 25,
+        "selected": 1
+      },
+      "001_015|who_q4|vegetarian|2_3": {
+        "available": 572,
+        "selected": 12
+      },
+      "001_015|who_q4|vegetarian|4_6": {
+        "available": 533,
+        "selected": 11
+      },
+      "001_015|who_q4|vegetarian|7_10": {
+        "available": 169,
+        "selected": 3
+      },
+      "001_015|who_q5|low_sodium|1": {
+        "available": 247,
+        "selected": 5
+      },
+      "001_015|who_q5|low_sodium|11_plus": {
+        "available": 39,
+        "selected": 1
+      },
+      "001_015|who_q5|low_sodium|2_3": {
+        "available": 751,
+        "selected": 16
+      },
+      "001_015|who_q5|low_sodium|4_6": {
+        "available": 891,
+        "selected": 19
+      },
+      "001_015|who_q5|low_sodium|7_10": {
+        "available": 260,
+        "selected": 5
+      },
+      "001_015|who_q5|no_tags|1": {
+        "available": 1596,
+        "selected": 34
+      },
+      "001_015|who_q5|no_tags|11_plus": {
+        "available": 170,
+        "selected": 3
+      },
+      "001_015|who_q5|no_tags|2_3": {
+        "available": 4352,
+        "selected": 95
+      },
+      "001_015|who_q5|no_tags|4_6": {
+        "available": 3763,
+        "selected": 82
+      },
+      "001_015|who_q5|no_tags|7_10": {
+        "available": 998,
+        "selected": 21
+      },
+      "001_015|who_q5|other_tags|1": {
+        "available": 530,
+        "selected": 11
+      },
+      "001_015|who_q5|other_tags|11_plus": {
+        "available": 102,
+        "selected": 2
+      },
+      "001_015|who_q5|other_tags|2_3": {
+        "available": 1872,
+        "selected": 40
+      },
+      "001_015|who_q5|other_tags|4_6": {
+        "available": 1813,
+        "selected": 39
+      },
+      "001_015|who_q5|other_tags|7_10": {
+        "available": 600,
+        "selected": 13
+      },
+      "001_015|who_q5|vegan|1": {
+        "available": 128,
+        "selected": 2
+      },
+      "001_015|who_q5|vegan|11_plus": {
+        "available": 12,
+        "selected": 1
+      },
+      "001_015|who_q5|vegan|2_3": {
+        "available": 489,
+        "selected": 10
+      },
+      "001_015|who_q5|vegan|4_6": {
+        "available": 452,
+        "selected": 9
+      },
+      "001_015|who_q5|vegan|7_10": {
+        "available": 115,
+        "selected": 2
+      },
+      "001_015|who_q5|vegetarian|1": {
+        "available": 114,
+        "selected": 2
+      },
+      "001_015|who_q5|vegetarian|11_plus": {
+        "available": 32,
+        "selected": 1
+      },
+      "001_015|who_q5|vegetarian|2_3": {
+        "available": 568,
+        "selected": 12
+      },
+      "001_015|who_q5|vegetarian|4_6": {
+        "available": 679,
+        "selected": 14
+      },
+      "001_015|who_q5|vegetarian|7_10": {
+        "available": 179,
+        "selected": 3
+      },
+      "001_015|who_unknown|low_sodium|7_10": {
+        "available": 1,
+        "selected": 1
+      },
+      "001_015|who_unknown|no_tags|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "001_015|who_unknown|no_tags|2_3": {
+        "available": 5,
+        "selected": 1
+      },
+      "001_015|who_unknown|no_tags|4_6": {
+        "available": 1,
+        "selected": 1
+      },
+      "001_015|who_unknown|no_tags|7_10": {
+        "available": 1,
+        "selected": 1
+      },
+      "001_015|who_unknown|other_tags|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "001_015|who_unknown|other_tags|4_6": {
+        "available": 2,
+        "selected": 1
+      },
+      "001_015|who_unknown|vegan|2_3": {
+        "available": 1,
+        "selected": 1
+      },
+      "001_015|who_unknown|vegetarian|1": {
+        "available": 1,
+        "selected": 1
+      },
+      "016_030|who_q1|low_sodium|1": {
+        "available": 18,
+        "selected": 1
+      },
+      "016_030|who_q1|low_sodium|11_plus": {
+        "available": 77,
+        "selected": 1
+      },
+      "016_030|who_q1|low_sodium|2_3": {
+        "available": 87,
+        "selected": 1
+      },
+      "016_030|who_q1|low_sodium|4_6": {
+        "available": 227,
+        "selected": 4
+      },
+      "016_030|who_q1|low_sodium|7_10": {
+        "available": 184,
+        "selected": 4
+      },
+      "016_030|who_q1|no_tags|1": {
+        "available": 468,
+        "selected": 10
+      },
+      "016_030|who_q1|no_tags|11_plus": {
+        "available": 930,
+        "selected": 20
+      },
+      "016_030|who_q1|no_tags|2_3": {
+        "available": 1730,
+        "selected": 37
+      },
+      "016_030|who_q1|no_tags|4_6": {
+        "available": 4294,
+        "selected": 93
+      },
+      "016_030|who_q1|no_tags|7_10": {
+        "available": 2937,
+        "selected": 64
+      },
+      "016_030|who_q1|other_tags|1": {
+        "available": 156,
+        "selected": 3
+      },
+      "016_030|who_q1|other_tags|11_plus": {
+        "available": 703,
+        "selected": 15
+      },
+      "016_030|who_q1|other_tags|2_3": {
+        "available": 946,
+        "selected": 20
+      },
+      "016_030|who_q1|other_tags|4_6": {
+        "available": 2801,
+        "selected": 61
+      },
+      "016_030|who_q1|other_tags|7_10": {
+        "available": 2217,
+        "selected": 48
+      },
+      "016_030|who_q1|vegan|1": {
+        "available": 1,
+        "selected": 1
+      },
+      "016_030|who_q1|vegan|11_plus": {
+        "available": 1,
+        "selected": 1
+      },
+      "016_030|who_q1|vegan|2_3": {
+        "available": 21,
+        "selected": 1
+      },
+      "016_030|who_q1|vegan|4_6": {
+        "available": 46,
+        "selected": 1
+      },
+      "016_030|who_q1|vegan|7_10": {
+        "available": 29,
+        "selected": 1
+      },
+      "016_030|who_q1|vegetarian|1": {
+        "available": 11,
+        "selected": 1
+      },
+      "016_030|who_q1|vegetarian|11_plus": {
+        "available": 64,
+        "selected": 1
+      },
+      "016_030|who_q1|vegetarian|2_3": {
+        "available": 84,
+        "selected": 1
+      },
+      "016_030|who_q1|vegetarian|4_6": {
+        "available": 274,
+        "selected": 5
+      },
+      "016_030|who_q1|vegetarian|7_10": {
+        "available": 251,
+        "selected": 5
+      },
+      "016_030|who_q2|low_sodium|1": {
+        "available": 12,
+        "selected": 1
+      },
+      "016_030|who_q2|low_sodium|11_plus": {
+        "available": 109,
+        "selected": 2
+      },
+      "016_030|who_q2|low_sodium|2_3": {
+        "available": 127,
+        "selected": 2
+      },
+      "016_030|who_q2|low_sodium|4_6": {
+        "available": 394,
+        "selected": 8
+      },
+      "016_030|who_q2|low_sodium|7_10": {
+        "available": 311,
+        "selected": 6
+      },
+      "016_030|who_q2|no_tags|1": {
+        "available": 469,
+        "selected": 10
+      },
+      "016_030|who_q2|no_tags|11_plus": {
+        "available": 899,
+        "selected": 19
+      },
+      "016_030|who_q2|no_tags|2_3": {
+        "available": 2158,
+        "selected": 47
+      },
+      "016_030|who_q2|no_tags|4_6": {
+        "available": 4733,
+        "selected": 103
+      },
+      "016_030|who_q2|no_tags|7_10": {
+        "available": 3008,
+        "selected": 65
+      },
+      "016_030|who_q2|other_tags|1": {
+        "available": 179,
+        "selected": 3
+      },
+      "016_030|who_q2|other_tags|11_plus": {
+        "available": 802,
+        "selected": 17
+      },
+      "016_030|who_q2|other_tags|2_3": {
+        "available": 1170,
+        "selected": 25
+      },
+      "016_030|who_q2|other_tags|4_6": {
+        "available": 3258,
+        "selected": 71
+      },
+      "016_030|who_q2|other_tags|7_10": {
+        "available": 2416,
+        "selected": 52
+      },
+      "016_030|who_q2|vegan|1": {
+        "available": 2,
+        "selected": 1
+      },
+      "016_030|who_q2|vegan|11_plus": {
+        "available": 8,
+        "selected": 1
+      },
+      "016_030|who_q2|vegan|2_3": {
+        "available": 30,
+        "selected": 1
+      },
+      "016_030|who_q2|vegan|4_6": {
+        "available": 79,
+        "selected": 1
+      },
+      "016_030|who_q2|vegan|7_10": {
+        "available": 53,
+        "selected": 1
+      },
+      "016_030|who_q2|vegetarian|1": {
+        "available": 6,
+        "selected": 1
+      },
+      "016_030|who_q2|vegetarian|11_plus": {
+        "available": 100,
+        "selected": 2
+      },
+      "016_030|who_q2|vegetarian|2_3": {
+        "available": 146,
+        "selected": 3
+      },
+      "016_030|who_q2|vegetarian|4_6": {
+        "available": 403,
+        "selected": 8
+      },
+      "016_030|who_q2|vegetarian|7_10": {
+        "available": 327,
+        "selected": 7
+      },
+      "016_030|who_q3|low_sodium|1": {
+        "available": 22,
+        "selected": 1
+      },
+      "016_030|who_q3|low_sodium|11_plus": {
+        "available": 131,
+        "selected": 2
+      },
+      "016_030|who_q3|low_sodium|2_3": {
+        "available": 209,
+        "selected": 4
+      },
+      "016_030|who_q3|low_sodium|4_6": {
+        "available": 545,
+        "selected": 11
+      },
+      "016_030|who_q3|low_sodium|7_10": {
+        "available": 355,
+        "selected": 7
+      },
+      "016_030|who_q3|no_tags|1": {
+        "available": 461,
+        "selected": 10
+      },
+      "016_030|who_q3|no_tags|11_plus": {
+        "available": 846,
+        "selected": 18
+      },
+      "016_030|who_q3|no_tags|2_3": {
+        "available": 2405,
+        "selected": 52
+      },
+      "016_030|who_q3|no_tags|4_6": {
+        "available": 5105,
+        "selected": 111
+      },
+      "016_030|who_q3|no_tags|7_10": {
+        "available": 2906,
+        "selected": 63
+      },
+      "016_030|who_q3|other_tags|1": {
+        "available": 151,
+        "selected": 3
+      },
+      "016_030|who_q3|other_tags|11_plus": {
+        "available": 693,
+        "selected": 15
+      },
+      "016_030|who_q3|other_tags|2_3": {
+        "available": 1193,
+        "selected": 26
+      },
+      "016_030|who_q3|other_tags|4_6": {
+        "available": 3257,
+        "selected": 71
+      },
+      "016_030|who_q3|other_tags|7_10": {
+        "available": 2142,
+        "selected": 46
+      },
+      "016_030|who_q3|vegan|1": {
+        "available": 7,
+        "selected": 1
+      },
+      "016_030|who_q3|vegan|11_plus": {
+        "available": 26,
+        "selected": 1
+      },
+      "016_030|who_q3|vegan|2_3": {
+        "available": 73,
+        "selected": 1
+      },
+      "016_030|who_q3|vegan|4_6": {
+        "available": 171,
+        "selected": 3
+      },
+      "016_030|who_q3|vegan|7_10": {
+        "available": 102,
+        "selected": 2
+      },
+      "016_030|who_q3|vegetarian|1": {
+        "available": 22,
+        "selected": 1
+      },
+      "016_030|who_q3|vegetarian|11_plus": {
+        "available": 114,
+        "selected": 2
+      },
+      "016_030|who_q3|vegetarian|2_3": {
+        "available": 191,
+        "selected": 4
+      },
+      "016_030|who_q3|vegetarian|4_6": {
+        "available": 540,
+        "selected": 11
+      },
+      "016_030|who_q3|vegetarian|7_10": {
+        "available": 351,
+        "selected": 7
+      },
+      "016_030|who_q4|low_sodium|1": {
+        "available": 41,
+        "selected": 1
+      },
+      "016_030|who_q4|low_sodium|11_plus": {
+        "available": 154,
+        "selected": 3
+      },
+      "016_030|who_q4|low_sodium|2_3": {
+        "available": 270,
+        "selected": 5
+      },
+      "016_030|who_q4|low_sodium|4_6": {
+        "available": 765,
+        "selected": 16
+      },
+      "016_030|who_q4|low_sodium|7_10": {
+        "available": 472,
+        "selected": 10
+      },
+      "016_030|who_q4|no_tags|1": {
+        "available": 549,
+        "selected": 11
+      },
+      "016_030|who_q4|no_tags|11_plus": {
+        "available": 737,
+        "selected": 16
+      },
+      "016_030|who_q4|no_tags|2_3": {
+        "available": 2590,
+        "selected": 56
+      },
+      "016_030|who_q4|no_tags|4_6": {
+        "available": 5374,
+        "selected": 117
+      },
+      "016_030|who_q4|no_tags|7_10": {
+        "available": 2997,
+        "selected": 65
+      },
+      "016_030|who_q4|other_tags|1": {
+        "available": 152,
+        "selected": 3
+      },
+      "016_030|who_q4|other_tags|11_plus": {
+        "available": 616,
+        "selected": 13
+      },
+      "016_030|who_q4|other_tags|2_3": {
+        "available": 1223,
+        "selected": 26
+      },
+      "016_030|who_q4|other_tags|4_6": {
+        "available": 3276,
+        "selected": 71
+      },
+      "016_030|who_q4|other_tags|7_10": {
+        "available": 2153,
+        "selected": 47
+      },
+      "016_030|who_q4|vegan|1": {
+        "available": 10,
+        "selected": 1
+      },
+      "016_030|who_q4|vegan|11_plus": {
+        "available": 34,
+        "selected": 1
+      },
+      "016_030|who_q4|vegan|2_3": {
+        "available": 121,
+        "selected": 2
+      },
+      "016_030|who_q4|vegan|4_6": {
+        "available": 334,
+        "selected": 7
+      },
+      "016_030|who_q4|vegan|7_10": {
+        "available": 157,
+        "selected": 3
+      },
+      "016_030|who_q4|vegetarian|1": {
+        "available": 23,
+        "selected": 1
+      },
+      "016_030|who_q4|vegetarian|11_plus": {
+        "available": 106,
+        "selected": 2
+      },
+      "016_030|who_q4|vegetarian|2_3": {
+        "available": 256,
+        "selected": 5
+      },
+      "016_030|who_q4|vegetarian|4_6": {
+        "available": 739,
+        "selected": 16
+      },
+      "016_030|who_q4|vegetarian|7_10": {
+        "available": 432,
+        "selected": 9
+      },
+      "016_030|who_q5|low_sodium|1": {
+        "available": 69,
+        "selected": 1
+      },
+      "016_030|who_q5|low_sodium|11_plus": {
+        "available": 199,
+        "selected": 4
+      },
+      "016_030|who_q5|low_sodium|2_3": {
+        "available": 557,
+        "selected": 12
+      },
+      "016_030|who_q5|low_sodium|4_6": {
+        "available": 1356,
+        "selected": 29
+      },
+      "016_030|who_q5|low_sodium|7_10": {
+        "available": 791,
+        "selected": 17
+      },
+      "016_030|who_q5|no_tags|1": {
+        "available": 623,
+        "selected": 13
+      },
+      "016_030|who_q5|no_tags|11_plus": {
+        "available": 895,
+        "selected": 19
+      },
+      "016_030|who_q5|no_tags|2_3": {
+        "available": 2854,
+        "selected": 62
+      },
+      "016_030|who_q5|no_tags|4_6": {
+        "available": 6145,
+        "selected": 134
+      },
+      "016_030|who_q5|no_tags|7_10": {
+        "available": 3520,
+        "selected": 76
+      },
+      "016_030|who_q5|other_tags|1": {
+        "available": 112,
+        "selected": 2
+      },
+      "016_030|who_q5|other_tags|11_plus": {
+        "available": 645,
+        "selected": 14
+      },
+      "016_030|who_q5|other_tags|2_3": {
+        "available": 1074,
+        "selected": 23
+      },
+      "016_030|who_q5|other_tags|4_6": {
+        "available": 3018,
+        "selected": 65
+      },
+      "016_030|who_q5|other_tags|7_10": {
+        "available": 2195,
+        "selected": 47
+      },
+      "016_030|who_q5|vegan|1": {
+        "available": 26,
+        "selected": 1
+      },
+      "016_030|who_q5|vegan|11_plus": {
+        "available": 50,
+        "selected": 1
+      },
+      "016_030|who_q5|vegan|2_3": {
+        "available": 210,
+        "selected": 4
+      },
+      "016_030|who_q5|vegan|4_6": {
+        "available": 506,
+        "selected": 11
+      },
+      "016_030|who_q5|vegan|7_10": {
+        "available": 239,
+        "selected": 5
+      },
+      "016_030|who_q5|vegetarian|1": {
+        "available": 21,
+        "selected": 1
+      },
+      "016_030|who_q5|vegetarian|11_plus": {
+        "available": 134,
+        "selected": 2
+      },
+      "016_030|who_q5|vegetarian|2_3": {
+        "available": 340,
+        "selected": 7
+      },
+      "016_030|who_q5|vegetarian|4_6": {
+        "available": 953,
+        "selected": 20
+      },
+      "016_030|who_q5|vegetarian|7_10": {
+        "available": 605,
+        "selected": 13
+      },
+      "016_030|who_unknown|no_tags|2_3": {
+        "available": 1,
+        "selected": 1
+      },
+      "031_060|who_q1|low_sodium|1": {
+        "available": 14,
+        "selected": 1
+      },
+      "031_060|who_q1|low_sodium|11_plus": {
+        "available": 280,
+        "selected": 6
+      },
+      "031_060|who_q1|low_sodium|2_3": {
+        "available": 75,
+        "selected": 1
+      },
+      "031_060|who_q1|low_sodium|4_6": {
+        "available": 304,
+        "selected": 6
+      },
+      "031_060|who_q1|low_sodium|7_10": {
+        "available": 349,
+        "selected": 7
+      },
+      "031_060|who_q1|no_tags|1": {
+        "available": 485,
+        "selected": 10
+      },
+      "031_060|who_q1|no_tags|11_plus": {
+        "available": 3118,
+        "selected": 68
+      },
+      "031_060|who_q1|no_tags|2_3": {
+        "available": 1885,
+        "selected": 41
+      },
+      "031_060|who_q1|no_tags|4_6": {
+        "available": 5955,
+        "selected": 130
+      },
+      "031_060|who_q1|no_tags|7_10": {
+        "available": 5533,
+        "selected": 120
+      },
+      "031_060|who_q1|other_tags|1": {
+        "available": 155,
+        "selected": 3
+      },
+      "031_060|who_q1|other_tags|11_plus": {
+        "available": 2338,
+        "selected": 51
+      },
+      "031_060|who_q1|other_tags|2_3": {
+        "available": 885,
+        "selected": 19
+      },
+      "031_060|who_q1|other_tags|4_6": {
+        "available": 3493,
+        "selected": 76
+      },
+      "031_060|who_q1|other_tags|7_10": {
+        "available": 3871,
+        "selected": 84
+      },
+      "031_060|who_q1|vegan|1": {
+        "available": 2,
+        "selected": 1
+      },
+      "031_060|who_q1|vegan|11_plus": {
+        "available": 10,
+        "selected": 1
+      },
+      "031_060|who_q1|vegan|2_3": {
+        "available": 14,
+        "selected": 1
+      },
+      "031_060|who_q1|vegan|4_6": {
+        "available": 37,
+        "selected": 1
+      },
+      "031_060|who_q1|vegan|7_10": {
+        "available": 26,
+        "selected": 1
+      },
+      "031_060|who_q1|vegetarian|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "031_060|who_q1|vegetarian|11_plus": {
+        "available": 273,
+        "selected": 5
+      },
+      "031_060|who_q1|vegetarian|2_3": {
+        "available": 82,
+        "selected": 1
+      },
+      "031_060|who_q1|vegetarian|4_6": {
+        "available": 341,
+        "selected": 7
+      },
+      "031_060|who_q1|vegetarian|7_10": {
+        "available": 385,
+        "selected": 8
+      },
+      "031_060|who_q2|low_sodium|1": {
+        "available": 15,
+        "selected": 1
+      },
+      "031_060|who_q2|low_sodium|11_plus": {
+        "available": 313,
+        "selected": 6
+      },
+      "031_060|who_q2|low_sodium|2_3": {
+        "available": 108,
+        "selected": 2
+      },
+      "031_060|who_q2|low_sodium|4_6": {
+        "available": 479,
+        "selected": 10
+      },
+      "031_060|who_q2|low_sodium|7_10": {
+        "available": 492,
+        "selected": 10
+      },
+      "031_060|who_q2|no_tags|1": {
+        "available": 534,
+        "selected": 11
+      },
+      "031_060|who_q2|no_tags|11_plus": {
+        "available": 2637,
+        "selected": 57
+      },
+      "031_060|who_q2|no_tags|2_3": {
+        "available": 2080,
+        "selected": 45
+      },
+      "031_060|who_q2|no_tags|4_6": {
+        "available": 6617,
+        "selected": 144
+      },
+      "031_060|who_q2|no_tags|7_10": {
+        "available": 5539,
+        "selected": 120
+      },
+      "031_060|who_q2|other_tags|1": {
+        "available": 194,
+        "selected": 4
+      },
+      "031_060|who_q2|other_tags|11_plus": {
+        "available": 2275,
+        "selected": 49
+      },
+      "031_060|who_q2|other_tags|2_3": {
+        "available": 1088,
+        "selected": 23
+      },
+      "031_060|who_q2|other_tags|4_6": {
+        "available": 4089,
+        "selected": 89
+      },
+      "031_060|who_q2|other_tags|7_10": {
+        "available": 4214,
+        "selected": 92
+      },
+      "031_060|who_q2|vegan|1": {
+        "available": 2,
+        "selected": 1
+      },
+      "031_060|who_q2|vegan|11_plus": {
+        "available": 28,
+        "selected": 1
+      },
+      "031_060|who_q2|vegan|2_3": {
+        "available": 26,
+        "selected": 1
+      },
+      "031_060|who_q2|vegan|4_6": {
+        "available": 77,
+        "selected": 1
+      },
+      "031_060|who_q2|vegan|7_10": {
+        "available": 60,
+        "selected": 1
+      },
+      "031_060|who_q2|vegetarian|1": {
+        "available": 13,
+        "selected": 1
+      },
+      "031_060|who_q2|vegetarian|11_plus": {
+        "available": 225,
+        "selected": 4
+      },
+      "031_060|who_q2|vegetarian|2_3": {
+        "available": 99,
+        "selected": 2
+      },
+      "031_060|who_q2|vegetarian|4_6": {
+        "available": 494,
+        "selected": 10
+      },
+      "031_060|who_q2|vegetarian|7_10": {
+        "available": 483,
+        "selected": 10
+      },
+      "031_060|who_q3|low_sodium|1": {
+        "available": 21,
+        "selected": 1
+      },
+      "031_060|who_q3|low_sodium|11_plus": {
+        "available": 301,
+        "selected": 6
+      },
+      "031_060|who_q3|low_sodium|2_3": {
+        "available": 177,
+        "selected": 3
+      },
+      "031_060|who_q3|low_sodium|4_6": {
+        "available": 612,
+        "selected": 13
+      },
+      "031_060|who_q3|low_sodium|7_10": {
+        "available": 639,
+        "selected": 13
+      },
+      "031_060|who_q3|no_tags|1": {
+        "available": 498,
+        "selected": 10
+      },
+      "031_060|who_q3|no_tags|11_plus": {
+        "available": 2258,
+        "selected": 49
+      },
+      "031_060|who_q3|no_tags|2_3": {
+        "available": 2182,
+        "selected": 47
+      },
+      "031_060|who_q3|no_tags|4_6": {
+        "available": 6393,
+        "selected": 139
+      },
+      "031_060|who_q3|no_tags|7_10": {
+        "available": 4905,
+        "selected": 107
+      },
+      "031_060|who_q3|other_tags|1": {
+        "available": 140,
+        "selected": 3
+      },
+      "031_060|who_q3|other_tags|11_plus": {
+        "available": 1785,
+        "selected": 38
+      },
+      "031_060|who_q3|other_tags|2_3": {
+        "available": 1068,
+        "selected": 23
+      },
+      "031_060|who_q3|other_tags|4_6": {
+        "available": 3673,
+        "selected": 80
+      },
+      "031_060|who_q3|other_tags|7_10": {
+        "available": 3364,
+        "selected": 73
+      },
+      "031_060|who_q3|vegan|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "031_060|who_q3|vegan|11_plus": {
+        "available": 56,
+        "selected": 1
+      },
+      "031_060|who_q3|vegan|2_3": {
+        "available": 59,
+        "selected": 1
+      },
+      "031_060|who_q3|vegan|4_6": {
+        "available": 171,
+        "selected": 3
+      },
+      "031_060|who_q3|vegan|7_10": {
+        "available": 120,
+        "selected": 2
+      },
+      "031_060|who_q3|vegetarian|1": {
+        "available": 9,
+        "selected": 1
+      },
+      "031_060|who_q3|vegetarian|11_plus": {
+        "available": 225,
+        "selected": 4
+      },
+      "031_060|who_q3|vegetarian|2_3": {
+        "available": 124,
+        "selected": 2
+      },
+      "031_060|who_q3|vegetarian|4_6": {
+        "available": 559,
+        "selected": 12
+      },
+      "031_060|who_q3|vegetarian|7_10": {
+        "available": 466,
+        "selected": 10
+      },
+      "031_060|who_q4|low_sodium|1": {
+        "available": 24,
+        "selected": 1
+      },
+      "031_060|who_q4|low_sodium|11_plus": {
+        "available": 282,
+        "selected": 6
+      },
+      "031_060|who_q4|low_sodium|2_3": {
+        "available": 215,
+        "selected": 4
+      },
+      "031_060|who_q4|low_sodium|4_6": {
+        "available": 712,
+        "selected": 15
+      },
+      "031_060|who_q4|low_sodium|7_10": {
+        "available": 614,
+        "selected": 13
+      },
+      "031_060|who_q4|no_tags|1": {
+        "available": 456,
+        "selected": 9
+      },
+      "031_060|who_q4|no_tags|11_plus": {
+        "available": 1915,
+        "selected": 41
+      },
+      "031_060|who_q4|no_tags|2_3": {
+        "available": 2124,
+        "selected": 46
+      },
+      "031_060|who_q4|no_tags|4_6": {
+        "available": 5866,
+        "selected": 128
+      },
+      "031_060|who_q4|no_tags|7_10": {
+        "available": 4392,
+        "selected": 95
+      },
+      "031_060|who_q4|other_tags|1": {
+        "available": 124,
+        "selected": 2
+      },
+      "031_060|who_q4|other_tags|11_plus": {
+        "available": 1351,
+        "selected": 29
+      },
+      "031_060|who_q4|other_tags|2_3": {
+        "available": 901,
+        "selected": 19
+      },
+      "031_060|who_q4|other_tags|4_6": {
+        "available": 3144,
+        "selected": 68
+      },
+      "031_060|who_q4|other_tags|7_10": {
+        "available": 2946,
+        "selected": 64
+      },
+      "031_060|who_q4|vegan|1": {
+        "available": 8,
+        "selected": 1
+      },
+      "031_060|who_q4|vegan|11_plus": {
+        "available": 102,
+        "selected": 2
+      },
+      "031_060|who_q4|vegan|2_3": {
+        "available": 101,
+        "selected": 2
+      },
+      "031_060|who_q4|vegan|4_6": {
+        "available": 327,
+        "selected": 7
+      },
+      "031_060|who_q4|vegan|7_10": {
+        "available": 234,
+        "selected": 5
+      },
+      "031_060|who_q4|vegetarian|1": {
+        "available": 17,
+        "selected": 1
+      },
+      "031_060|who_q4|vegetarian|11_plus": {
+        "available": 250,
+        "selected": 5
+      },
+      "031_060|who_q4|vegetarian|2_3": {
+        "available": 180,
+        "selected": 3
+      },
+      "031_060|who_q4|vegetarian|4_6": {
+        "available": 600,
+        "selected": 13
+      },
+      "031_060|who_q4|vegetarian|7_10": {
+        "available": 548,
+        "selected": 11
+      },
+      "031_060|who_q5|low_sodium|1": {
+        "available": 47,
+        "selected": 1
+      },
+      "031_060|who_q5|low_sodium|11_plus": {
+        "available": 404,
+        "selected": 8
+      },
+      "031_060|who_q5|low_sodium|2_3": {
+        "available": 316,
+        "selected": 6
+      },
+      "031_060|who_q5|low_sodium|4_6": {
+        "available": 966,
+        "selected": 21
+      },
+      "031_060|who_q5|low_sodium|7_10": {
+        "available": 893,
+        "selected": 19
+      },
+      "031_060|who_q5|no_tags|1": {
+        "available": 381,
+        "selected": 8
+      },
+      "031_060|who_q5|no_tags|11_plus": {
+        "available": 1892,
+        "selected": 41
+      },
+      "031_060|who_q5|no_tags|2_3": {
+        "available": 1901,
+        "selected": 41
+      },
+      "031_060|who_q5|no_tags|4_6": {
+        "available": 5663,
+        "selected": 123
+      },
+      "031_060|who_q5|no_tags|7_10": {
+        "available": 4373,
+        "selected": 95
+      },
+      "031_060|who_q5|other_tags|1": {
+        "available": 84,
+        "selected": 1
+      },
+      "031_060|who_q5|other_tags|11_plus": {
+        "available": 1204,
+        "selected": 26
+      },
+      "031_060|who_q5|other_tags|2_3": {
+        "available": 649,
+        "selected": 14
+      },
+      "031_060|who_q5|other_tags|4_6": {
+        "available": 2363,
+        "selected": 51
+      },
+      "031_060|who_q5|other_tags|7_10": {
+        "available": 2436,
+        "selected": 53
+      },
+      "031_060|who_q5|vegan|1": {
+        "available": 12,
+        "selected": 1
+      },
+      "031_060|who_q5|vegan|11_plus": {
+        "available": 111,
+        "selected": 2
+      },
+      "031_060|who_q5|vegan|2_3": {
+        "available": 153,
+        "selected": 3
+      },
+      "031_060|who_q5|vegan|4_6": {
+        "available": 503,
+        "selected": 10
+      },
+      "031_060|who_q5|vegan|7_10": {
+        "available": 299,
+        "selected": 6
+      },
+      "031_060|who_q5|vegetarian|1": {
+        "available": 17,
+        "selected": 1
+      },
+      "031_060|who_q5|vegetarian|11_plus": {
+        "available": 285,
+        "selected": 6
+      },
+      "031_060|who_q5|vegetarian|2_3": {
+        "available": 216,
+        "selected": 4
+      },
+      "031_060|who_q5|vegetarian|4_6": {
+        "available": 764,
+        "selected": 16
+      },
+      "031_060|who_q5|vegetarian|7_10": {
+        "available": 662,
+        "selected": 14
+      },
+      "031_060|who_unknown|other_tags|7_10": {
+        "available": 1,
+        "selected": 1
+      },
+      "061_120|who_q1|low_sodium|1": {
+        "available": 10,
+        "selected": 1
+      },
+      "061_120|who_q1|low_sodium|11_plus": {
+        "available": 256,
+        "selected": 5
+      },
+      "061_120|who_q1|low_sodium|2_3": {
+        "available": 54,
+        "selected": 1
+      },
+      "061_120|who_q1|low_sodium|4_6": {
+        "available": 185,
+        "selected": 4
+      },
+      "061_120|who_q1|low_sodium|7_10": {
+        "available": 254,
+        "selected": 5
+      },
+      "061_120|who_q1|no_tags|1": {
+        "available": 252,
+        "selected": 5
+      },
+      "061_120|who_q1|no_tags|11_plus": {
+        "available": 2885,
+        "selected": 62
+      },
+      "061_120|who_q1|no_tags|2_3": {
+        "available": 1003,
+        "selected": 21
+      },
+      "061_120|who_q1|no_tags|4_6": {
+        "available": 3356,
+        "selected": 73
+      },
+      "061_120|who_q1|no_tags|7_10": {
+        "available": 3595,
+        "selected": 78
+      },
+      "061_120|who_q1|other_tags|1": {
+        "available": 69,
+        "selected": 1
+      },
+      "061_120|who_q1|other_tags|11_plus": {
+        "available": 1984,
+        "selected": 43
+      },
+      "061_120|who_q1|other_tags|2_3": {
+        "available": 471,
+        "selected": 10
+      },
+      "061_120|who_q1|other_tags|4_6": {
+        "available": 1733,
+        "selected": 37
+      },
+      "061_120|who_q1|other_tags|7_10": {
+        "available": 2113,
+        "selected": 46
+      },
+      "061_120|who_q1|vegan|1": {
+        "available": 1,
+        "selected": 1
+      },
+      "061_120|who_q1|vegan|11_plus": {
+        "available": 3,
+        "selected": 1
+      },
+      "061_120|who_q1|vegan|2_3": {
+        "available": 4,
+        "selected": 1
+      },
+      "061_120|who_q1|vegan|4_6": {
+        "available": 17,
+        "selected": 1
+      },
+      "061_120|who_q1|vegan|7_10": {
+        "available": 19,
+        "selected": 1
+      },
+      "061_120|who_q1|vegetarian|1": {
+        "available": 4,
+        "selected": 1
+      },
+      "061_120|who_q1|vegetarian|11_plus": {
+        "available": 226,
+        "selected": 4
+      },
+      "061_120|who_q1|vegetarian|2_3": {
+        "available": 37,
+        "selected": 1
+      },
+      "061_120|who_q1|vegetarian|4_6": {
+        "available": 220,
+        "selected": 4
+      },
+      "061_120|who_q1|vegetarian|7_10": {
+        "available": 251,
+        "selected": 5
+      },
+      "061_120|who_q2|low_sodium|1": {
+        "available": 10,
+        "selected": 1
+      },
+      "061_120|who_q2|low_sodium|11_plus": {
+        "available": 240,
+        "selected": 5
+      },
+      "061_120|who_q2|low_sodium|2_3": {
+        "available": 78,
+        "selected": 1
+      },
+      "061_120|who_q2|low_sodium|4_6": {
+        "available": 250,
+        "selected": 5
+      },
+      "061_120|who_q2|low_sodium|7_10": {
+        "available": 264,
+        "selected": 5
+      },
+      "061_120|who_q2|no_tags|1": {
+        "available": 255,
+        "selected": 5
+      },
+      "061_120|who_q2|no_tags|11_plus": {
+        "available": 2155,
+        "selected": 47
+      },
+      "061_120|who_q2|no_tags|2_3": {
+        "available": 1021,
+        "selected": 22
+      },
+      "061_120|who_q2|no_tags|4_6": {
+        "available": 3275,
+        "selected": 71
+      },
+      "061_120|who_q2|no_tags|7_10": {
+        "available": 3067,
+        "selected": 66
+      },
+      "061_120|who_q2|other_tags|1": {
+        "available": 96,
+        "selected": 2
+      },
+      "061_120|who_q2|other_tags|11_plus": {
+        "available": 1515,
+        "selected": 33
+      },
+      "061_120|who_q2|other_tags|2_3": {
+        "available": 465,
+        "selected": 10
+      },
+      "061_120|who_q2|other_tags|4_6": {
+        "available": 1889,
+        "selected": 41
+      },
+      "061_120|who_q2|other_tags|7_10": {
+        "available": 2106,
+        "selected": 45
+      },
+      "061_120|who_q2|vegan|1": {
+        "available": 1,
+        "selected": 1
+      },
+      "061_120|who_q2|vegan|11_plus": {
+        "available": 10,
+        "selected": 1
+      },
+      "061_120|who_q2|vegan|2_3": {
+        "available": 11,
+        "selected": 1
+      },
+      "061_120|who_q2|vegan|4_6": {
+        "available": 36,
+        "selected": 1
+      },
+      "061_120|who_q2|vegan|7_10": {
+        "available": 20,
+        "selected": 1
+      },
+      "061_120|who_q2|vegetarian|1": {
+        "available": 2,
+        "selected": 1
+      },
+      "061_120|who_q2|vegetarian|11_plus": {
+        "available": 206,
+        "selected": 4
+      },
+      "061_120|who_q2|vegetarian|2_3": {
+        "available": 52,
+        "selected": 1
+      },
+      "061_120|who_q2|vegetarian|4_6": {
+        "available": 207,
+        "selected": 4
+      },
+      "061_120|who_q2|vegetarian|7_10": {
+        "available": 266,
+        "selected": 5
+      },
+      "061_120|who_q3|low_sodium|1": {
+        "available": 10,
+        "selected": 1
+      },
+      "061_120|who_q3|low_sodium|11_plus": {
+        "available": 268,
+        "selected": 5
+      },
+      "061_120|who_q3|low_sodium|2_3": {
+        "available": 96,
+        "selected": 2
+      },
+      "061_120|who_q3|low_sodium|4_6": {
+        "available": 315,
+        "selected": 6
+      },
+      "061_120|who_q3|low_sodium|7_10": {
+        "available": 327,
+        "selected": 7
+      },
+      "061_120|who_q3|no_tags|1": {
+        "available": 225,
+        "selected": 4
+      },
+      "061_120|who_q3|no_tags|11_plus": {
+        "available": 1679,
+        "selected": 36
+      },
+      "061_120|who_q3|no_tags|2_3": {
+        "available": 971,
+        "selected": 21
+      },
+      "061_120|who_q3|no_tags|4_6": {
+        "available": 2952,
+        "selected": 64
+      },
+      "061_120|who_q3|no_tags|7_10": {
+        "available": 2731,
+        "selected": 59
+      },
+      "061_120|who_q3|other_tags|1": {
+        "available": 88,
+        "selected": 1
+      },
+      "061_120|who_q3|other_tags|11_plus": {
+        "available": 1301,
+        "selected": 28
+      },
+      "061_120|who_q3|other_tags|2_3": {
+        "available": 430,
+        "selected": 9
+      },
+      "061_120|who_q3|other_tags|4_6": {
+        "available": 1619,
+        "selected": 35
+      },
+      "061_120|who_q3|other_tags|7_10": {
+        "available": 1672,
+        "selected": 36
+      },
+      "061_120|who_q3|vegan|11_plus": {
+        "available": 40,
+        "selected": 1
+      },
+      "061_120|who_q3|vegan|2_3": {
+        "available": 25,
+        "selected": 1
+      },
+      "061_120|who_q3|vegan|4_6": {
+        "available": 70,
+        "selected": 1
+      },
+      "061_120|who_q3|vegan|7_10": {
+        "available": 79,
+        "selected": 1
+      },
+      "061_120|who_q3|vegetarian|1": {
+        "available": 6,
+        "selected": 1
+      },
+      "061_120|who_q3|vegetarian|11_plus": {
+        "available": 176,
+        "selected": 3
+      },
+      "061_120|who_q3|vegetarian|2_3": {
+        "available": 41,
+        "selected": 1
+      },
+      "061_120|who_q3|vegetarian|4_6": {
+        "available": 204,
+        "selected": 4
+      },
+      "061_120|who_q3|vegetarian|7_10": {
+        "available": 195,
+        "selected": 4
+      },
+      "061_120|who_q4|low_sodium|1": {
+        "available": 12,
+        "selected": 1
+      },
+      "061_120|who_q4|low_sodium|11_plus": {
+        "available": 220,
+        "selected": 4
+      },
+      "061_120|who_q4|low_sodium|2_3": {
+        "available": 98,
+        "selected": 2
+      },
+      "061_120|who_q4|low_sodium|4_6": {
+        "available": 345,
+        "selected": 7
+      },
+      "061_120|who_q4|low_sodium|7_10": {
+        "available": 335,
+        "selected": 7
+      },
+      "061_120|who_q4|no_tags|1": {
+        "available": 196,
+        "selected": 4
+      },
+      "061_120|who_q4|no_tags|11_plus": {
+        "available": 1337,
+        "selected": 29
+      },
+      "061_120|who_q4|no_tags|2_3": {
+        "available": 874,
+        "selected": 19
+      },
+      "061_120|who_q4|no_tags|4_6": {
+        "available": 2713,
+        "selected": 59
+      },
+      "061_120|who_q4|no_tags|7_10": {
+        "available": 2247,
+        "selected": 49
+      },
+      "061_120|who_q4|other_tags|1": {
+        "available": 59,
+        "selected": 1
+      },
+      "061_120|who_q4|other_tags|11_plus": {
+        "available": 804,
+        "selected": 17
+      },
+      "061_120|who_q4|other_tags|2_3": {
+        "available": 381,
+        "selected": 8
+      },
+      "061_120|who_q4|other_tags|4_6": {
+        "available": 1319,
+        "selected": 28
+      },
+      "061_120|who_q4|other_tags|7_10": {
+        "available": 1288,
+        "selected": 28
+      },
+      "061_120|who_q4|vegan|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "061_120|who_q4|vegan|11_plus": {
+        "available": 52,
+        "selected": 1
+      },
+      "061_120|who_q4|vegan|2_3": {
+        "available": 43,
+        "selected": 1
+      },
+      "061_120|who_q4|vegan|4_6": {
+        "available": 167,
+        "selected": 3
+      },
+      "061_120|who_q4|vegan|7_10": {
+        "available": 103,
+        "selected": 2
+      },
+      "061_120|who_q4|vegetarian|1": {
+        "available": 8,
+        "selected": 1
+      },
+      "061_120|who_q4|vegetarian|11_plus": {
+        "available": 177,
+        "selected": 3
+      },
+      "061_120|who_q4|vegetarian|2_3": {
+        "available": 72,
+        "selected": 1
+      },
+      "061_120|who_q4|vegetarian|4_6": {
+        "available": 274,
+        "selected": 5
+      },
+      "061_120|who_q4|vegetarian|7_10": {
+        "available": 217,
+        "selected": 4
+      },
+      "061_120|who_q5|low_sodium|1": {
+        "available": 13,
+        "selected": 1
+      },
+      "061_120|who_q5|low_sodium|11_plus": {
+        "available": 261,
+        "selected": 5
+      },
+      "061_120|who_q5|low_sodium|2_3": {
+        "available": 124,
+        "selected": 2
+      },
+      "061_120|who_q5|low_sodium|4_6": {
+        "available": 390,
+        "selected": 8
+      },
+      "061_120|who_q5|low_sodium|7_10": {
+        "available": 370,
+        "selected": 8
+      },
+      "061_120|who_q5|no_tags|1": {
+        "available": 165,
+        "selected": 3
+      },
+      "061_120|who_q5|no_tags|11_plus": {
+        "available": 1166,
+        "selected": 25
+      },
+      "061_120|who_q5|no_tags|2_3": {
+        "available": 708,
+        "selected": 15
+      },
+      "061_120|who_q5|no_tags|4_6": {
+        "available": 2128,
+        "selected": 46
+      },
+      "061_120|who_q5|no_tags|7_10": {
+        "available": 1793,
+        "selected": 39
+      },
+      "061_120|who_q5|other_tags|1": {
+        "available": 27,
+        "selected": 1
+      },
+      "061_120|who_q5|other_tags|11_plus": {
+        "available": 600,
+        "selected": 13
+      },
+      "061_120|who_q5|other_tags|2_3": {
+        "available": 259,
+        "selected": 5
+      },
+      "061_120|who_q5|other_tags|4_6": {
+        "available": 774,
+        "selected": 16
+      },
+      "061_120|who_q5|other_tags|7_10": {
+        "available": 834,
+        "selected": 18
+      },
+      "061_120|who_q5|vegan|1": {
+        "available": 4,
+        "selected": 1
+      },
+      "061_120|who_q5|vegan|11_plus": {
+        "available": 80,
+        "selected": 1
+      },
+      "061_120|who_q5|vegan|2_3": {
+        "available": 62,
+        "selected": 1
+      },
+      "061_120|who_q5|vegan|4_6": {
+        "available": 159,
+        "selected": 3
+      },
+      "061_120|who_q5|vegan|7_10": {
+        "available": 152,
+        "selected": 3
+      },
+      "061_120|who_q5|vegetarian|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "061_120|who_q5|vegetarian|11_plus": {
+        "available": 161,
+        "selected": 3
+      },
+      "061_120|who_q5|vegetarian|2_3": {
+        "available": 55,
+        "selected": 1
+      },
+      "061_120|who_q5|vegetarian|4_6": {
+        "available": 251,
+        "selected": 5
+      },
+      "061_120|who_q5|vegetarian|7_10": {
+        "available": 226,
+        "selected": 4
+      },
+      "061_120|who_unknown|no_tags|11_plus": {
+        "available": 1,
+        "selected": 1
+      },
+      "121_240|who_q1|low_sodium|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "121_240|who_q1|low_sodium|11_plus": {
+        "available": 73,
+        "selected": 1
+      },
+      "121_240|who_q1|low_sodium|2_3": {
+        "available": 23,
+        "selected": 1
+      },
+      "121_240|who_q1|low_sodium|4_6": {
+        "available": 88,
+        "selected": 1
+      },
+      "121_240|who_q1|low_sodium|7_10": {
+        "available": 73,
+        "selected": 1
+      },
+      "121_240|who_q1|no_tags|1": {
+        "available": 68,
+        "selected": 1
+      },
+      "121_240|who_q1|no_tags|11_plus": {
+        "available": 840,
+        "selected": 18
+      },
+      "121_240|who_q1|no_tags|2_3": {
+        "available": 371,
+        "selected": 8
+      },
+      "121_240|who_q1|no_tags|4_6": {
+        "available": 931,
+        "selected": 20
+      },
+      "121_240|who_q1|no_tags|7_10": {
+        "available": 802,
+        "selected": 17
+      },
+      "121_240|who_q1|other_tags|1": {
+        "available": 31,
+        "selected": 1
+      },
+      "121_240|who_q1|other_tags|11_plus": {
+        "available": 495,
+        "selected": 10
+      },
+      "121_240|who_q1|other_tags|2_3": {
+        "available": 188,
+        "selected": 4
+      },
+      "121_240|who_q1|other_tags|4_6": {
+        "available": 532,
+        "selected": 11
+      },
+      "121_240|who_q1|other_tags|7_10": {
+        "available": 452,
+        "selected": 9
+      },
+      "121_240|who_q1|vegan|11_plus": {
+        "available": 3,
+        "selected": 1
+      },
+      "121_240|who_q1|vegan|2_3": {
+        "available": 4,
+        "selected": 1
+      },
+      "121_240|who_q1|vegan|4_6": {
+        "available": 1,
+        "selected": 1
+      },
+      "121_240|who_q1|vegan|7_10": {
+        "available": 4,
+        "selected": 1
+      },
+      "121_240|who_q1|vegetarian|1": {
+        "available": 2,
+        "selected": 1
+      },
+      "121_240|who_q1|vegetarian|11_plus": {
+        "available": 35,
+        "selected": 1
+      },
+      "121_240|who_q1|vegetarian|2_3": {
+        "available": 11,
+        "selected": 1
+      },
+      "121_240|who_q1|vegetarian|4_6": {
+        "available": 33,
+        "selected": 1
+      },
+      "121_240|who_q1|vegetarian|7_10": {
+        "available": 34,
+        "selected": 1
+      },
+      "121_240|who_q2|low_sodium|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "121_240|who_q2|low_sodium|11_plus": {
+        "available": 95,
+        "selected": 2
+      },
+      "121_240|who_q2|low_sodium|2_3": {
+        "available": 20,
+        "selected": 1
+      },
+      "121_240|who_q2|low_sodium|4_6": {
+        "available": 85,
+        "selected": 1
+      },
+      "121_240|who_q2|low_sodium|7_10": {
+        "available": 91,
+        "selected": 1
+      },
+      "121_240|who_q2|no_tags|1": {
+        "available": 97,
+        "selected": 2
+      },
+      "121_240|who_q2|no_tags|11_plus": {
+        "available": 671,
+        "selected": 14
+      },
+      "121_240|who_q2|no_tags|2_3": {
+        "available": 378,
+        "selected": 8
+      },
+      "121_240|who_q2|no_tags|4_6": {
+        "available": 1020,
+        "selected": 22
+      },
+      "121_240|who_q2|no_tags|7_10": {
+        "available": 784,
+        "selected": 17
+      },
+      "121_240|who_q2|other_tags|1": {
+        "available": 32,
+        "selected": 1
+      },
+      "121_240|who_q2|other_tags|11_plus": {
+        "available": 504,
+        "selected": 11
+      },
+      "121_240|who_q2|other_tags|2_3": {
+        "available": 189,
+        "selected": 4
+      },
+      "121_240|who_q2|other_tags|4_6": {
+        "available": 576,
+        "selected": 12
+      },
+      "121_240|who_q2|other_tags|7_10": {
+        "available": 521,
+        "selected": 11
+      },
+      "121_240|who_q2|vegan|11_plus": {
+        "available": 4,
+        "selected": 1
+      },
+      "121_240|who_q2|vegan|2_3": {
+        "available": 5,
+        "selected": 1
+      },
+      "121_240|who_q2|vegan|4_6": {
+        "available": 11,
+        "selected": 1
+      },
+      "121_240|who_q2|vegan|7_10": {
+        "available": 6,
+        "selected": 1
+      },
+      "121_240|who_q2|vegetarian|1": {
+        "available": 5,
+        "selected": 1
+      },
+      "121_240|who_q2|vegetarian|11_plus": {
+        "available": 41,
+        "selected": 1
+      },
+      "121_240|who_q2|vegetarian|2_3": {
+        "available": 19,
+        "selected": 1
+      },
+      "121_240|who_q2|vegetarian|4_6": {
+        "available": 35,
+        "selected": 1
+      },
+      "121_240|who_q2|vegetarian|7_10": {
+        "available": 37,
+        "selected": 1
+      },
+      "121_240|who_q3|low_sodium|1": {
+        "available": 2,
+        "selected": 1
+      },
+      "121_240|who_q3|low_sodium|11_plus": {
+        "available": 78,
+        "selected": 1
+      },
+      "121_240|who_q3|low_sodium|2_3": {
+        "available": 42,
+        "selected": 1
+      },
+      "121_240|who_q3|low_sodium|4_6": {
+        "available": 128,
+        "selected": 2
+      },
+      "121_240|who_q3|low_sodium|7_10": {
+        "available": 126,
+        "selected": 2
+      },
+      "121_240|who_q3|no_tags|1": {
+        "available": 104,
+        "selected": 2
+      },
+      "121_240|who_q3|no_tags|11_plus": {
+        "available": 687,
+        "selected": 14
+      },
+      "121_240|who_q3|no_tags|2_3": {
+        "available": 436,
+        "selected": 9
+      },
+      "121_240|who_q3|no_tags|4_6": {
+        "available": 1073,
+        "selected": 23
+      },
+      "121_240|who_q3|no_tags|7_10": {
+        "available": 885,
+        "selected": 19
+      },
+      "121_240|who_q3|other_tags|1": {
+        "available": 36,
+        "selected": 1
+      },
+      "121_240|who_q3|other_tags|11_plus": {
+        "available": 530,
+        "selected": 11
+      },
+      "121_240|who_q3|other_tags|2_3": {
+        "available": 216,
+        "selected": 4
+      },
+      "121_240|who_q3|other_tags|4_6": {
+        "available": 592,
+        "selected": 12
+      },
+      "121_240|who_q3|other_tags|7_10": {
+        "available": 589,
+        "selected": 12
+      },
+      "121_240|who_q3|vegan|1": {
+        "available": 4,
+        "selected": 1
+      },
+      "121_240|who_q3|vegan|11_plus": {
+        "available": 11,
+        "selected": 1
+      },
+      "121_240|who_q3|vegan|2_3": {
+        "available": 11,
+        "selected": 1
+      },
+      "121_240|who_q3|vegan|4_6": {
+        "available": 32,
+        "selected": 1
+      },
+      "121_240|who_q3|vegan|7_10": {
+        "available": 19,
+        "selected": 1
+      },
+      "121_240|who_q3|vegetarian|1": {
+        "available": 4,
+        "selected": 1
+      },
+      "121_240|who_q3|vegetarian|11_plus": {
+        "available": 48,
+        "selected": 1
+      },
+      "121_240|who_q3|vegetarian|2_3": {
+        "available": 21,
+        "selected": 1
+      },
+      "121_240|who_q3|vegetarian|4_6": {
+        "available": 45,
+        "selected": 1
+      },
+      "121_240|who_q3|vegetarian|7_10": {
+        "available": 61,
+        "selected": 1
+      },
+      "121_240|who_q4|low_sodium|1": {
+        "available": 4,
+        "selected": 1
+      },
+      "121_240|who_q4|low_sodium|11_plus": {
+        "available": 70,
+        "selected": 1
+      },
+      "121_240|who_q4|low_sodium|2_3": {
+        "available": 53,
+        "selected": 1
+      },
+      "121_240|who_q4|low_sodium|4_6": {
+        "available": 143,
+        "selected": 3
+      },
+      "121_240|who_q4|low_sodium|7_10": {
+        "available": 106,
+        "selected": 2
+      },
+      "121_240|who_q4|no_tags|1": {
+        "available": 105,
+        "selected": 2
+      },
+      "121_240|who_q4|no_tags|11_plus": {
+        "available": 500,
+        "selected": 10
+      },
+      "121_240|who_q4|no_tags|2_3": {
+        "available": 388,
+        "selected": 8
+      },
+      "121_240|who_q4|no_tags|4_6": {
+        "available": 979,
+        "selected": 21
+      },
+      "121_240|who_q4|no_tags|7_10": {
+        "available": 718,
+        "selected": 15
+      },
+      "121_240|who_q4|other_tags|1": {
+        "available": 31,
+        "selected": 1
+      },
+      "121_240|who_q4|other_tags|11_plus": {
+        "available": 349,
+        "selected": 7
+      },
+      "121_240|who_q4|other_tags|2_3": {
+        "available": 230,
+        "selected": 5
+      },
+      "121_240|who_q4|other_tags|4_6": {
+        "available": 497,
+        "selected": 10
+      },
+      "121_240|who_q4|other_tags|7_10": {
+        "available": 470,
+        "selected": 10
+      },
+      "121_240|who_q4|vegan|1": {
+        "available": 2,
+        "selected": 1
+      },
+      "121_240|who_q4|vegan|11_plus": {
+        "available": 22,
+        "selected": 1
+      },
+      "121_240|who_q4|vegan|2_3": {
+        "available": 26,
+        "selected": 1
+      },
+      "121_240|who_q4|vegan|4_6": {
+        "available": 41,
+        "selected": 1
+      },
+      "121_240|who_q4|vegan|7_10": {
+        "available": 27,
+        "selected": 1
+      },
+      "121_240|who_q4|vegetarian|1": {
+        "available": 4,
+        "selected": 1
+      },
+      "121_240|who_q4|vegetarian|11_plus": {
+        "available": 39,
+        "selected": 1
+      },
+      "121_240|who_q4|vegetarian|2_3": {
+        "available": 40,
+        "selected": 1
+      },
+      "121_240|who_q4|vegetarian|4_6": {
+        "available": 50,
+        "selected": 1
+      },
+      "121_240|who_q4|vegetarian|7_10": {
+        "available": 51,
+        "selected": 1
+      },
+      "121_240|who_q5|low_sodium|1": {
+        "available": 6,
+        "selected": 1
+      },
+      "121_240|who_q5|low_sodium|11_plus": {
+        "available": 80,
+        "selected": 1
+      },
+      "121_240|who_q5|low_sodium|2_3": {
+        "available": 39,
+        "selected": 1
+      },
+      "121_240|who_q5|low_sodium|4_6": {
+        "available": 156,
+        "selected": 3
+      },
+      "121_240|who_q5|low_sodium|7_10": {
+        "available": 141,
+        "selected": 3
+      },
+      "121_240|who_q5|no_tags|1": {
+        "available": 68,
+        "selected": 1
+      },
+      "121_240|who_q5|no_tags|11_plus": {
+        "available": 467,
+        "selected": 10
+      },
+      "121_240|who_q5|no_tags|2_3": {
+        "available": 331,
+        "selected": 7
+      },
+      "121_240|who_q5|no_tags|4_6": {
+        "available": 791,
+        "selected": 17
+      },
+      "121_240|who_q5|no_tags|7_10": {
+        "available": 647,
+        "selected": 14
+      },
+      "121_240|who_q5|other_tags|1": {
+        "available": 26,
+        "selected": 1
+      },
+      "121_240|who_q5|other_tags|11_plus": {
+        "available": 301,
+        "selected": 6
+      },
+      "121_240|who_q5|other_tags|2_3": {
+        "available": 130,
+        "selected": 2
+      },
+      "121_240|who_q5|other_tags|4_6": {
+        "available": 377,
+        "selected": 8
+      },
+      "121_240|who_q5|other_tags|7_10": {
+        "available": 349,
+        "selected": 7
+      },
+      "121_240|who_q5|vegan|1": {
+        "available": 5,
+        "selected": 1
+      },
+      "121_240|who_q5|vegan|11_plus": {
+        "available": 17,
+        "selected": 1
+      },
+      "121_240|who_q5|vegan|2_3": {
+        "available": 31,
+        "selected": 1
+      },
+      "121_240|who_q5|vegan|4_6": {
+        "available": 48,
+        "selected": 1
+      },
+      "121_240|who_q5|vegan|7_10": {
+        "available": 36,
+        "selected": 1
+      },
+      "121_240|who_q5|vegetarian|1": {
+        "available": 2,
+        "selected": 1
+      },
+      "121_240|who_q5|vegetarian|11_plus": {
+        "available": 45,
+        "selected": 1
+      },
+      "121_240|who_q5|vegetarian|2_3": {
+        "available": 22,
+        "selected": 1
+      },
+      "121_240|who_q5|vegetarian|4_6": {
+        "available": 46,
+        "selected": 1
+      },
+      "121_240|who_q5|vegetarian|7_10": {
+        "available": 56,
+        "selected": 1
+      },
+      "241_plus|who_q1|low_sodium|1": {
+        "available": 1,
+        "selected": 1
+      },
+      "241_plus|who_q1|low_sodium|11_plus": {
+        "available": 33,
+        "selected": 1
+      },
+      "241_plus|who_q1|low_sodium|2_3": {
+        "available": 17,
+        "selected": 1
+      },
+      "241_plus|who_q1|low_sodium|4_6": {
+        "available": 56,
+        "selected": 1
+      },
+      "241_plus|who_q1|low_sodium|7_10": {
+        "available": 46,
+        "selected": 1
+      },
+      "241_plus|who_q1|no_tags|1": {
+        "available": 41,
+        "selected": 1
+      },
+      "241_plus|who_q1|no_tags|11_plus": {
+        "available": 338,
+        "selected": 7
+      },
+      "241_plus|who_q1|no_tags|2_3": {
+        "available": 190,
+        "selected": 4
+      },
+      "241_plus|who_q1|no_tags|4_6": {
+        "available": 525,
+        "selected": 11
+      },
+      "241_plus|who_q1|no_tags|7_10": {
+        "available": 382,
+        "selected": 8
+      },
+      "241_plus|who_q1|other_tags|1": {
+        "available": 24,
+        "selected": 1
+      },
+      "241_plus|who_q1|other_tags|11_plus": {
+        "available": 225,
+        "selected": 4
+      },
+      "241_plus|who_q1|other_tags|2_3": {
+        "available": 97,
+        "selected": 2
+      },
+      "241_plus|who_q1|other_tags|4_6": {
+        "available": 271,
+        "selected": 5
+      },
+      "241_plus|who_q1|other_tags|7_10": {
+        "available": 223,
+        "selected": 4
+      },
+      "241_plus|who_q1|vegan|2_3": {
+        "available": 2,
+        "selected": 1
+      },
+      "241_plus|who_q1|vegan|4_6": {
+        "available": 4,
+        "selected": 1
+      },
+      "241_plus|who_q1|vegan|7_10": {
+        "available": 1,
+        "selected": 1
+      },
+      "241_plus|who_q1|vegetarian|1": {
+        "available": 1,
+        "selected": 1
+      },
+      "241_plus|who_q1|vegetarian|11_plus": {
+        "available": 15,
+        "selected": 1
+      },
+      "241_plus|who_q1|vegetarian|2_3": {
+        "available": 9,
+        "selected": 1
+      },
+      "241_plus|who_q1|vegetarian|4_6": {
+        "available": 11,
+        "selected": 1
+      },
+      "241_plus|who_q1|vegetarian|7_10": {
+        "available": 10,
+        "selected": 1
+      },
+      "241_plus|who_q2|low_sodium|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "241_plus|who_q2|low_sodium|11_plus": {
+        "available": 27,
+        "selected": 1
+      },
+      "241_plus|who_q2|low_sodium|2_3": {
+        "available": 20,
+        "selected": 1
+      },
+      "241_plus|who_q2|low_sodium|4_6": {
+        "available": 48,
+        "selected": 1
+      },
+      "241_plus|who_q2|low_sodium|7_10": {
+        "available": 44,
+        "selected": 1
+      },
+      "241_plus|who_q2|no_tags|1": {
+        "available": 65,
+        "selected": 1
+      },
+      "241_plus|who_q2|no_tags|11_plus": {
+        "available": 229,
+        "selected": 112
+      },
+      "241_plus|who_q2|no_tags|2_3": {
+        "available": 285,
+        "selected": 6
+      },
+      "241_plus|who_q2|no_tags|4_6": {
+        "available": 569,
+        "selected": 12
+      },
+      "241_plus|who_q2|no_tags|7_10": {
+        "available": 348,
+        "selected": 7
+      },
+      "241_plus|who_q2|other_tags|1": {
+        "available": 29,
+        "selected": 1
+      },
+      "241_plus|who_q2|other_tags|11_plus": {
+        "available": 148,
+        "selected": 3
+      },
+      "241_plus|who_q2|other_tags|2_3": {
+        "available": 172,
+        "selected": 3
+      },
+      "241_plus|who_q2|other_tags|4_6": {
+        "available": 392,
+        "selected": 8
+      },
+      "241_plus|who_q2|other_tags|7_10": {
+        "available": 288,
+        "selected": 6
+      },
+      "241_plus|who_q2|vegan|11_plus": {
+        "available": 1,
+        "selected": 1
+      },
+      "241_plus|who_q2|vegan|2_3": {
+        "available": 2,
+        "selected": 1
+      },
+      "241_plus|who_q2|vegan|4_6": {
+        "available": 7,
+        "selected": 1
+      },
+      "241_plus|who_q2|vegan|7_10": {
+        "available": 4,
+        "selected": 1
+      },
+      "241_plus|who_q2|vegetarian|11_plus": {
+        "available": 11,
+        "selected": 1
+      },
+      "241_plus|who_q2|vegetarian|2_3": {
+        "available": 7,
+        "selected": 1
+      },
+      "241_plus|who_q2|vegetarian|4_6": {
+        "available": 14,
+        "selected": 1
+      },
+      "241_plus|who_q2|vegetarian|7_10": {
+        "available": 13,
+        "selected": 1
+      },
+      "241_plus|who_q3|low_sodium|1": {
+        "available": 2,
+        "selected": 1
+      },
+      "241_plus|who_q3|low_sodium|11_plus": {
+        "available": 21,
+        "selected": 1
+      },
+      "241_plus|who_q3|low_sodium|2_3": {
+        "available": 33,
+        "selected": 1
+      },
+      "241_plus|who_q3|low_sodium|4_6": {
+        "available": 76,
+        "selected": 1
+      },
+      "241_plus|who_q3|low_sodium|7_10": {
+        "available": 51,
+        "selected": 1
+      },
+      "241_plus|who_q3|no_tags|1": {
+        "available": 87,
+        "selected": 1
+      },
+      "241_plus|who_q3|no_tags|11_plus": {
+        "available": 240,
+        "selected": 5
+      },
+      "241_plus|who_q3|no_tags|2_3": {
+        "available": 384,
+        "selected": 8
+      },
+      "241_plus|who_q3|no_tags|4_6": {
+        "available": 624,
+        "selected": 13
+      },
+      "241_plus|who_q3|no_tags|7_10": {
+        "available": 436,
+        "selected": 9
+      },
+      "241_plus|who_q3|other_tags|1": {
+        "available": 37,
+        "selected": 1
+      },
+      "241_plus|who_q3|other_tags|11_plus": {
+        "available": 147,
+        "selected": 3
+      },
+      "241_plus|who_q3|other_tags|2_3": {
+        "available": 228,
+        "selected": 4
+      },
+      "241_plus|who_q3|other_tags|4_6": {
+        "available": 473,
+        "selected": 10
+      },
+      "241_plus|who_q3|other_tags|7_10": {
+        "available": 345,
+        "selected": 7
+      },
+      "241_plus|who_q3|vegan|11_plus": {
+        "available": 6,
+        "selected": 1
+      },
+      "241_plus|who_q3|vegan|2_3": {
+        "available": 10,
+        "selected": 1
+      },
+      "241_plus|who_q3|vegan|4_6": {
+        "available": 10,
+        "selected": 1
+      },
+      "241_plus|who_q3|vegan|7_10": {
+        "available": 7,
+        "selected": 1
+      },
+      "241_plus|who_q3|vegetarian|11_plus": {
+        "available": 6,
+        "selected": 1
+      },
+      "241_plus|who_q3|vegetarian|2_3": {
+        "available": 13,
+        "selected": 1
+      },
+      "241_plus|who_q3|vegetarian|4_6": {
+        "available": 19,
+        "selected": 1
+      },
+      "241_plus|who_q3|vegetarian|7_10": {
+        "available": 14,
+        "selected": 1
+      },
+      "241_plus|who_q4|low_sodium|1": {
+        "available": 4,
+        "selected": 1
+      },
+      "241_plus|who_q4|low_sodium|11_plus": {
+        "available": 26,
+        "selected": 1
+      },
+      "241_plus|who_q4|low_sodium|2_3": {
+        "available": 45,
+        "selected": 1
+      },
+      "241_plus|who_q4|low_sodium|4_6": {
+        "available": 94,
+        "selected": 2
+      },
+      "241_plus|who_q4|low_sodium|7_10": {
+        "available": 66,
+        "selected": 1
+      },
+      "241_plus|who_q4|no_tags|1": {
+        "available": 93,
+        "selected": 2
+      },
+      "241_plus|who_q4|no_tags|11_plus": {
+        "available": 192,
+        "selected": 4
+      },
+      "241_plus|who_q4|no_tags|2_3": {
+        "available": 365,
+        "selected": 7
+      },
+      "241_plus|who_q4|no_tags|4_6": {
+        "available": 589,
+        "selected": 12
+      },
+      "241_plus|who_q4|no_tags|7_10": {
+        "available": 362,
+        "selected": 7
+      },
+      "241_plus|who_q4|other_tags|1": {
+        "available": 34,
+        "selected": 1
+      },
+      "241_plus|who_q4|other_tags|11_plus": {
+        "available": 145,
+        "selected": 3
+      },
+      "241_plus|who_q4|other_tags|2_3": {
+        "available": 210,
+        "selected": 4
+      },
+      "241_plus|who_q4|other_tags|4_6": {
+        "available": 460,
+        "selected": 10
+      },
+      "241_plus|who_q4|other_tags|7_10": {
+        "available": 275,
+        "selected": 6
+      },
+      "241_plus|who_q4|vegan|1": {
+        "available": 1,
+        "selected": 1
+      },
+      "241_plus|who_q4|vegan|11_plus": {
+        "available": 5,
+        "selected": 1
+      },
+      "241_plus|who_q4|vegan|2_3": {
+        "available": 17,
+        "selected": 1
+      },
+      "241_plus|who_q4|vegan|4_6": {
+        "available": 18,
+        "selected": 1
+      },
+      "241_plus|who_q4|vegan|7_10": {
+        "available": 14,
+        "selected": 1
+      },
+      "241_plus|who_q4|vegetarian|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "241_plus|who_q4|vegetarian|11_plus": {
+        "available": 6,
+        "selected": 1
+      },
+      "241_plus|who_q4|vegetarian|2_3": {
+        "available": 18,
+        "selected": 1
+      },
+      "241_plus|who_q4|vegetarian|4_6": {
+        "available": 38,
+        "selected": 1
+      },
+      "241_plus|who_q4|vegetarian|7_10": {
+        "available": 15,
+        "selected": 1
+      },
+      "241_plus|who_q5|low_sodium|1": {
+        "available": 8,
+        "selected": 1
+      },
+      "241_plus|who_q5|low_sodium|11_plus": {
+        "available": 31,
+        "selected": 1
+      },
+      "241_plus|who_q5|low_sodium|2_3": {
+        "available": 33,
+        "selected": 1
+      },
+      "241_plus|who_q5|low_sodium|4_6": {
+        "available": 76,
+        "selected": 1
+      },
+      "241_plus|who_q5|low_sodium|7_10": {
+        "available": 55,
+        "selected": 1
+      },
+      "241_plus|who_q5|no_tags|1": {
+        "available": 53,
+        "selected": 1
+      },
+      "241_plus|who_q5|no_tags|11_plus": {
+        "available": 160,
+        "selected": 3
+      },
+      "241_plus|who_q5|no_tags|2_3": {
+        "available": 239,
+        "selected": 5
+      },
+      "241_plus|who_q5|no_tags|4_6": {
+        "available": 391,
+        "selected": 8
+      },
+      "241_plus|who_q5|no_tags|7_10": {
+        "available": 309,
+        "selected": 6
+      },
+      "241_plus|who_q5|other_tags|1": {
+        "available": 19,
+        "selected": 1
+      },
+      "241_plus|who_q5|other_tags|11_plus": {
+        "available": 92,
+        "selected": 2
+      },
+      "241_plus|who_q5|other_tags|2_3": {
+        "available": 129,
+        "selected": 2
+      },
+      "241_plus|who_q5|other_tags|4_6": {
+        "available": 227,
+        "selected": 4
+      },
+      "241_plus|who_q5|other_tags|7_10": {
+        "available": 174,
+        "selected": 3
+      },
+      "241_plus|who_q5|vegan|1": {
+        "available": 3,
+        "selected": 1
+      },
+      "241_plus|who_q5|vegan|11_plus": {
+        "available": 5,
+        "selected": 1
+      },
+      "241_plus|who_q5|vegan|2_3": {
+        "available": 13,
+        "selected": 1
+      },
+      "241_plus|who_q5|vegan|4_6": {
+        "available": 25,
+        "selected": 1
+      },
+      "241_plus|who_q5|vegan|7_10": {
+        "available": 11,
+        "selected": 1
+      },
+      "241_plus|who_q5|vegetarian|1": {
+        "available": 4,
+        "selected": 1
+      },
+      "241_plus|who_q5|vegetarian|11_plus": {
+        "available": 16,
+        "selected": 1
+      },
+      "241_plus|who_q5|vegetarian|2_3": {
+        "available": 12,
+        "selected": 1
+      },
+      "241_plus|who_q5|vegetarian|4_6": {
+        "available": 29,
+        "selected": 1
+      },
+      "241_plus|who_q5|vegetarian|7_10": {
+        "available": 14,
+        "selected": 1
+      },
+      "241_plus|who_unknown|other_tags|4_6": {
+        "available": 1,
+        "selected": 1
+      }
+    },
+    "strata_count": 754,
+    "thresholds": {
+      "calories": [
+        143.7,
+        244.3,
+        360.7,
+        531.6
+      ],
+      "protein": [
+        2.7,
+        5.8,
+        12.3,
+        26.4
+      ],
+      "sodium": [
+        85.8,
+        230.9,
+        444.5,
+        827.1
+      ],
+      "who": [
+        0.1747818098300413,
+        0.2114285714285714,
+        0.2365808514218408,
+        0.2739641311069882
+      ]
+    }
+  },
+  "schema_version": "hummus_subset_v1",
+  "script_version": "0.1.0",
+  "source_archive_hash": "b37ab3e4133c447a36427d6429fad1ed6b459a130123257627137716895d544c",
+  "source_archive_name": "C:\\temp\\hummus_migration\\raw\\pp_recipes.zip",
+  "source_archive_size": 316978383,
+  "source_csv_hash": "795fda95e2dac442a1f5a211a2fce9ab7f6a21ad11cb35babd2f8e3580bdd1e6",
+  "source_csv_name": "pp_recipes.csv",
+  "source_csv_size": 1137469414,
+  "subset_recipe_ids_sha256": "2f6608400464393cba8240f8bb630a50236fda570edce2131e2f77d1b5c9c32a",
+  "subset_size_actual": 10000,
+  "subset_size_requested": 10000
+}

@@ -1,0 +1,2 @@
+{"error":{"code":"STALE_REVISION"}}
+HTTP 409

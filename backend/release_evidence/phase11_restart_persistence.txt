@@ -1,0 +1,8 @@
+﻿session_id=51cbcd55-d6f8-40df-8465-7d02119c2c19
+revision=2
+history_count=1
+job_id=bbd393df-cd66-4ef6-a478-4cf5e15c39c4
+job_status=complete
+budget=8
+actual_expansions=8
+selected_policy=deterministic_recipe_recommendation

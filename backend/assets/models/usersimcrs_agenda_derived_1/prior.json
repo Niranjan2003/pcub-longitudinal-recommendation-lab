@@ -1,0 +1,1 @@
+{"class_order":["ACCEPT","MODIFY_CLARIFY","DEFER","REJECT"],"fit_split":"TRAIN","method_id":"global_class_prior","probabilities":[0.20113240418118467,0.49233449477351915,8.710801393728223e-05,0.3064459930313589],"smoothing":1.0,"version":"pcub_rq1_global_prior_v1"}

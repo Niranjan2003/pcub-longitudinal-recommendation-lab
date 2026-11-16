@@ -1,0 +1,2 @@
+{"error":{"code":"RECIPE_NOT_FOUND"}}
+HTTP 404

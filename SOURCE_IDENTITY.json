@@ -1,0 +1,3593 @@
+{
+ "schema": "pcub_publication_source_identity_v1",
+ "prepared": {
+  "date": "2026-11-11",
+  "hardened": "2026-11-12",
+  "demo_release": "2026-11-15",
+  "live_guarded_release": "2026-11-15",
+  "interface_refinement": "2026-11-15",
+  "presentation_update": "2026-11-15",
+  "publication_update": "2026-11-16",
+  "method": "Read-only extraction. Frontend files taken from Git objects with core.autocrlf=false (committed bytes); backend files byte-copied. Neither source directory was modified. Frontend files changed or added for publication are listed in frontend.modified and frontend.added, each with its reason; every backend file is byte-identical to its source."
+ },
+ "frontend": {
+  "source": "PCUB_DEMO_FRONTEND (Git repository, working tree clean at extraction)",
+  "branch": "integration/pcub-frontend",
+  "commit": "989acf6d34096b438723f5b13f387e8f73b8fcb6",
+  "tree": "a32546f022c209e5de6372ed9c7aa3f7aab1eb04",
+  "commit_date": "2026-11-11T07:24:17+02:00",
+  "commit_subject": "feat: interactive Architecture Explorer with four linked views",
+  "tracked_files": 138,
+  "published_files": 138,
+  "published_unmodified": 81,
+  "line_endings": "Committed blobs (LF). The source working tree had CRLF due to core.autocrlf=true; content is otherwise identical.",
+  "modified": [
+   {
+    "path": "docs/OBSERVED_CONTRACT_NOTES.md",
+    "source_git_blob": "38679387ae18d3035c98f982fec9863200f15bd3",
+    "source_sha256": "d211dde4ab7adb01865a9f1f90070139ead24cb8ab4ecb48a5bee7aed8db4211",
+    "published_sha256": "bf3024dc805161256fca728211879c53d9ae0cfe794adb0bcc21429882e76bd9",
+    "reason": "Live guarded release (2026-11-15): live-mode response shapes observed against the unmodified backend with the fake-provider harness."
+   },
+   {
+    "path": "docs/OPERATOR_VERIFICATION_CHECKLIST.md",
+    "source_git_blob": "424674fa9571c0ea12b0648e2efade409d33acee",
+    "source_sha256": "1d87ab98661dc888e3c5bb7b01cf40416520da1b08fd084dc7c57ead2d177dcc",
+    "published_sha256": "98d18589c67ae7476bf56622c38bc5c94d6df379b700a7a2db50b705e97cb095",
+    "reason": "Expected test counts updated to 117 / 32; development re-run row reworded (not an independent run); publication verification row added. Live guarded release (2026-11-15): live checks L1-L8, live-fake suites, counts 132 / 54 / 32 and the live verification record. Interface refinement (2026-11-15): unit count 144, step H1 without allergy inputs, and the acceptance record. Presentation update (2026-11-15): status-strip wording for offline and live checks."
+   },
+   {
+    "path": "docs/RUNNING_LOCALLY.md",
+    "source_git_blob": "33808b765cf0ea58537bbd9eda41e2482a18967d",
+    "source_sha256": "61ca3a79bf35b80fcf3862fd6bd38f75400b8466de1c8d5cb60029e9267ceeea",
+    "published_sha256": "254bdcc567d591b9c9beb6b5dd5c19f9632eb8889861e24af71f387fb0a4e524",
+    "reason": "Workstation-specific backend path replaced by a placeholder; test counts updated to the suites at this commit (117 / 52 / 32); note on running a second copy on other ports. Live guarded release (2026-11-15): unit count 132, live-fake suites, live error codes and safety boundaries. Interface refinement (2026-11-15): unit count 144."
+   },
+   {
+    "path": "docs/SCIENTIFIC_INTERPRETATION.md",
+    "source_git_blob": "d08bc302f7043850e9aa31480f6d37ba47d9aef0",
+    "source_sha256": "7e7bf65bbfd683896ea3df2bea14d10c1c8a5712e3f82572bc0487f37ed2561d",
+    "published_sha256": "395f0df365021d30af273db60b1de485f7b62b260a8556786cd545c144621f21",
+    "reason": "Live guarded release (2026-11-15): live guarded decisions are engineering demonstrations, not R1 evidence. Interface refinement (2026-11-15): section 10: known constraint-filter defects with reproductions, ranking-input limits, predictor findings, simulator zero-health fallback, catalog presentation."
+   },
+   {
+    "path": "docs/USER_GUIDE.md",
+    "source_git_blob": "bee9ef6fecb653af4af603ca2b2dc20d0a05be9a",
+    "source_sha256": "e5b6df2d19fcb7bfb4bcdfb1eae699f19c4da2d4077694bfb73c71e13a0c3a32",
+    "published_sha256": "aa1a6f9d16652bd1f064d1c50d7c72c1cc25d8e69b686fae563ff398808d41c9",
+    "reason": "Demo interface update (2026-11-15): navigation label \"Lab\" renamed \"Live Session\"; run-all and trajectory summary described; stale test counts replaced by a pointer to the verification record. Live guarded release (2026-11-15): guarded scorer and limitations describe the optional live mode. Interface refinement (2026-11-15): policies and the constraint filter described as implemented; disabled controls; soft request and requested-change effects."
+   },
+   {
+    "path": "docs/reference/README.md",
+    "source_git_blob": "3dfab25135d2e92aa32721aa63537e0c5747ab73",
+    "source_sha256": "5b6cb64f460fb8358f6eb795f4908d6ed46e7bc1bd653830ae97662f9b544e7a",
+    "published_sha256": "1e15ae5337f406e68a0024bc67fec28f256b07dce4b970902475d94d4e12e7b6",
+    "reason": "Rewritten as a neutral inventory: removed development-workflow instructions and the entries for the excluded handoff note and SHA256.txt; points to the preserved, verified snapshot hashes."
+   },
+   {
+    "path": "e2e/architecture.spec.ts",
+    "source_git_blob": "fb97640f4b575efd38c17fdfb0851fd4607eb625",
+    "source_sha256": "c7a1704a38ec3dae5a53c5e39cde1993d96ddf36f4e18f6387827c6bc7e2cbfb",
+    "published_sha256": "73169dbb9e07d41e3ee4f6c46af87875b8e2a14c12f5669e88e9df38c77a07ac",
+    "reason": "Line 72: getByText('Select a component') also matched the system-map figcaption, a Playwright strict-mode violation (31 of 32 e2e tests passed). The assertion now targets the heading inside the Component inspector, as the test's line 69 already does. Application code unchanged."
+   },
+   {
+    "path": "e2e/offline.spec.ts",
+    "source_git_blob": "aebdf49ac7040f7aa107d4edca43781b800a166b",
+    "source_sha256": "b9029b9d13e9bceca5487db4eaf00826825bb9b948fd53ff245dada8f167427d",
+    "published_sha256": "ddae6c0a0dc6ce70115bae34722943243991558d6aadf6b7efe10d1d46c11973",
+    "reason": "Presentation update (2026-11-15): the human-session test asserts the concise screening statement in the main view and the full statement in the technical details."
+   },
+   {
+    "path": "package.json",
+    "source_git_blob": "48ed1e5e8457da4a7b7136eba22b244f66d7e907",
+    "source_sha256": "092c966e1d6ac0b13445d020da5c572df2248ecf54af60245a3d3be32fe7bd2a",
+    "published_sha256": "b967e887b9cf60c6241e725071ca30f74becbc2638419bda609c368bf662adb4",
+    "reason": "Live guarded release (2026-11-15): npm scripts test:live-fake and test:e2e:live-fake (fake-provider harness only). Dependencies unchanged."
+   },
+   {
+    "path": "playwright.config.ts",
+    "source_git_blob": "045893783f628be25b2c04e7ad9450e29366248f",
+    "source_sha256": "b3591bd6748ef404b07772943d824b30a7e731e6ac2d0f43a77670641ed41b8c",
+    "published_sha256": "9b41d7fa14f75d11bd615ab297641b31e891fb29293ccd35bea322737f85167b",
+    "reason": "baseURL and webServer URL follow PCUB_FRONTEND_PORT (default 5173). Defaults unchanged. Live guarded release (2026-11-15): ignores e2e/live-fake/, which runs only with playwright.live-fake.config.ts."
+   },
+   {
+    "path": "src/api/schemas.ts",
+    "source_git_blob": "9bdf3517fad109c741129768cc855bc5e740d8d9",
+    "source_sha256": "fb9e6fa57076e79507dc60f897d29612c720cfe126275d394504581ddd23595e",
+    "published_sha256": "7e5b180e028eb2e60f1d63ab7ff40daea35ec3ab79251f4f934eefa8c654f8b4",
+    "reason": "Live guarded release (2026-11-15): types the optional journal_before / journal_after accounting snapshots that a live backend returns in provider_costs."
+   },
+   {
+    "path": "src/app/AppShell.tsx",
+    "source_git_blob": "df10f1bb0884479ea11ff6e0ff6ed2dbde201ebb",
+    "source_sha256": "d6b58a2a93ad887686762b23664c2f0d0886e5299e7c0b5df96f88910f5cccb7",
+    "published_sha256": "64215f513beab0cba216b16f6dddc72ff9b595233bd071caf26b60b51820bf2e",
+    "reason": "Demo interface update (2026-11-15): navigation label \"Lab\" renamed \"Live Session\" (route /lab unchanged). Interface refinement (2026-11-15): a new page starts at the top (the scroll offset of the previous page was kept, so a new session opened past its header)."
+   },
+   {
+    "path": "src/app/StatusStrip.tsx",
+    "source_git_blob": "1d1420539fa4cad0d240a23a070f8a054f2ccc43",
+    "source_sha256": "f4ee9b576bc65c1f283624f961f809cef3207ecc80a60b3637d54c33919e73b8",
+    "published_sha256": "58cfe520e9900605b60d98f4b27aa48b8cf0097b2c372f14edecf591c339e099",
+    "reason": "Live guarded release (2026-11-15): LIVE banner text describes the gated live workflow instead of a blanket block. Interface refinement (2026-11-15): shorter LIVE banner on narrow screens. Presentation update (2026-11-15): the red live banner is replaced by a neutral status label that still distinguishes offline, live-capable and unreachable backends."
+   },
+   {
+    "path": "src/components/comparison/EstimatesPanel.tsx",
+    "source_git_blob": "6bc70e8e336ee2593d725fa6b9ff9d971bed7a86",
+    "source_sha256": "aa2601960681a876cde4a6d685db0ebc950131bcbafa91754fc95073f9ee7b63",
+    "published_sha256": "b417601ee774a5660231be5af40eacd2087c6e70fe5593695c00f6b19afc5b65",
+    "reason": "Interface refinement (2026-11-15): evaluation metrics labelled and rounded for reading; every metric field stays available verbatim. Presentation update (2026-11-15): a concise \"not available for human sessions\" note replaces the empty oracle and metrics areas; values unchanged."
+   },
+   {
+    "path": "src/components/evidence/EvidenceLabel.tsx",
+    "source_git_blob": "14ef3ef1e6584aab89e1766f55d2d35176c4f37f",
+    "source_sha256": "03d80bcc2db2e4b167ad2c981291bb27dedd5e6adfef9f16accf7b2abfcebabe",
+    "published_sha256": "6aa89697d67f439a55004164a3f5d3bcfc1fffa082f1dc8a2f18e1f9589141f2",
+    "reason": "Live guarded release (2026-11-15): execution-mode chip gains an explanatory title (recorded versus live guarded)."
+   },
+   {
+    "path": "src/components/session/AdaptationLens.tsx",
+    "source_git_blob": "208327a1b71b480320c62cfa83c261d6a837c6a0",
+    "source_sha256": "450c4f6f86016d9ee1f1566f7cea39776c05f2881f41116289fe2f6850ac8714",
+    "published_sha256": "886c97d4596f7a7cfe87eb2e2a753882f9219cbc7e567eb7cdb0d53f027e0069",
+    "reason": "Interface refinement (2026-11-15): shows the largest difference between the returned forecast and the population vector per turn; no personalization claim. Presentation update (2026-11-15): clearer labels for the current forecast and the frozen population reference."
+   },
+   {
+    "path": "src/components/session/FeedbackDock.tsx",
+    "source_git_blob": "5c705120b3ba8b9c5b167447a1e0aab27677befc",
+    "source_sha256": "69e466ad4c57a26070bada23a4e571fc4eaf017542be069aa75796537f02ded6",
+    "published_sha256": "4ad1b44368152ef8bea2696a92dc9abff20b38adcd7b516d5d9d6b94b8b7efae",
+    "reason": "Interface refinement (2026-11-15): states per policy what a requested change actually does (only health and effort change feedback-sequence rankings). Presentation update (2026-11-15): larger reaction controls; requested-change effects stated in three short points."
+   },
+   {
+    "path": "src/components/session/ForecastPanels.tsx",
+    "source_git_blob": "6041c1760db7ee4190577918f5db39b45cf30816",
+    "source_sha256": "b10c45f7ebd26c88be3bfca873a19520b9c28116aced6e066d81a0a92cd29757",
+    "published_sha256": "404057034692e6924c706fced6f1e0fa560c6e2511bfefd70e64bfbe9f5553c0",
+    "reason": "Live guarded release (2026-11-15): provider-work panel explains the execution mode and cache reuse in words and shows the returned journal totals and the usage and latency of this decision; computes nothing. Interface refinement (2026-11-15): conformal sets collapsed by default and no longer called personalized; non-provider policies show a one-line provider note. Presentation update (2026-11-15): shorter forecast text; the predictor audit finding (42 of 48) in an expandable."
+   },
+   {
+    "path": "src/components/session/RecipeCard.tsx",
+    "source_git_blob": "cc59fe9fbab3103e1c7689fa01c90b2ba5023118",
+    "source_sha256": "f01f011581887007d4640ada84703d4a38d6e1af73515221926147e9a3c6a10b",
+    "published_sha256": "881c0d2a8fa2ccdb9191b1d40a989448a29eec90b9ff46118e895196efbf8001",
+    "reason": "Live guarded release (2026-11-15): the verbatim policy rationale may wrap anywhere (a 64-character decision hash overflowed 375 px layouts for every guarded decision). Interface refinement (2026-11-15): readable rationale with the verbatim text kept; catalog rating, entity/mojibake, missing-health and incomplete-ingredient presentation; approximate-screening wording. Presentation update (2026-11-15): recipe first (title, essentials, ingredients, directions), then a short reason; screening record, ranking and provenance in an expandable."
+   },
+   {
+    "path": "src/components/session/Timeline.tsx",
+    "source_git_blob": "64aa15ca6c080dd100949a81eb9036e2ccc946ca",
+    "source_sha256": "30f242bb0c0335da9373ed55bcd479d4511d44c047375407b556bf2772782a2c",
+    "published_sha256": "6190ac772325e31423c2497f48832127975d63afa993414833bfbe4bf0155d13",
+    "reason": "Interface refinement (2026-11-15): reaction labels instead of raw enum values."
+   },
+   {
+    "path": "src/components/viz/ProbabilityBars.tsx",
+    "source_git_blob": "3c36a4a23d672a0c8a3004e99d16a61d4e7b35d3",
+    "source_sha256": "d18b7430b90d7aebc9ef8daec2d06e5b2c49e54824755bda80e2af64141dd97b",
+    "published_sha256": "40a57614cd7859f8bcd39f200f3d5ba9573499e4fd8a6c5e518a34d963a2f1ef",
+    "reason": "Presentation update (2026-11-15): taller bars and larger values in the full-size view."
+   },
+   {
+    "path": "src/components/viz/StateSmallMultiples.tsx",
+    "source_git_blob": "c997685954b7a5514d2e7b3e6393066ce932e1a6",
+    "source_sha256": "c8d04cfbd9b3c1f05866372db1a9c1592e4e97c2fa8b98c622e4c2b1f1474099",
+    "published_sha256": "a106950efd143bb467cc55e3374daf3f45693c8516d5eb26837aecff91d0e2c0",
+    "reason": "Presentation update (2026-11-15): readable chart text on wide screens; latest value beside each chart."
+   },
+   {
+    "path": "src/config/humanPresets.ts",
+    "source_git_blob": "425e6f12d4f13b6db233faa8807c3af15537f7da",
+    "source_sha256": "5e633a1c5f0c3328d976867178645327a2626e9804c900f7f8f1a3f88f04ce35",
+    "published_sha256": "d760df23d5341885bb693bf88214e8dca5134cc1fcf96ac194e1e672ae1ab6ef",
+    "reason": "Interface refinement (2026-11-15): example personas declare no allergy or exclusion (those inputs are disabled)."
+   },
+   {
+    "path": "src/domain/ontology.ts",
+    "source_git_blob": "cb27fad083271d83762e0f33b0813b72b4885eee",
+    "source_sha256": "c393440655945a088da7d1c518cb627aaec62d9bd9e3975ca157b000aca6e944",
+    "published_sha256": "02acf89908fe644194f8a47b46f828d80bdf1321c6b3ae6dda425e9cfc3fc27e",
+    "reason": "Demo interface update (2026-11-15): world label for human_interaction changed from \"Human-submitted\" to \"Human interaction\" (it labels the world, including hypothetical comparison jobs). Interface refinement (2026-11-15): policy descriptions match the implemented scoring (48-recipe window; health/effort requests; no exact-repeat claim)."
+   },
+   {
+    "path": "src/features/architecture/CounterfactualView.tsx",
+    "source_git_blob": "092e8c5a63a0215070aafad5685245b4d9154757",
+    "source_sha256": "103ae72af80036e4c5a1554358ed2e4940fd4d15cac0d10f8b0cf8b2952d3bae",
+    "published_sha256": "b71d0a9d7d65d2bede7c024b3f6f7f8d2eaa4dba4457c0e368533dfefe4f1de3",
+    "reason": "Demo interface update (2026-11-15): link text \"Lab\" renamed \"Live Session\"."
+   },
+   {
+    "path": "src/features/architecture/LifecycleView.tsx",
+    "source_git_blob": "d3b1298e5bca182f5299afd3938f9cf3b4bb41c1",
+    "source_sha256": "2016f19ee0f20a1a4339e8f7f829975c9178b2930d40d22cc0218f8ddd61d566",
+    "published_sha256": "465b3b532fae0a8005231006e21e8d94c09eb4fb68283b1c579e0cb0e6d2e963",
+    "reason": "Demo interface update (2026-11-15): link and hint text \"Lab\" renamed \"Live Session\"."
+   },
+   {
+    "path": "src/features/architecture/systemModel.ts",
+    "source_git_blob": "5975c8d62fd2411d448586afcea237d07f5c4fee",
+    "source_sha256": "1bcb72aafbf960a92a070d0531b31c64524f2c2305103fc06a6f91f9a85b1795",
+    "published_sha256": "25883444c7156af60a086d930a9e45370de355a39a7895bbde524021bf7b0efd",
+    "reason": "Demo interface update (2026-11-15): link labels \"Lab\" renamed \"Live Session\". Live guarded release (2026-11-15): interface and provider-journal descriptions match the gated live workflow. Interface refinement (2026-11-15): constraint-filter and policy descriptions state the keyword-matching limits and the disabled controls."
+   },
+   {
+    "path": "src/features/comparison/ComparisonPage.tsx",
+    "source_git_blob": "883e31405ccdfee4a6894d222ef00145391d08c1",
+    "source_sha256": "d0f2a89d81bbcf3ca8650d8e70c805e887eafc83e72c0f1dcf96e44d5359ccd3",
+    "published_sha256": "06c57bac0776dba12091160f1aef9cb474c7eca7f1b1c7d26b930a51bddd69d7",
+    "reason": "Demo interface update (2026-11-15): link text renamed \"Back to Live Session\". Presentation update (2026-11-15): an at-a-glance summary of backend-returned values (policies, allocator, budget, selection, oracle preference, regret, factual session); cost ledger and provenance in an expandable."
+   },
+   {
+    "path": "src/features/explore/ExplorePage.tsx",
+    "source_git_blob": "fb19b7fe054238d976706edc2c8a4f0a801a4356",
+    "source_sha256": "9e512b6ff92b1abc33311c936d59aca83d25ab5dc4c7437d8471f04f2f440a91",
+    "published_sha256": "427f6b7a88103afdd483aeee27aaded6b5b466e8f4ed2b54d188e0412d46ccc3",
+    "reason": "Live guarded release (2026-11-15): live mode keeps guarded comparisons disabled and states why (up to 21 provider decisions per comparison); deterministic pairs remain available."
+   },
+   {
+    "path": "src/features/lab/LabPage.tsx",
+    "source_git_blob": "2646bc2bb02771734525563f082e31e1093e813e",
+    "source_sha256": "a681bac35f3512c93f6a06e9d0ee3581d81180acb2932e432f057cb6a5331196",
+    "published_sha256": "558cc6d35ee758ca5722c8e0a5dfbc048ee415c4a0db96d91ad22ee18afe7779",
+    "reason": "Demo interface update (2026-11-15): page heading \"Live Session\"; introduction covers both worlds; synthetic explanation added. Live guarded release (2026-11-15): the guarded policy can be chosen on a live-capable backend, with a LIVE note. Interface refinement (2026-11-15): allergy and ingredient-exclusion inputs removed (the backend matcher misses multi-word and plural forms); pescatarian and other disabled; vegetarian/vegan labelled approximate keyword screening; total recipe time; soft-request note. Presentation update (2026-11-15): regrouped form (persona, diet and limits, soft preferences, request); a short neutral filtering note replaces the large warning; allergy/exclusion inputs remain unavailable."
+   },
+   {
+    "path": "src/features/method/MethodPage.tsx",
+    "source_git_blob": "28a3069b24156dd6eef362956e20cdddaedd93b2",
+    "source_sha256": "7502ca2d04148609dda9e9a5f967455263904e165554e4174811d2b2e8a10c6f",
+    "published_sha256": "1f416a98eaa021d162d191aab541c742541a1fadd7dd1c1f1712c6bd4ad5782b",
+    "reason": "Live guarded release (2026-11-15): limitation text describes the gated live workflow. Interface refinement (2026-11-15): limitations list the constraint-filter defects, the predictor audit findings and the simulator zero-health fallback."
+   },
+   {
+    "path": "src/features/overview/OverviewPage.tsx",
+    "source_git_blob": "1c1b842e4604346d34e09ef917190858d68403ed",
+    "source_sha256": "c6e690b1e320c236eeea83ad83e4dd80aab283554c89bbc5e943ea191fabe94c",
+    "published_sha256": "3efd3b99d21122edc2ce149816ad259b2d35be890b201cc2948d4a36a44bef81",
+    "reason": "Demo interface update (2026-11-15): call-to-action renamed \"Open Live Session\". Interface refinement (2026-11-15): no longer says offline for a live-capable backend; 48-candidate window and approximate screening wording. Presentation update (2026-11-15): three principal workflows; neutral connection text."
+   },
+   {
+    "path": "src/features/r1/R1Page.tsx",
+    "source_git_blob": "9574d6c3e5aad794ada6e7cab37f0e1d816a246e",
+    "source_sha256": "79aa6c80cfb45b48688c51782c74cd4d04c9f182b491a73becd398b80a15d594",
+    "published_sha256": "99687812ff67047be4ea1c7825bc38dd74a7d61c582796ae0b6b006011162615",
+    "reason": "Demo interface update (2026-11-15): link text renamed \"Live Session\"."
+   },
+   {
+    "path": "src/features/session/SessionPage.tsx",
+    "source_git_blob": "69f040c2d672e5581391c46dba5a9345483e9d2d",
+    "source_sha256": "e2c65a4e26766012d56ce45a62a8c2b8c176ddad7e249e1ac8b007888c7da8fa",
+    "published_sha256": "4ca3ccba630f1ba5004479fdb47c2a93832a888568598c4b3698ef83f9d8dc73",
+    "reason": "Demo interface update (2026-11-15): synthetic explanation, \"Run all remaining turns\" (existing recommend/advance commands), trajectory summary on closed sessions, segment in the result heading, Live Session link texts. Live guarded release (2026-11-15): live guarded panel with explicit per-session permission; one request per click; multi-turn runs disabled for live guarded sessions; page stops live requests after an unknown completion. Interface refinement (2026-11-15): requested-change notes; 48-candidate window wording. Presentation update (2026-11-15): trajectory summary first in a closed session; shorter notes."
+   },
+   {
+    "path": "src/features/session/useSessionActions.ts",
+    "source_git_blob": "0a5dd3e0c53b1ac54ce17b4dfd252244503af01b",
+    "source_sha256": "746eb241caeecc45cbe06d55247842f823ff8d3a86bec1d5015cee08eed0d6ff",
+    "published_sha256": "f1dd9c2f8568877c01fe18af7e8a9948082d40fb397defe0f05a5e9550b9ce5f",
+    "reason": "Demo interface update (2026-11-15): completion message says when the planned horizon closed the session. Live guarded release (2026-11-15): refuses guarded commands without permission and multi-turn runs in live guarded sessions (defence in depth)."
+   },
+   {
+    "path": "src/features/system/JournalPanel.tsx",
+    "source_git_blob": "da856ce8bb2b24fadc2fdabbc473bef5ab6544b2",
+    "source_sha256": "edfbdd4d900186135912c90d0d15cf2e0a1f75ea53c7b7d668f65574c1228093",
+    "published_sha256": "a4799a861beaee5cdd38f78256c93737400c61514ee686ab39945e22c09d595e",
+    "reason": "Live guarded release (2026-11-15): live-mode recovery note (a reserved decision is never sent twice)."
+   },
+   {
+    "path": "src/state/backendStatus.ts",
+    "source_git_blob": "5bd91c3aaaa9a5b71177a0817f5c6bc19ae7e828",
+    "source_sha256": "ee8f068ce4bb29ddeb34c96a814e7f887f20392fea493b70320753dabd23e37d",
+    "published_sha256": "f4788da435ac7ec0b71b1aff7bc78c000ff2da1daad8f036fcb203352dc974f3",
+    "reason": "Live guarded release (2026-11-15): comments describe the gated live workflow; logic unchanged."
+   },
+   {
+    "path": "tests/integration/synthetic_capture.test.ts",
+    "source_git_blob": "ded1e042bda44212b60c5330fdeb44d55b5983f7",
+    "source_sha256": "1a92560aae6f33057e928f1b7faad62e0ac147c0aca418db2bc374b8657f8e2a",
+    "published_sha256": "611b0b7fee06958c11bb86ff6836a96337c90c5c712006a776ed7edcf7335efb",
+    "reason": "Demo interface update (2026-11-15): adds a real-backend test that completes the 2 x 6 synthetic horizon for each simulator."
+   },
+   {
+    "path": "tests/unit/comparison.test.tsx",
+    "source_git_blob": "af9718ff336665936bc6adba792c875cfaee4477",
+    "source_sha256": "886a0ddab243ebb878ed5367f188d6ea3980981e184ca96a6c336f1f526b59c7",
+    "published_sha256": "f0dd2ef64cea6c3b94fc6251e62b3792d565d25da80b565b159f851f21042ca2",
+    "reason": "Presentation update (2026-11-15): asserts the summary and the concise oracle absence."
+   },
+   {
+    "path": "tests/unit/sessionPage.test.tsx",
+    "source_git_blob": "5ef305c369365137f6514a4f10e4791e7615bdf7",
+    "source_sha256": "e6584559996be81b095c2b07b342f6226643ef94cac2185cb92a2117bf851851",
+    "published_sha256": "abc405a295d8c67f59634ec7e1e0d919e7b3b537f4527bf67448e951e7688b28",
+    "reason": "Live guarded release (2026-11-15): the former blanket-block test now asserts the permission gate (nothing is sent before permission). Presentation update (2026-11-15): updated forecast wording."
+   },
+   {
+    "path": "tests/unit/statusStrip.test.tsx",
+    "source_git_blob": "7d3820ccceeff6fa22b6996d322adcf674da3041",
+    "source_sha256": "2d8c4b3037776e9dab5113c0f543179d7abd2c6dc59a394228b83a367e7e785d",
+    "published_sha256": "8630fdb5441ea9d5d2224ad8bfde4282ea214e4bab1845889f65833d49ef5091",
+    "reason": "Presentation update (2026-11-15): asserts the neutral live and offline labels and no alert banner."
+   },
+   {
+    "path": "tests/unit/synthetic.test.tsx",
+    "source_git_blob": "06471d160ed3ebd48638be8f7d2eddfb6a0ca6e8",
+    "source_sha256": "74f5ff33a4e86c5ba5b89270ea4a7dcba6050e81f3623a3cecfc21bc090b3ab2",
+    "published_sha256": "9b46f6e20c1a85d717be8dddb85e94f0f08baefb3c39c42a0e5a8f1595994ac2",
+    "reason": "Interface refinement (2026-11-15): asserts the rounded metric display and the exact value in its title."
+   },
+   {
+    "path": "tsconfig.node.json",
+    "source_git_blob": "00db0848aa135176ed848272745f5923afbaadbd",
+    "source_sha256": "6eb65113787c97483a2eefd1307ac5097b124064475f718376480627157e3392",
+    "published_sha256": "203a7155991604ea54d6f2468cf9529eb3332baf0a31c4d11571c2288850617a",
+    "reason": "Live guarded release (2026-11-15): includes the two live-fake test configuration files."
+   },
+   {
+    "path": "vite.config.ts",
+    "source_git_blob": "5e2273cd043a64cbe564958e17559b834fce3954",
+    "source_sha256": "211f579f4dc40632c323000c9a1bb71730b175dff12e9d5b2a2eba809c149eda",
+    "published_sha256": "a93d890688c0ef383fa18e83c0af0dafa5c495356386dcd5008648d47f9a5c4d",
+    "reason": "PCUB_FRONTEND_PORT and PCUB_BACKEND_URL may override the dev/preview port (default 5173) and the proxy target (default http://127.0.0.1:8765). Defaults and proxy behaviour are unchanged."
+   },
+   {
+    "path": ".gitignore",
+    "source_git_blob": "8f3dd84615cc6da0e6f35ff2e042fa104f3ffdee",
+    "source_sha256": "32ec36c0abf3b093234d2c9eb73b1e175005fb3a852f7cac092bc370048a3244",
+    "published_sha256": "4d6c728ecbb773aae382184a765286ed24e79e9836c06477d1d7db840b971ce3",
+    "reason": "Publication update (2026-11-16): the tool-specific machine-local settings pattern is generalized to *.local.json."
+   }
+  ],
+  "added": [
+   {
+    "path": "src/components/session/SyntheticExplainer.tsx",
+    "sha256": "eb8f128ecbd819b62e84d9214b22cdd84d8ab7b63af29dc9406e7cd80aa155f9",
+    "reason": "Demo interface update (2026-11-15): plain-language explanation of synthetic simulation (fixture, simulator reactions, 2 x 6 horizon from the backend plan, prediction versus outcome)."
+   },
+   {
+    "path": "src/components/session/TrajectorySummary.tsx",
+    "sha256": "f987bd78f1e2bef4321b2f3c3adede7bdd486e4df476494a380301018e862b10",
+    "reason": "Demo interface update (2026-11-15): read-only summary of a closed session built only from backend-returned values; computes no score. Presentation update (2026-11-15): headline counts of the returned history (turns, plan, reactions, continuation flags) and segment grouping; still no score or accuracy measure."
+   },
+   {
+    "path": "tests/unit/liveSession.test.tsx",
+    "sha256": "a9127790699b4286ed5b2aa06f1c2846b3fe9d24d8d427ab046f2e1f50b6bae9",
+    "reason": "Demo interface update (2026-11-15): unit tests for the Live Session label, world label, synthetic explanation, run-all control and trajectory summary. Interface refinement (2026-11-15): disabled allergy/exclusion inputs and unsupported diets; empty lists are sent. Presentation update (2026-11-15): short neutral filtering note and diet labels."
+   },
+   {
+    "path": "src/components/session/LiveGuardedPanel.tsx",
+    "sha256": "1a3373fa0bc1aacc0f3bfcc829e4774327f83a19e16f401ebe9ab3adf4d00425",
+    "reason": "Live guarded release (2026-11-15): explains a live guarded request and holds the explicit per-session permission. Interface refinement (2026-11-15): the explanation collapses once permission is granted."
+   },
+   {
+    "path": "src/state/liveConsent.ts",
+    "sha256": "8e7b9b08eb62f7937afb393c2e62a0fe9c9bdbddaa24183b17c5fe1df161d019",
+    "reason": "Live guarded release (2026-11-15): in-memory per-session permission store; derives the page stop after an unknown completion from the command journal."
+   },
+   {
+    "path": "tests/unit/liveMode.test.tsx",
+    "sha256": "4afc6aefce162c5be076f21b0e6d2cf4a038318bd950b00734f3aca52f2aacf8",
+    "reason": "Live guarded release (2026-11-15): unit tests of the live workflow (banner, permission gate, accounting views, unknown completion, synthetic single turns, Live Session form, Branch Explorer, recovery note). Interface refinement (2026-11-15): Overview live label and collapsed live panel. Presentation update (2026-11-15): neutral live status and updated wording."
+   },
+   {
+    "path": "tests/live-fake/live_guarded.test.ts",
+    "sha256": "0ec459604028939a7b6fe841396a6a138c23df376ea48c1ee5218e50c1fecff6",
+    "reason": "Live guarded release (2026-11-15): real-client tests against the unmodified backend in live mode with the fake in-process provider."
+   },
+   {
+    "path": "e2e/live-fake/live.spec.ts",
+    "sha256": "73d8f33e7ba3b81b453842c74fb8bdda1f052e61df3b8490761c93609e9ec48e",
+    "reason": "Live guarded release (2026-11-15): browser tests of the live workflow against the fake-provider harness. Presentation update (2026-11-15): expects the neutral live status label and the reworded guarded-policy note."
+   },
+   {
+    "path": "vitest.live-fake.config.ts",
+    "sha256": "dd94452a66eb5aea47f2e3ae1a5872bd09691214abc7a6fc3a9e9b00b87b7a63",
+    "reason": "Live guarded release (2026-11-15): configuration of the live-fake client suite."
+   },
+   {
+    "path": "playwright.live-fake.config.ts",
+    "sha256": "783cfd224051790fb580c03ab6185b40e8d454fbf5ba6743c01ede6623dde563",
+    "reason": "Live guarded release (2026-11-15): configuration of the live-fake browser suite."
+   },
+   {
+    "path": "src/domain/display.ts",
+    "sha256": "0c4e08f0660532dc84212c53bcfb945961e5ecd9cd086b86365c31e0ae05831c",
+    "reason": "Interface refinement (2026-11-15): display-only helpers (readable rationale, catalog text and rating, incomplete-ingredient flag, reaction labels); nothing is computed for the science."
+   },
+   {
+    "path": "tests/unit/display.test.ts",
+    "sha256": "65908b7aa6e75a769061fa112655c3a12c67c23bc1fe156c629d7cc874586e64",
+    "reason": "Interface refinement (2026-11-15): unit tests of the display-only helpers."
+   }
+  ],
+  "excluded_tracked": [
+   {
+    "path": ".claude/launch.json",
+    "git_blob": "2916f1e5d7c91edbd85d4d17f27e5b752a915600",
+    "sha256": "877f28ef42606febfd9bad06b71d33f2dfd13702c9056940b0b9e98825244976",
+    "size": 185,
+    "reason": "Local development configuration (local preview launcher). Development tooling, not part of the research software."
+   },
+   {
+    "path": ".claude/settings.json",
+    "git_blob": "7acb8dd790f9baecbf8b05671189e3cdee363e00",
+    "sha256": "6abc776e54a61cff9a2ce9db3a392ca5b8d8480eda5efabc38f6c2fe7ecaa534",
+    "size": 349,
+    "reason": "Local development-tool settings. Development tooling, not part of the research software."
+   },
+   {
+    "path": ".claude/skills/api-contract-audit/SKILL.md",
+    "git_blob": "59f30aed23c83f6269e105e42c074bc4fcf5d677",
+    "sha256": "cf9bf8966287a53647a41ab37148e08c153ae11f65677ef3489f566f2ee43834",
+    "size": 847,
+    "reason": "Development task notes. Development tooling, not part of the research software."
+   },
+   {
+    "path": ".claude/skills/browser-acceptance/SKILL.md",
+    "git_blob": "c52f7441da8b405bdfd4d59a8743be8b8541e668",
+    "sha256": "3c6068f7fa79195d7a3642d3f0d9a5f8a1d02f120a0ab139f506109af710c93b",
+    "size": 1106,
+    "reason": "Development task notes. Development tooling, not part of the research software."
+   },
+   {
+    "path": ".claude/skills/scientific-ui-review/SKILL.md",
+    "git_blob": "11c79e8d904718df416e26a12c46451e0f991457",
+    "sha256": "defc74d3931d83e7b29f3825fc2567eb258c35b16b6de4108fd28c426ae4fa95",
+    "size": 891,
+    "reason": "Development task notes. Development tooling, not part of the research software."
+   },
+   {
+    "path": "CLAUDE.md",
+    "git_blob": "255752acab0629c1c2bd47ddc41c2c08f0150f17",
+    "sha256": "688ac64eb2b163829df0eb5e59e6226ecf177991a016a521cf5e0b2902c40fb9",
+    "size": 5662,
+    "reason": "Development notes with workstation-specific paths. Development tooling, not part of the research software."
+   },
+   {
+    "path": "prompts/01_KICKOFF_READONLY_PLAN.md",
+    "git_blob": "3a023b7dcc89e6997c9b1a0bf3d42433b2f570b7",
+    "sha256": "28f4951d32ab9b1ed34397701a9bea4b68bb017acacc31761a2a0b30a0fa7dce",
+    "size": 4058,
+    "reason": "Implementation notes used during development. Development tooling, not part of the research software."
+   },
+   {
+    "path": "prompts/02_IMPLEMENT_AFTER_APPROVAL.md",
+    "git_blob": "f93fade001f55e3858e8e66a48cf3fea1da1da8d",
+    "sha256": "544bd69a093fc7ca9e673a088dad22ec91d119679b0f587e48a0884e4018b0dd",
+    "size": 1216,
+    "reason": "Implementation notes used during development. Development tooling, not part of the research software."
+   },
+   {
+    "path": "README_SETUP.md",
+    "git_blob": "1ead9fba57c55cce24b4546b1b637ee93e368b08",
+    "sha256": "363a8f7cb4f84cb28cb3957c300b3b5a7b7549981991a154d30c0df7ab72a25c",
+    "size": 6980,
+    "reason": "Development environment setup guide with workstation-specific paths. Replaced by a publication version at the same path, because src/app/StatusStrip.tsx refers to it."
+   },
+   {
+    "path": "docs/reference/CRS_CONTINUATION_HANDOFF.md",
+    "git_blob": "c909aef0507f916edbb1bf4cc8bf58c51ac5cc66",
+    "sha256": "215952dec0b1c9c36515911e6a5e9d6020ddd0064fc07327ff0718f496dd38b7",
+    "size": 26806,
+    "reason": "Development continuity notes (work inventory, safeguards and provider-journal state). Its scientific content is covered by backend/docs/MASTER_SYSTEM_REPORT.md."
+   },
+   {
+    "path": "docs/FRONTEND_PRODUCT_BRIEF.md",
+    "git_blob": "bbd044a08358f5945302a0a1524f767efd763fa1",
+    "sha256": "de98d6a56020c8b6c1ed2d87c131df1c701a4465b4fa9b45adfd39c25ac88d46",
+    "size": 8820,
+    "reason": "Pre-implementation design brief (proposed milestones, validation steps and tooling suggestions). A development-process document; the implemented design is described by docs/USER_GUIDE.md, docs/SCIENTIFIC_INTERPRETATION.md and docs/OBSERVED_CONTRACT_NOTES.md."
+   },
+   {
+    "path": "docs/reference/SHA256.txt",
+    "git_blob": "e4a8376ecdf04e6720c43f09b237569156521598",
+    "sha256": "00ee67684a02acc725066e0adbba8b78eb3209b30987f20a50bdbb548dada567",
+    "size": 363,
+    "reason": "Original SHA-256 list of the reference snapshot. It hashes the CRLF bytes of files that the commit stores with LF, so it cannot be checked against the published files directly, and it lists the excluded CRS_CONTINUATION_HANDOFF.md. Every entry is preserved verbatim, and verified, in frontend.reference_snapshot."
+   }
+  ],
+  "excluded_untracked": [
+   {
+    "path": "node_modules/",
+    "reason": "Installed npm dependencies; regenerated by `npm ci` from package-lock.json."
+   },
+   {
+    "path": "dist/",
+    "reason": "Generated production build output."
+   },
+   {
+    "path": "test-results/",
+    "reason": "Generated Playwright run record."
+   },
+   {
+    "path": ".claude/settings.local.json",
+    "reason": "Machine-local development-tool settings (git-ignored in the source). Development tooling, not part of the research software."
+   }
+  ],
+  "replaced": [
+   {
+    "path": "README_SETUP.md",
+    "original_git_blob": "1ead9fba57c55cce24b4546b1b637ee93e368b08",
+    "reason": "See excluded_tracked; the publication version is a portable setup note."
+   }
+  ],
+  "reference_snapshot": {
+   "source": "docs/reference/SHA256.txt at the source commit (excluded from the tree; see excluded_tracked)",
+   "meaning": "SHA-256 of the reference documents as supplied on 10 November 2026, with CRLF line endings. Git normalised three of them to LF when they were committed; the content is unchanged.",
+   "entries": [
+    {
+     "file": "MASTER_SYSTEM_REPORT.md",
+     "sha256": "4c6096f4aad71d3dd90bab3f6963a7b68ea82d5e69b8b9140f4d028434eb50f2",
+     "published_copy": "frontend/docs/reference/MASTER_SYSTEM_REPORT.md",
+     "check": "sha256 of the published copy with LF converted to CRLF; also equals sha256 of the backend original as published",
+     "backend_original": "backend/docs/MASTER_SYSTEM_REPORT.md"
+    },
+    {
+     "file": "CODE_ARCHITECTURE_REFERENCE.md",
+     "sha256": "b6067f8154bd1c89be815dfa866970bf86ccdfa53320ee2798704e5981d6ffe9",
+     "published_copy": "frontend/docs/reference/CODE_ARCHITECTURE_REFERENCE.md",
+     "check": "sha256 of the published copy with LF converted to CRLF; also equals sha256 of the backend original as published",
+     "backend_original": "backend/docs/CODE_ARCHITECTURE_REFERENCE.md"
+    },
+    {
+     "file": "API_CONTRACT.md",
+     "sha256": "64d635916ef16b3fa86690205df72be4edd4c2134bdcbbafa41b4720f01c9a07",
+     "published_copy": "frontend/docs/reference/API_CONTRACT.md",
+     "check": "sha256 of the published copy with LF converted to CRLF"
+    },
+    {
+     "file": "CRS_CONTINUATION_HANDOFF.md",
+     "sha256": "215952dec0b1c9c36515911e6a5e9d6020ddd0064fc07327ff0718f496dd38b7",
+     "excluded_tracked": "docs/reference/CRS_CONTINUATION_HANDOFF.md",
+     "check": "equals the sha256 of the excluded file at the source commit (stored without CRLF conversion)"
+    }
+   ]
+  }
+ },
+ "backend": {
+  "source": "PCUB_DEMO_BACKEND (not a Git repository; identified by its own sealed manifests and file hashes)",
+  "files_outside_venv": 429,
+  "published_files": 421,
+  "modified": [],
+  "implementation_ledger": {
+   "path": "implementation_ledger.json",
+   "sha256": "6c3c614ba3e9800b7289e575e4b258042623f492c084ab0d1b62e8ea6b7e4086",
+   "entries": 87,
+   "verifier": "tools/verify_source.py"
+  },
+  "asset_subset_manifest": {
+   "path": "assets/subset_manifest.json",
+   "fingerprint": "9ec70fca613378c7b3c2faf579a3dd69a813439f1714d0fa244e45b3701cf093",
+   "version": "demo_asset_subset_v1",
+   "files": 320
+  },
+  "asset_migration_ledger": {
+   "path": "asset_migration.json",
+   "sha256": "24df0c09b4e27701c6633d23e02eff704388236594f5119af415be314478db51",
+   "entries": 320
+  },
+  "golden_capture_fingerprint": "368727191a5801c928aef6cff992ca16b9237c3ee920e9308c3f3987e039f0b6",
+  "recorded_decisions": {
+   "upstream_freeze_fingerprint": "7101ce7cd2ca9d4bc0d1176efa9727e7016a10b99d182354b997d575776ccd9a",
+   "decisions": 77
+  },
+  "catalog": {
+   "dataset": "HUMMUS",
+   "upstream_repository": "https://gitlab.com/felix134/connected-recipe-data-set",
+   "upstream_commit": "eb67259",
+   "ordered_recipe_ids_sha256": "2f6608400464393cba8240f8bb630a50236fda570edce2131e2f77d1b5c9c32a",
+   "recipes": 10000
+  },
+  "historical_reference_repository": {
+   "branch": "v3-r1-confirmatory-replication",
+   "head": "45c58e73e07d68bad2892942e5fe926fbdc1704a",
+   "note": "Historical R1 source from which assets were captured; not included."
+  },
+  "python": "3.12.10",
+  "direct_dependencies": [
+   "numpy==2.5.1",
+   "pandas==3.0.3",
+   "pydantic==2.13.4",
+   "pyarrow==24.0.0"
+  ],
+  "excluded": [
+   {
+    "path": "release_evidence/phase10_provider_summary.txt",
+    "sha256": "c1c5bb22f3d90891929d152b1972259981e9c33123376d51df65f5ce7f4685f0",
+    "size": 470,
+    "reason": "Summary dump of the provider journal containing the absolute local journal path; its facts (one success, one unknown completion, decision keys) are documented in backend/docs/MASTER_SYSTEM_REPORT.md sections 22 and 26."
+   },
+   {
+    "path": "runtime/checkpoint.sqlite3",
+    "sha256": "ad1ec68e7e39788a94841a78a73450a9936a058fcfd2c0ecfd8523a94e6ce20a",
+    "size": 28672,
+    "reason": "Local SQLite runtime database (mutable state)."
+   },
+   {
+    "path": "runtime/demo.sqlite3",
+    "sha256": "b520ef7b6e802bb1b84b3dd80c6f81f132063462b874a5c1152481fa378ba450",
+    "size": 147456,
+    "reason": "Local SQLite runtime database: sessions, jobs, idempotency records."
+   },
+   {
+    "path": "runtime/demo.sqlite3-shm",
+    "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "size": 32768,
+    "reason": "SQLite WAL shared-memory file."
+   },
+   {
+    "path": "runtime/demo.sqlite3-wal",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0,
+    "reason": "SQLite write-ahead log."
+   },
+   {
+    "path": "runtime/frontend_dev.sqlite3",
+    "sha256": "5e88ff8fe1073b06c2993d94f9c7c5e0e765e7125c5e7834efa10bd49e937d3c",
+    "size": 30023680,
+    "reason": "Local SQLite runtime database used during frontend development and tests."
+   },
+   {
+    "path": "runtime/provider.sqlite3",
+    "sha256": "04798252507617b30197b3232bce3c34dac754343dad7a501d22e5c103951037",
+    "size": 57344,
+    "reason": "Provider journal (live LLM reservations and responses, including one unresolved unknown completion). Must be preserved privately, never published or edited."
+   },
+   {
+    "path": "runtime/provider.writer.lock",
+    "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "size": 1,
+    "reason": "Provider-journal writer lock file."
+   },
+   {
+    "path": ".venv/",
+    "files": 7043,
+    "reason": "Local Python 3.12.10 virtual environment with absolute interpreter paths; regenerated from requirements.txt."
+   }
+  ]
+ },
+ "publication_files": [
+  ".gitattributes",
+  ".gitignore",
+  "README.md",
+  "SETUP.md",
+  "THIRD_PARTY_DATA.md",
+  "SOURCE_IDENTITY.json",
+  "LIVE_GUARDED_MODE.md",
+  "scripts/verify_publication.py",
+  "scripts/fake_live_backend.py",
+  "scripts/live_smoke.py",
+  "scripts/start_live_backend.ps1",
+  "frontend/README_SETUP.md"
+ ],
+ "known_discrepancies": [
+  "backend/docs/MASTER_SYSTEM_REPORT.md section 26 cites release_evidence/phase10_provider_summary.txt, which is excluded (see backend.excluded).",
+  "implementation_ledger.json creation_document fields cite docs/01.md-docs/09.md of the archived reconstruction manual. That manual was not present in either source directory and is not included; it is not needed to build, run or verify the current system. CODE_ARCHITECTURE_REFERENCE.md describes where the archive was kept on the original workstation.",
+  "Absolute paths of the original workstation remain in provenance records that are sealed, hash-referenced or part of the scientific record: backend/asset_migration.json, backend/assets/subset_manifest.json, backend/release_evidence/subset_manifest.json, backend/assets/golden/environment.json, backend/assets/golden/effective_reference_configuration.json, backend/assets/golden/recorded_decision_subset_manifest.json, backend/docs/MASTER_SYSTEM_REPORT.md, backend/docs/CODE_ARCHITECTURE_REFERENCE.md, frontend/docs/reference/MASTER_SYSTEM_REPORT.md, frontend/docs/reference/CODE_ARCHITECTURE_REFERENCE.md, backend/tools/copy_assets.py. They are historical provenance, not configuration; editing them would break SHA-256 seals or the reference-snapshot hashes.",
+  "backend/tools/copy_assets.py (ledger-sealed) hard-codes the historical R1 source location. It is the archival asset-migration tool; the migrated assets are included, so it is not needed to run or test the system.",
+  "Frontend status and error messages name the default addresses (127.0.0.1:8765, localhost:5173) even when PCUB_FRONTEND_PORT / PCUB_BACKEND_URL override them."
+ ],
+ "files": {
+  "frontend/.gitignore": {
+   "sha256": "4d6c728ecbb773aae382184a765286ed24e79e9836c06477d1d7db840b971ce3",
+   "size": 144,
+   "source_git_blob": "8f3dd84615cc6da0e6f35ff2e042fa104f3ffdee",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/docs/OBSERVED_CONTRACT_NOTES.md": {
+   "sha256": "bf3024dc805161256fca728211879c53d9ae0cfe794adb0bcc21429882e76bd9",
+   "size": 12929,
+   "source_git_blob": "38679387ae18d3035c98f982fec9863200f15bd3",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/docs/OPERATOR_VERIFICATION_CHECKLIST.md": {
+   "sha256": "98d18589c67ae7476bf56622c38bc5c94d6df379b700a7a2db50b705e97cb095",
+   "size": 20527,
+   "source_git_blob": "424674fa9571c0ea12b0648e2efade409d33acee",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/docs/RUNNING_LOCALLY.md": {
+   "sha256": "254bdcc567d591b9c9beb6b5dd5c19f9632eb8889861e24af71f387fb0a4e524",
+   "size": 10214,
+   "source_git_blob": "33808b765cf0ea58537bbd9eda41e2482a18967d",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/docs/SCIENTIFIC_INTERPRETATION.md": {
+   "sha256": "395f0df365021d30af273db60b1de485f7b62b260a8556786cd545c144621f21",
+   "size": 17522,
+   "source_git_blob": "d08bc302f7043850e9aa31480f6d37ba47d9aef0",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/docs/USER_GUIDE.md": {
+   "sha256": "aa1a6f9d16652bd1f064d1c50d7c72c1cc25d8e69b686fae563ff398808d41c9",
+   "size": 23910,
+   "source_git_blob": "bee9ef6fecb653af4af603ca2b2dc20d0a05be9a",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/docs/reference/API_CONTRACT.md": {
+   "sha256": "d851b22b5cbf582e7da9828a9878a5dbe1c762d9781dacd9a6dc95bb514ce64d",
+   "size": 14052,
+   "git_blob": "52d248f88917e8fff74da6c9f722618cb1779280",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/docs/reference/CODE_ARCHITECTURE_REFERENCE.md": {
+   "sha256": "68b0480aa36fc6f7a7bc27e020203c0d2c0288b1f616cd9d8558b13081acc260",
+   "size": 423653,
+   "git_blob": "0f1cc25993905769d54d0565dd8931c2fae6b5de",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/docs/reference/MASTER_SYSTEM_REPORT.md": {
+   "sha256": "f43bbc5c50ea6a2b9a2b5cbd080a75c50ab83ee5eb4de0357bb01d20c21cd3be",
+   "size": 86064,
+   "git_blob": "7e5f9d0924bb76ca0745bfe6bb6b9bddbcbc7459",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/docs/reference/README.md": {
+   "sha256": "1e15ae5337f406e68a0024bc67fec28f256b07dce4b970902475d94d4e12e7b6",
+   "size": 1822,
+   "source_git_blob": "3dfab25135d2e92aa32721aa63537e0c5747ab73",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/e2e/architecture.spec.ts": {
+   "sha256": "73169dbb9e07d41e3ee4f6c46af87875b8e2a14c12f5669e88e9df38c77a07ac",
+   "size": 6905,
+   "source_git_blob": "fb97640f4b575efd38c17fdfb0851fd4607eb625",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/e2e/offline.spec.ts": {
+   "sha256": "ddae6c0a0dc6ce70115bae34722943243991558d6aadf6b7efe10d1d46c11973",
+   "size": 12430,
+   "source_git_blob": "aebdf49ac7040f7aa107d4edca43781b800a166b",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/eslint.config.js": {
+   "sha256": "95ab177e29c2ca31090f63c737102e0d474db580df90fee7b796efc1fa738ce7",
+   "size": 1310,
+   "git_blob": "377b6385a841435d317639e3ef87c63c18a23bf8",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/index.html": {
+   "sha256": "f5ddcc599913112944d1459f1465fa87321bd49c87df77d1c7a86a396ffba3bb",
+   "size": 539,
+   "git_blob": "c56cb941d2c9ccb4f68b604a4bb56b1924b7cb74",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/package-lock.json": {
+   "sha256": "d4c6ad5f55d4a12c9123cc708084ac9ce557d7fd970b9db69dd915aca1d62a86",
+   "size": 276352,
+   "git_blob": "bca175b89f6d6c71e4a6f6655052fb2bc6739cb2",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/package.json": {
+   "sha256": "b967e887b9cf60c6241e725071ca30f74becbc2638419bda609c368bf662adb4",
+   "size": 1887,
+   "source_git_blob": "48ed1e5e8457da4a7b7136eba22b244f66d7e907",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/playwright.config.ts": {
+   "sha256": "9b41d7fa14f75d11bd615ab297641b31e891fb29293ccd35bea322737f85167b",
+   "size": 1126,
+   "source_git_blob": "045893783f628be25b2c04e7ad9450e29366248f",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/public/favicon.svg": {
+   "sha256": "f53b4c45ee929df5c4a7dbf895e5033a555b8d836970c86230c7b655ea8d3710",
+   "size": 344,
+   "git_blob": "2e21daffe7fb140b9acdf1657f3be97243f5e609",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/api/client.ts": {
+   "sha256": "ed6367af39b4997ca9dd54e78d9b66e289d46858e66c92fe5827c52685dabd81",
+   "size": 3680,
+   "git_blob": "92f28c04bc1a6b06dc2c82d87962763f30cda2d9",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/api/commands/journal.ts": {
+   "sha256": "c6d8978bef85e0d63fa5d3757d73f856bef1683d22cd143de058767236759e35",
+   "size": 5151,
+   "git_blob": "978e5f1abcbf0b42fd22f7ad6e0dea41921455a0",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/api/commands/keys.ts": {
+   "sha256": "4282d7bd3679377157f27a4bb7fef8503461b68f7c58694c1d27f0ac8065c487",
+   "size": 531,
+   "git_blob": "86bfd54ae4847d369ae7533d0bc3d4511e668955",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/api/commands/runCommand.ts": {
+   "sha256": "38c117814407820b1f08eb18bf05f5955b75289e78e7d494ec46c31ce1e4c043",
+   "size": 4750,
+   "git_blob": "ed06af7286971ef64e34bc7794a3a54cfa8cdcdc",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/api/endpoints.ts": {
+   "sha256": "254368de9be74ab0d3bacd433a5f06eea5d66e0b400dc2d5815603a767e6bf05",
+   "size": 5907,
+   "git_blob": "14f1ccbb61341ed1de16f14ba747b1abd19df1f8",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/api/errors.ts": {
+   "sha256": "edd814e1531c49aae99c611adb154fa0794b2a2fd853ec509e8be796d9f6419e",
+   "size": 5203,
+   "git_blob": "72e2eab461b84d5a1140bf80db7155b8343b3de2",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/api/requests.ts": {
+   "sha256": "110ad384891de5ae7fa180d702daaa6b5c0d70f3ea4d7ea217e2ed6a3aa4a41c",
+   "size": 7370,
+   "git_blob": "dd922d7b4580dc54a50fa3443120b697546c9034",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/api/schemas.ts": {
+   "sha256": "7e5b180e028eb2e60f1d63ab7ff40daea35ec3ab79251f4f934eefa8c654f8b4",
+   "size": 13947,
+   "source_git_blob": "9bdf3517fad109c741129768cc855bc5e740d8d9",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/app/AppShell.tsx": {
+   "sha256": "64215f513beab0cba216b16f6dddc72ff9b595233bd071caf26b60b51820bf2e",
+   "size": 3285,
+   "source_git_blob": "df10f1bb0884479ea11ff6e0ff6ed2dbde201ebb",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/app/StatusStrip.tsx": {
+   "sha256": "58cfe520e9900605b60d98f4b27aa48b8cf0097b2c372f14edecf591c339e099",
+   "size": 6011,
+   "source_git_blob": "1d1420539fa4cad0d240a23a070f8a054f2ccc43",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/app/router.tsx": {
+   "sha256": "bfcb072048092f655021b9663d8fdf1a2ec1344d83e91f00befce84f5227f268",
+   "size": 1602,
+   "git_blob": "a5425bda32d9e77eab14e3619dc33747aefb5635",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/comparison/BranchTree.tsx": {
+   "sha256": "5bdc656dfe157f31ec1483ea29cd3316bf3fcaa5605cb6d447d3afb3022601df",
+   "size": 5108,
+   "git_blob": "9b0bb28dd91b7d0322e78325d21e68b51674056f",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/comparison/CostLedger.tsx": {
+   "sha256": "3411008166dfca42e728b97036230b51d55352ca71cef71498946a510792eaba",
+   "size": 4217,
+   "git_blob": "5a03e2b0c33dc26bea6f37420d074d29a1c473dd",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/comparison/EstimatesPanel.tsx": {
+   "sha256": "b417601ee774a5660231be5af40eacd2087c6e70fe5593695c00f6b19afc5b65",
+   "size": 14529,
+   "source_git_blob": "6bc70e8e336ee2593d725fa6b9ff9d971bed7a86",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/components/comparison/ExpansionStepper.tsx": {
+   "sha256": "6040c5c00e38df0caece11ea2f9bc9889b694c0952ddc2759013aad8e008a9c1",
+   "size": 4165,
+   "git_blob": "a9120342eb72ec4147d3bf979a2f4b60a44c0fe9",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/comparison/NodeDetail.tsx": {
+   "sha256": "647dba6bb22da497104664a9fd0f437db7d1618cea0a0f09110825fc56a14ffe",
+   "size": 5992,
+   "git_blob": "0b03e545cc75f080681f039e3774da4db770d2cd",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/evidence/EvidenceLabel.tsx": {
+   "sha256": "6aa89697d67f439a55004164a3f5d3bcfc1fffa082f1dc8a2f18e1f9589141f2",
+   "size": 2822,
+   "source_git_blob": "14ef3ef1e6584aab89e1766f55d2d35176c4f37f",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/components/session/AdaptationLens.tsx": {
+   "sha256": "886c97d4596f7a7cfe87eb2e2a753882f9219cbc7e567eb7cdb0d53f027e0069",
+   "size": 3505,
+   "source_git_blob": "208327a1b71b480320c62cfa83c261d6a837c6a0",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/components/session/EndSession.tsx": {
+   "sha256": "050419b4d2d2ecdf2115f1e3e54b7539eaacb3240d90868eea3f38dd95a695cf",
+   "size": 2213,
+   "git_blob": "19d640e4ff1437fbbc0e358bdb08b966391ae1b1",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/session/FeedbackDock.tsx": {
+   "sha256": "4ad1b44368152ef8bea2696a92dc9abff20b38adcd7b516d5d9d6b94b8b7efae",
+   "size": 10678,
+   "source_git_blob": "5c705120b3ba8b9c5b167447a1e0aab27677befc",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/components/session/ForecastPanels.tsx": {
+   "sha256": "404057034692e6924c706fced6f1e0fa560c6e2511bfefd70e64bfbe9f5553c0",
+   "size": 18860,
+   "source_git_blob": "6041c1760db7ee4190577918f5db39b45cf30816",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/components/session/RecipeCard.tsx": {
+   "sha256": "881c0d2a8fa2ccdb9191b1d40a989448a29eec90b9ff46118e895196efbf8001",
+   "size": 12255,
+   "source_git_blob": "cc59fe9fbab3103e1c7689fa01c90b2ba5023118",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/components/session/Timeline.tsx": {
+   "sha256": "6190ac772325e31423c2497f48832127975d63afa993414833bfbe4bf0155d13",
+   "size": 3525,
+   "source_git_blob": "64aa15ca6c080dd100949a81eb9036e2ccc946ca",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/components/ui/ErrorPanel.tsx": {
+   "sha256": "a25df461665195d4df0f4601218a6976575d5f9406abff6dd784d1abac11ddf7",
+   "size": 3267,
+   "git_blob": "141bdc3225c4d48ebc72d9d390bb8d2f6e89242d",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/ui/Notice.tsx": {
+   "sha256": "ffb5f9cf4a1318ef8332065ae6c82831f2e02cde57a9c348ce3b4a9ed20ddad0",
+   "size": 911,
+   "git_blob": "c7796fc0e361d4c028d7a8b2e10f117b1d57afcf",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/ui/RawJson.tsx": {
+   "sha256": "7defabcb90e29e2c15d05dff024bad4db8edd0e0a10a024583a22ebfb663208c",
+   "size": 810,
+   "git_blob": "8e60cae8123fa72c99fa4f066d56fdf1286ee98b",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/viz/ProbabilityBars.tsx": {
+   "sha256": "40a57614cd7859f8bcd39f200f3d5ba9573499e4fd8a6c5e518a34d963a2f1ef",
+   "size": 3324,
+   "source_git_blob": "3c36a4a23d672a0c8a3004e99d16a61d4e7b35d3",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/components/viz/ReactionMark.tsx": {
+   "sha256": "295fd61fbcd1ee0352b42176e71bf5a7e136bd63300ef5a80320e70c91d3f431",
+   "size": 1415,
+   "git_blob": "c4fda4554efc7703c5e4d117ea0967796dfb8c7e",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/viz/StateSmallMultiples.tsx": {
+   "sha256": "a106950efd143bb467cc55e3374daf3f45693c8516d5eb26837aecff91d0e2c0",
+   "size": 6093,
+   "source_git_blob": "c997685954b7a5514d2e7b3e6393066ce932e1a6",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/config/humanPresets.ts": {
+   "sha256": "d760df23d5341885bb693bf88214e8dca5134cc1fcf96ac194e1e672ae1ab6ef",
+   "size": 1898,
+   "source_git_blob": "425e6f12d4f13b6db233faa8807c3af15537f7da",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/config/syntheticPresets.ts": {
+   "sha256": "2ca6383058be83cc95ff0f40ec94a3e30a1c8774df27fbd57d57a56b716e11f2",
+   "size": 1998,
+   "git_blob": "c7dc626b41af46f6ace35e9686ca401e4ca84a46",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/domain/format.ts": {
+   "sha256": "05f8b389fbacc8ca4701c01ec42da47df0cd668ed5321c20f8ba5a0620601a23",
+   "size": 1520,
+   "git_blob": "9f251503952659a9844d0d7e1212cf31646d8975",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/domain/ontology.ts": {
+   "sha256": "02acf89908fe644194f8a47b46f828d80bdf1321c6b3ae6dda425e9cfc3fc27e",
+   "size": 4357,
+   "source_git_blob": "cb27fad083271d83762e0f33b0813b72b4885eee",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/architecture/ArchitecturePage.tsx": {
+   "sha256": "80bd853a037a8c33275ee7782e5dcda43a345f53066be5fb5b6c5171187fab00",
+   "size": 4220,
+   "git_blob": "03d328fabb7732261c452cc9c3d53a1da9491084",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/features/architecture/CounterfactualView.tsx": {
+   "sha256": "b71d0a9d7d65d2bede7c024b3f6f7f8d2eaa4dba4457c0e368533dfefe4f1de3",
+   "size": 21457,
+   "source_git_blob": "092e8c5a63a0215070aafad5685245b4d9154757",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/architecture/EvaluationMap.tsx": {
+   "sha256": "9323494ca7aca83db3300c4bb67ec66e2b7e911c515bcc9f8a2417e230d56c58",
+   "size": 5987,
+   "git_blob": "9603bae0d6b1bb3eaa52f3f6f20208a77fcbab56",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/features/architecture/Inspector.tsx": {
+   "sha256": "a0996ae638a0ffdf28f3f8cf29cb72f512b5cc893c0653c0f0c6775ab018a00e",
+   "size": 5386,
+   "git_blob": "fea69df1ca7d5de613ec18b8e76e1567a52753d5",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/features/architecture/LifecycleView.tsx": {
+   "sha256": "465b3b532fae0a8005231006e21e8d94c09eb4fb68283b1c579e0cb0e6d2e963",
+   "size": 20471,
+   "source_git_blob": "d3b1298e5bca182f5299afd3938f9cf3b4bb41c1",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/architecture/SystemMap.tsx": {
+   "sha256": "a6ec7e3b26b6044ba7084c1c86c360571ee018e0175f9bf7a968b0da659aec1f",
+   "size": 15303,
+   "git_blob": "88dc342a3aadf86b06fe2c5bad0a674af7b939c2",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/features/architecture/counterfactualModel.ts": {
+   "sha256": "812f7467dce66aacb6efed1a5808d6765ca277e893cf8035153eee8078fbd0c3",
+   "size": 3231,
+   "git_blob": "c202691fda85c6e396ffeee87b43c4d3f312859e",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/features/architecture/evaluationModel.ts": {
+   "sha256": "48a6a01c748265135dfd84c6cae8d8731472dc3136788e269a170cf57459b69a",
+   "size": 6004,
+   "git_blob": "250b80562fed6f750aefc3326b4e8ce75f06f33d",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/features/architecture/graph.ts": {
+   "sha256": "7423283b1f7ac1f496ff6b3ed5afa4440037fbd33901655da019fde0b79b6911",
+   "size": 2599,
+   "git_blob": "95e9e94e9a25cfe46492b10990d00f3fae7a8b4d",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/features/architecture/lifecycleModel.ts": {
+   "sha256": "d907dead82b168f18495c68989e7a28b18e5c7a70e6bd6943a7ad8aae4685ef8",
+   "size": 8600,
+   "git_blob": "282972e64ed6e65572d01c4b17a27623611cb67e",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/features/architecture/systemModel.ts": {
+   "sha256": "25883444c7156af60a086d930a9e45370de355a39a7895bbde524021bf7b0efd",
+   "size": 36869,
+   "source_git_blob": "5975c8d62fd2411d448586afcea237d07f5c4fee",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/comparison/ComparisonPage.tsx": {
+   "sha256": "06c57bac0776dba12091160f1aef9cb474c7eca7f1b1c7d26b930a51bddd69d7",
+   "size": 13572,
+   "source_git_blob": "883e31405ccdfee4a6894d222ef00145391d08c1",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/explore/ExplorePage.tsx": {
+   "sha256": "427f6b7a88103afdd483aeee27aaded6b5b466e8f4ed2b54d188e0412d46ccc3",
+   "size": 14710,
+   "source_git_blob": "fb19b7fe054238d976706edc2c8a4f0a801a4356",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/lab/LabPage.tsx": {
+   "sha256": "558cc6d35ee758ca5722c8e0a5dfbc048ee415c4a0db96d91ad22ee18afe7779",
+   "size": 26699,
+   "source_git_blob": "2646bc2bb02771734525563f082e31e1093e813e",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/method/MethodPage.tsx": {
+   "sha256": "1f416a98eaa021d162d191aab541c742541a1fadd7dd1c1f1712c6bd4ad5782b",
+   "size": 16719,
+   "source_git_blob": "28a3069b24156dd6eef362956e20cdddaedd93b2",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/overview/OverviewPage.tsx": {
+   "sha256": "3efd3b99d21122edc2ce149816ad259b2d35be890b201cc2948d4a36a44bef81",
+   "size": 15553,
+   "source_git_blob": "1c1b842e4604346d34e09ef917190858d68403ed",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/r1/R1Page.tsx": {
+   "sha256": "99687812ff67047be4ea1c7825bc38dd74a7d61c582796ae0b6b006011162615",
+   "size": 16598,
+   "source_git_blob": "9574d6c3e5aad794ada6e7cab37f0e1d816a246e",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/session/SessionPage.tsx": {
+   "sha256": "4ca3ccba630f1ba5004479fdb47c2a93832a888568598c4b3698ef83f9d8dc73",
+   "size": 21881,
+   "source_git_blob": "69f040c2d672e5581391c46dba5a9345483e9d2d",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/session/useSessionActions.ts": {
+   "sha256": "f1dd9c2f8568877c01fe18af7e8a9948082d40fb397defe0f05a5e9550b9ce5f",
+   "size": 4726,
+   "source_git_blob": "0a5dd3e0c53b1ac54ce17b4dfd252244503af01b",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/system/JournalPanel.tsx": {
+   "sha256": "a4799a861beaee5cdd38f78256c93737400c61514ee686ab39945e22c09d595e",
+   "size": 6962,
+   "source_git_blob": "da856ce8bb2b24fadc2fdabbc473bef5ab6544b2",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/features/system/NotFoundPage.tsx": {
+   "sha256": "24d5d0a6c165a30cbc4e05c860afaea68d39a490d3fb7436c2b4876e428541d0",
+   "size": 394,
+   "git_blob": "6c49c82a1d4f68d10bf61233aed162beb7292c58",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/features/system/SystemPage.tsx": {
+   "sha256": "9dc36d24a5364d19ca703a1217efc4fb126e2d058b8c81b8f38695dc6935ccac",
+   "size": 5838,
+   "git_blob": "af339ad5d11dd98a98e8402f8b5538b2540b3070",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/main.tsx": {
+   "sha256": "1a93a6bfcd43f873e667fbabbe17642b7938722c0ac06c9fd78ccb8aeb3298cb",
+   "size": 913,
+   "git_blob": "1d30d5ab06e87cc3812deab502118482ff0f0b6d",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/state/backendStatus.ts": {
+   "sha256": "f4788da435ac7ec0b71b1aff7bc78c000ff2da1daad8f036fcb203352dc974f3",
+   "size": 2021,
+   "source_git_blob": "5bd91c3aaaa9a5b71177a0817f5c6bc19ae7e828",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/src/state/hooks.ts": {
+   "sha256": "2092b77ceb1671bfef0eac318c495b29b61c37f67d721b54ad7b2b9ef36332fc",
+   "size": 3628,
+   "git_blob": "9a571e41ec09578eec0b6bbdf01acccebd65a3aa",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/state/localIndex.ts": {
+   "sha256": "4adab585e743355b76491dca08a88f1a1d130355c6832494b0cf9687acbd8fbc",
+   "size": 3361,
+   "git_blob": "8db5ebc9310abb85900c0386629c2ca0540e0413",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/state/queryClient.ts": {
+   "sha256": "f8d2f8f68797e5770c1731a8eff6b0a955d8bee8dfa42f542eb4f94016f27a5d",
+   "size": 1064,
+   "git_blob": "70141a5cf96329b5d5966d91cca31698219f0b44",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/state/stateLog.ts": {
+   "sha256": "12aa77d53df7f620216449b2f90440b043761c71c5b1ddb028c98d2d0352a9af",
+   "size": 2885,
+   "git_blob": "ec5cb9c306d738bd79ff2819ffd50652a5e5e203",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/styles/app.css": {
+   "sha256": "79138d7f70a2d3e339275de8589420d6c2706f7d797975c0b4e906be4fb14722",
+   "size": 5068,
+   "git_blob": "5596120fb0c4075acdf5dee8b3eb813335a5f4ae",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/README.md": {
+   "sha256": "9f6327323eaa46308c1f8bd8334f40c747dfd222a7d5d391996aaf75d790ecda",
+   "size": 1048,
+   "git_blob": "140eff866b0e335c4a3e4afcb98bbcb73afc32be",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/capabilities.json": {
+   "sha256": "cc8d7c1bd16499a0f211621cc147205ed251e83cf3d026f26001e1ec719770db",
+   "size": 735,
+   "git_blob": "8360ddc19932fc9d70385894439439b38da33d99",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/comparison_human_pcub8.json": {
+   "sha256": "9ee39691697245e32fcd09bc1d36f98890bed4a79ed5cb4b4658445021f3c631",
+   "size": 34706,
+   "git_blob": "02e3af51e5aaf8cad816ab383883971cd07fb024",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/error_fixture_unknown.txt": {
+   "sha256": "69fb2386e824109b8245fab2a82fd5b63709d4d2960502d4c98de6487dd109da",
+   "size": 45,
+   "git_blob": "31dc6ea8579c0f265978efa4e4c70adb1682165f",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/error_invalid_422.txt": {
+   "sha256": "6b5168f3d9f7d7d201388fec730d9f618e3695637e1f30c2beb1c386c3d12c98",
+   "size": 46,
+   "git_blob": "6b027f5952c478744d54459dd71edb89a4ad3001",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/error_nokey_400.txt": {
+   "sha256": "98ba748df4a28716539813177e144880806746b9600194f43f57f2b879dc2207",
+   "size": 55,
+   "git_blob": "354fece53e2b36ca695e51f579caa65980960a69",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/error_recipe_404.txt": {
+   "sha256": "2e0dbdd32310fc568082fe8f1c46fcc9bbe4ae591ddcaa5d5bfe40395d8ab7bb",
+   "size": 47,
+   "git_blob": "0118fda5845209da6d1375b9151be4f623de0ee5",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/error_session_404.txt": {
+   "sha256": "f25a1e5199ed8c4470479cc6038cfb71f6635f2ef99adc00afc6d723970ca2e8",
+   "size": 40,
+   "git_blob": "fcfcfc54c6821fdd415ab6468c3ceb3dac695647",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/error_stale_409.txt": {
+   "sha256": "04e4a3e5a655a5f6b920e701dbc5bafc7262e939123019bd7dd7fcad1c0f0a6e",
+   "size": 45,
+   "git_blob": "a01916473ee350d9d909a1b1a388c1bfc591ea53",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/recipe_249560.json": {
+   "sha256": "89c3c64f9472049ff13e4acd6228028964ba6c6d099994681ff29cb3d676713d",
+   "size": 2277,
+   "git_blob": "ee1d2ff6d96e4fb279fe89108024a97ddac64f5f",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/reference_results_r1.json": {
+   "sha256": "3b5da12d76946eb4600805b1c2ce42455f3cf6d72ad335b5f456f90358b239f7",
+   "size": 695234,
+   "git_blob": "01a7b2be56f95babbd2fed1fb9578511c0e02dd2",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/session_rev0.json": {
+   "sha256": "be8aab3629de0a9c3658d7ac9f8d41143879b12abc6bd3f0bfe685ee1a378810",
+   "size": 1047,
+   "git_blob": "b6431d955bf675cd28cd095759c19e52f85784ca",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/session_rev1_pending.json": {
+   "sha256": "f2312bfefe4c18a4ae05051099de69dc60cafc2bc635df5c85321d34df57e7e7",
+   "size": 6157,
+   "git_blob": "be7252162570334f46e9d7437e7db15714502b9d",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/session_rev2_after_feedback.json": {
+   "sha256": "a7ca48f9ede3cc35076131972c0103d003ca3343057c1f6f2d0cf87c724e0f1c",
+   "size": 7903,
+   "git_blob": "f179bdda9832e5b40212882e1232306d75e0b21f",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/session_rev2_replay.json": {
+   "sha256": "3a01e1529f0d335c21c32fbc1e4030d5eb40d3a776ea47c9351381c65aad64c7",
+   "size": 7903,
+   "git_blob": "26053561f0492eacb06181736c8995fd4bc28270",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/synthetic_agenda_after_advance.json": {
+   "sha256": "2fbdcf18e997869c0b267eebb9d4e23d2e380481626e02efcccadf7ff17e2714",
+   "size": 9725,
+   "git_blob": "16f45c490b0cc56e002468c184c46262e548a7d7",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/synthetic_agenda_comparison_oracle.json": {
+   "sha256": "a338a1bd25923e6087c468ff88ae87e679970fa3792bb975654f5fe671fca405",
+   "size": 39627,
+   "git_blob": "c678e7a330bb1ddf8638b49924d5604ba35b88db",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/synthetic_agenda_pending.json": {
+   "sha256": "e875d938f713989aa4d14c38c7639564e8da2fbcce16744af37ee6ad7e4e690f",
+   "size": 6940,
+   "git_blob": "c2d1b13866684c39bbdb777dba2293bc600c7dde",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/synthetic_agenda_root_session.json": {
+   "sha256": "68a6d09efa42572a4db4771446bab93054f4834a8213e0d7dfa9ac409bd95168",
+   "size": 39218,
+   "git_blob": "daf2bb431eb51e97c6c1b572ede7461cf6408458",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/synthetic_session_rev0.json": {
+   "sha256": "494feb7d8bd3f7f0ca6c44024a46e5d7f8b6009370413b656e406cbcdfc80810",
+   "size": 1262,
+   "git_blob": "9a1d5c0e40141b9fbf2cbb1d7c34108927ec8f9f",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/synthetic_structured_after_advance.json": {
+   "sha256": "cceef5f6d1f36f11eb3a7e7e02a9bdf6f5cb9f301239269e033e34efc8fcfdc4",
+   "size": 10009,
+   "git_blob": "ba483195f7c17310fa18f04928a9721d3529acb4",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/synthetic_structured_comparison_oracle.json": {
+   "sha256": "b232d40d6f4336998ae238b112ddca848e48a65bb608010875328856df409348",
+   "size": 37708,
+   "git_blob": "937e1fbfdd73606daf6b5a67e25c2b46a0c42ad0",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/synthetic_structured_pending.json": {
+   "sha256": "1a9a17235529973cca53c6f97b468c1eee6acf7bd32b19375823d36d3b4afb6f",
+   "size": 7027,
+   "git_blob": "4851c2c40748feafb217c463a4a9bd36b9795ee2",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/fixtures/captured/synthetic_structured_root_session.json": {
+   "sha256": "77980a5e0ebb06e55b42a7d3b40b824e5ef5ae6b0886cefdbcfdb2485620fd41",
+   "size": 39191,
+   "git_blob": "d94380423abd156456b8c2c14849d590fa25b6c1",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/integration/comparison.test.ts": {
+   "sha256": "57bc202c07934a37675d09c02d811f5d800ffe422f3101f01f3444d213b2e04f",
+   "size": 11602,
+   "git_blob": "9aaacc3ba12dbfb084879ec3626c1653b8ff9e33",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/integration/helpers.ts": {
+   "sha256": "5245c838fe89b916076bd2e46f8932b6dfe518149658c481bf12d10ed9da9c93",
+   "size": 2798,
+   "git_blob": "1c61ed382debf2b592535177ab96accf5d1dd9f6",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/integration/human_lifecycle.test.ts": {
+   "sha256": "b414b72d61adaebdf7ecf81fc10b5f3e5c0e03e54064f5ebdd29120b336e3204",
+   "size": 14408,
+   "git_blob": "214d7abd0bd8fe3dcf7f26d7bd378007faacaad9",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/integration/synthetic_capture.test.ts": {
+   "sha256": "611b0b7fee06958c11bb86ff6836a96337c90c5c712006a776ed7edcf7335efb",
+   "size": 10754,
+   "source_git_blob": "ded1e042bda44212b60c5330fdeb44d55b5983f7",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/tests/msw/server.ts": {
+   "sha256": "284603824605d7ab4b6ba7612d89763162f5724f09f0e77715aff7a6bbbb103a",
+   "size": 78,
+   "git_blob": "618e02b774e16b6757f1ca60fd615b4ec188ec3e",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/setup.ts": {
+   "sha256": "99f2786f79fb0a91186f2002b86ffb236e405524461ddf88f9b7aae9aa35cedf",
+   "size": 602,
+   "git_blob": "707193c660d256c58af4c83791d95bb91dc6eb4f",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/unit/architecture.test.tsx": {
+   "sha256": "db0a6871dc6887298150d47c0cdf08e92b6da7016c3f3a72fbe976fe2c32d11f",
+   "size": 19985,
+   "git_blob": "4cc8202519b5c9e788c17ebf83e6f87eb52c44a0",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/unit/client.test.ts": {
+   "sha256": "8eeafaaaaa79acc22b99ed84e784efb12eb4411d269a87a39f0468ef5fb09026",
+   "size": 3099,
+   "git_blob": "36cbf03e60ffaa7928bfd77ab8bc371ee6e1ca6d",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/unit/comparison.test.tsx": {
+   "sha256": "f0dd2ef64cea6c3b94fc6251e62b3792d565d25da80b565b159f851f21042ca2",
+   "size": 9781,
+   "source_git_blob": "af9718ff336665936bc6adba792c875cfaee4477",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/tests/unit/explore.test.tsx": {
+   "sha256": "b79565c9509554beff2115150878019c61f5b8d1123159e2a63c51654757a6f6",
+   "size": 7271,
+   "git_blob": "9831b4765d21423bf861f8d1e1c63a6e9b0aa5b0",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/unit/journal.test.ts": {
+   "sha256": "652924a4505cef3fad2beb2b22697b239f4bb2b73fd24a5beb0bfdfad6471197",
+   "size": 3164,
+   "git_blob": "a478a9192725c7a8db3e0ebc13fa53b2706def5d",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/unit/requests.test.ts": {
+   "sha256": "0ed878602f107952d2df54053b24bfd8637f99d55aafb8079cdadf616bcba8fb",
+   "size": 4165,
+   "git_blob": "94fb5c58906d57bc1bfb3b0c7aff7c36ffb2d27a",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/unit/runCommand.test.ts": {
+   "sha256": "fb74d157e22da55ff5eb69bf9324fe2f01e744fcc2544035008039add3df6427",
+   "size": 8691,
+   "git_blob": "196b0ebd457b259f632d0c812a9ee1a1910528fa",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/unit/schemas.test.ts": {
+   "sha256": "fe76b2fe747d41c1bac3b66995e38b22ad33133d652f638d236f7828db930eb7",
+   "size": 4083,
+   "git_blob": "075eccfa024573107000f837d40a9abad7430d4f",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tests/unit/sessionPage.test.tsx": {
+   "sha256": "abc405a295d8c67f59634ec7e1e0d919e7b3b537f4527bf67448e951e7688b28",
+   "size": 12630,
+   "source_git_blob": "5ef305c369365137f6514a4f10e4791e7615bdf7",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/tests/unit/statusStrip.test.tsx": {
+   "sha256": "8630fdb5441ea9d5d2224ad8bfde4282ea214e4bab1845889f65833d49ef5091",
+   "size": 4946,
+   "source_git_blob": "7d3820ccceeff6fa22b6996d322adcf674da3041",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/tests/unit/synthetic.test.tsx": {
+   "sha256": "9b46f6e20c1a85d717be8dddb85e94f0f08baefb3c39c42a0e5a8f1595994ac2",
+   "size": 9622,
+   "source_git_blob": "06471d160ed3ebd48638be8f7d2eddfb6a0ca6e8",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/tsconfig.app.json": {
+   "sha256": "97db884d4ef57bac0fa034bb419d802aa8cb986c01dd9922e559841374cfc687",
+   "size": 850,
+   "git_blob": "5ce9d92e13167486851a2dfd24fdb23f4d7776f0",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tsconfig.json": {
+   "sha256": "e8d6f7b50828db3953e21c7e92584f9206b3cd2551b4012507372afbb7fe9ce3",
+   "size": 107,
+   "git_blob": "d32ff682003e0ff5d8a6e6bb3663d4c35a45b116",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/tsconfig.node.json": {
+   "sha256": "203a7155991604ea54d6f2468cf9529eb3332baf0a31c4d11571c2288850617a",
+   "size": 616,
+   "source_git_blob": "00db0848aa135176ed848272745f5923afbaadbd",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/vite.config.ts": {
+   "sha256": "a93d890688c0ef383fa18e83c0af0dafa5c495356386dcd5008648d47f9a5c4d",
+   "size": 1451,
+   "source_git_blob": "5e2273cd043a64cbe564958e17559b834fce3954",
+   "origin": "frontend@989acf6, modified for publication"
+  },
+  "frontend/vitest.integration.config.ts": {
+   "sha256": "c718e3a79e8f5f5ad323ecbae5699c54a4c2bdf8c78368d953b344067bd14aba",
+   "size": 948,
+   "git_blob": "d70d05998bc1e9de40117b0b2a0cdbdfd20206c4",
+   "origin": "frontend@989acf6"
+  },
+  "frontend/src/components/session/SyntheticExplainer.tsx": {
+   "sha256": "eb8f128ecbd819b62e84d9214b22cdd84d8ab7b63af29dc9406e7cd80aa155f9",
+   "size": 2658,
+   "origin": "added for publication"
+  },
+  "frontend/src/components/session/TrajectorySummary.tsx": {
+   "sha256": "f987bd78f1e2bef4321b2f3c3adede7bdd486e4df476494a380301018e862b10",
+   "size": 7162,
+   "origin": "added for publication"
+  },
+  "frontend/tests/unit/liveSession.test.tsx": {
+   "sha256": "a9127790699b4286ed5b2aa06f1c2846b3fe9d24d8d427ab046f2e1f50b6bae9",
+   "size": 6274,
+   "origin": "added for publication"
+  },
+  "frontend/src/components/session/LiveGuardedPanel.tsx": {
+   "sha256": "1a3373fa0bc1aacc0f3bfcc829e4774327f83a19e16f401ebe9ab3adf4d00425",
+   "size": 5702,
+   "origin": "added for publication"
+  },
+  "frontend/src/state/liveConsent.ts": {
+   "sha256": "8e7b9b08eb62f7937afb393c2e62a0fe9c9bdbddaa24183b17c5fe1df161d019",
+   "size": 2358,
+   "origin": "added for publication"
+  },
+  "frontend/tests/unit/liveMode.test.tsx": {
+   "sha256": "4afc6aefce162c5be076f21b0e6d2cf4a038318bd950b00734f3aca52f2aacf8",
+   "size": 14887,
+   "origin": "added for publication"
+  },
+  "frontend/tests/live-fake/live_guarded.test.ts": {
+   "sha256": "0ec459604028939a7b6fe841396a6a138c23df376ea48c1ee5218e50c1fecff6",
+   "size": 9376,
+   "origin": "added for publication"
+  },
+  "frontend/e2e/live-fake/live.spec.ts": {
+   "sha256": "73d8f33e7ba3b81b453842c74fb8bdda1f052e61df3b8490761c93609e9ec48e",
+   "size": 9580,
+   "origin": "added for publication"
+  },
+  "frontend/vitest.live-fake.config.ts": {
+   "sha256": "dd94452a66eb5aea47f2e3ae1a5872bd09691214abc7a6fc3a9e9b00b87b7a63",
+   "size": 804,
+   "origin": "added for publication"
+  },
+  "frontend/playwright.live-fake.config.ts": {
+   "sha256": "783cfd224051790fb580c03ab6185b40e8d454fbf5ba6743c01ede6623dde563",
+   "size": 464,
+   "origin": "added for publication"
+  },
+  "frontend/src/domain/display.ts": {
+   "sha256": "0c4e08f0660532dc84212c53bcfb945961e5ecd9cd086b86365c31e0ae05831c",
+   "size": 4503,
+   "origin": "added for publication"
+  },
+  "frontend/tests/unit/display.test.ts": {
+   "sha256": "65908b7aa6e75a769061fa112655c3a12c67c23bc1fe156c629d7cc874586e64",
+   "size": 3348,
+   "origin": "added for publication"
+  },
+  "backend/.gitignore": {
+   "sha256": "859d75a3bf4f11c1376acca0b78eaebb35e95bc3c2fa39e9ff377056ebe632bf",
+   "size": 40,
+   "origin": "backend"
+  },
+  "backend/asset_migration.json": {
+   "sha256": "24df0c09b4e27701c6633d23e02eff704388236594f5119af415be314478db51",
+   "size": 138347,
+   "origin": "backend"
+  },
+  "backend/assets/catalog/hummus_subset_10000.parquet": {
+   "sha256": "7738a1f4d54847e1e1e316f32527e14f770d19b89c2f4e609ec306ecb510d5ea",
+   "size": 7232791,
+   "origin": "backend"
+  },
+  "backend/assets/catalog/hummus_subset_10000_manifest.json": {
+   "sha256": "82592f607721e72095feacf3f54572525c32b88825331b3e96817025c4b5ef26",
+   "size": 83234,
+   "origin": "backend"
+  },
+  "backend/assets/configuration/inheritance.json": {
+   "sha256": "6da49f8517ff60d68c54b7ee8da7748045bf8c9d9a4fb1af5ae28693dd47eb0e",
+   "size": 22522,
+   "origin": "backend"
+  },
+  "backend/assets/golden/capture_manifest.json": {
+   "sha256": "e938f444b2acc542f8278a2c05532b9e3494679970256798fce8969de447d8d7",
+   "size": 82526,
+   "origin": "backend"
+  },
+  "backend/assets/golden/CAPTURE_REPORT.md": {
+   "sha256": "260ce92f9629d03e7c64ef097a60682f4732854c625e5073c490abe2c0437bc5",
+   "size": 2924,
+   "origin": "backend"
+  },
+  "backend/assets/golden/case_status.json": {
+   "sha256": "4ff606ff5e72fac059eac3114a8c429a33cdee6fb00f39e39702082d38718fc7",
+   "size": 2011,
+   "origin": "backend"
+  },
+  "backend/assets/golden/completion_git_checks.json": {
+   "sha256": "b8507f77a1154f8b2028f74f688c8ab6063c75ff349ad036f6c6a83df298051c",
+   "size": 1857,
+   "origin": "backend"
+  },
+  "backend/assets/golden/effective_reference_configuration.json": {
+   "sha256": "b7dc5b26477b09b5b0a9dd040ee30fcd4d6ef3d59d3e5e875b3001913ba5951f",
+   "size": 879,
+   "origin": "backend"
+  },
+  "backend/assets/golden/environment.json": {
+   "sha256": "ef53b876e51046215108a8be91f74f6f1892fa64da6fcdd0d1027daa1a55514d",
+   "size": 1522,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/new_contracts/A11_future_lifecycle.json": {
+   "sha256": "b88d460111f70cd5297c2d36ad82ec152f1c778fbccf80bb10182f1622b5ec58",
+   "size": 1350,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/new_contracts/A4.json": {
+   "sha256": "85e73c06b061eb1a23f1044bcf933d895dd70ba0a0a7ed9c2d16c8c0985864b4",
+   "size": 2690,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/new_contracts/A5.json": {
+   "sha256": "55a1e89eeec583c8eedcce29d2b203b75912c65bba79a0461f1a33e393912876",
+   "size": 28571,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/new_contracts/A6_future_validation.json": {
+   "sha256": "51303761088675b0edf6646cd42daae0bf045f598746507b7e7c7caa4d97700e",
+   "size": 1328,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/new_contracts/A8.json": {
+   "sha256": "ced9a26377bcaed3019064b33d8efdde9511e435c17ee6007241d3ff19b48c68",
+   "size": 11790,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A1.json": {
+   "sha256": "909c8026ecac3260dd4b24e97531c42706c4a516412be814be4eb7de780eedab",
+   "size": 8599,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A10.json": {
+   "sha256": "9dcf3efe033d3bfc2721fec1bc2df47313afc77424c57f06bd4c93f0b4ccc835",
+   "size": 1453,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A11.json": {
+   "sha256": "c0bf57c44cdb6ae12ac1db0280eec43adabed140cafc19d4da9279fb334f4930",
+   "size": 1687,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A1_completion.json": {
+   "sha256": "84496a15ff09af00813385361627e893e46257a51417ea2ef0250352743daf5d",
+   "size": 83755,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A2.json": {
+   "sha256": "270e974ea02bcb27ec43b5adb41ce7f4a5ae654b486069205d15c4615e9651dd",
+   "size": 1352,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A2_completion.json": {
+   "sha256": "5575d07cc2ac3299fa1e8468522ec4f43b528ccdc094ef01b740343446c36add",
+   "size": 2392,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A2_deterministic_near_tie.json": {
+   "sha256": "2ee1eb75d29a6fc423387d5a00bfa48f90c503ec86b4235099982bdb78e8d3a9",
+   "size": 7078,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A3.json": {
+   "sha256": "a09064203642027bbf5cfe44acfb47f7ca18f46b293e617919f3600ffd7b96d9",
+   "size": 2601,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A3_completion.json": {
+   "sha256": "e32dd984ca38759eb3930582e60af9f5a33aafecd855645b84a187fd98f72a17",
+   "size": 164499,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A6.json": {
+   "sha256": "634e84bb31435c6155989642ea1a46602f9d69bf0d17b85ca3c357210ceb2176",
+   "size": 23179,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A6_completion.json": {
+   "sha256": "79940dab4fdc14671bb66fa8cfc586fe97b1dc39f8d1fb76d086cbbac86131d4",
+   "size": 5230,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A6_dependency_errors.json": {
+   "sha256": "2f949de41e06fcc9408ecb27ee159e1bc1f87afbca60e9ae578aee82cd8c037c",
+   "size": 1392,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A7.json": {
+   "sha256": "abc9ce56e266ec227df286b6e1abb39188105c0819c8ad62320842582870c993",
+   "size": 1195,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/A9.json": {
+   "sha256": "5cf83e513b03a212987035a028dd8c90ce9f19fc830b44f8c40259015fd9a614",
+   "size": 30864,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/branches_current_structured_simulator_1.json": {
+   "sha256": "4bcc2fc62ca8269db664c22691791e5a413cad86babe98d2ce22a5568fbe37ac",
+   "size": 4845614,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/branches_usersimcrs_agenda_derived_1.json": {
+   "sha256": "5df897a6e2920b6dce188d98e89fa4309804eecc510238494f11e5ac2fc1f000",
+   "size": 4857445,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H1.json": {
+   "sha256": "0a37ee2acc478c5ae96b3f6155a6bc48cfa8fcdc50a6c12b626743d5e3e3f0cf",
+   "size": 6543,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H10.json": {
+   "sha256": "d0cba2f8ad2e6924701f8d0310e5a8e23807e6cb451accc89f7c8ada2f06f646",
+   "size": 127692,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H10_completion.json": {
+   "sha256": "b7abb57d4a7eb858a40d6e1054b74d9a619d2f40e68f7583d60f8122af9459bc",
+   "size": 5917,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H11.json": {
+   "sha256": "5cf3d39b3c8e628eb6e38acc08da16f64621f0967b43dce4e954c621a6728d48",
+   "size": 67855,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H14_completion.json": {
+   "sha256": "80412f115f93d1c7bad1c039caac163ff7bce6dacb191e884f3dcccb20082a0e",
+   "size": 4301,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H17_completion.json": {
+   "sha256": "cf4acee41767d2d25f825f181ee7e76932bbf58ec712338549c5e708ece2cbd8",
+   "size": 977284,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H2.json": {
+   "sha256": "b633b588875de601ffe620b1c62544535f41a96ea575356479ddbd5b78ec35ec",
+   "size": 105638,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H20_completion.json": {
+   "sha256": "3d744ee48dc1d6894f0e1b8e50773c77c1c6cf89659e4c87947cfa0d4984e14f",
+   "size": 65068,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H2_completion.json": {
+   "sha256": "a76a7bb134c4633d76e25153856147a730c8c5e59499759c213753fbd8c87f64",
+   "size": 129093,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H3.json": {
+   "sha256": "43741bf97da055b28926c63f41951c56b37db38c98af8ec6036a5766d1e591e7",
+   "size": 109628,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H3_completion.json": {
+   "sha256": "b5a01fd3ca80fe7f98e423e9957fbc084781243540910341b7c2794feb25d227",
+   "size": 1342399,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H3_signed_decay_probe.json": {
+   "sha256": "2e03f571e481434d572394a4f484093a41471e9d15c5a00592d819fdf91b5c90",
+   "size": 123458,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H4.json": {
+   "sha256": "716e2fb56aed75ea94534237fb07b2de7e2ef65fc2cfd9b151a061ce2662d267",
+   "size": 26178,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H5_completion.json": {
+   "sha256": "faf408be4fbc5610d2b48cdf63bfe2fb9b964f582639d17c9e17558e1d54bb34",
+   "size": 54531,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H6_completion.json": {
+   "sha256": "d7170cbca052f7c3fb71948a0fcc1bdab4fa6ea302c223bcdfa5e64d2ac2427c",
+   "size": 68588,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H7.json": {
+   "sha256": "2e466a828048a837d4bdef0079dd495352d3e17a684c986e0e8415ca2cb094f2",
+   "size": 4214,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H7_completion.json": {
+   "sha256": "57d3c3f3501a595ef1059c3f30f753e2957d23f78fe955d7fb41ab5defa0d4cf",
+   "size": 10069,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H8_completion.json": {
+   "sha256": "dee2588bcebe15b48ea55618726b1f0dc96c6cc151057358a9cbd853dad7efd6",
+   "size": 34096,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/H9_completion.json": {
+   "sha256": "82fed19ef4b92cd7a08c87a99b9bebab4b13394f0415e69b6c3c5572e500799f",
+   "size": 34096,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/trajectory_pcub-v3-current_structured_simulator@1-pcub-v1-pcub-profile-0002-23d45e44-constraint_only_baseline-v1.json": {
+   "sha256": "2d08428290067d648c6e995ed9a7cacf4e1778b8e83cfbf21beeef7466672023",
+   "size": 161205,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/trajectory_pcub-v3-current_structured_simulator@1-pcub-v1-pcub-profile-0002-23d45e44-deterministic_recipe_recommendation-v1.json": {
+   "sha256": "ac4c255868069d1dda76a1c061c36d427dd2c10a1b0f39fa3d37f4de956baf68",
+   "size": 171938,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/trajectory_pcub-v3-current_structured_simulator@1-pcub-v1-pcub-profile-0002-23d45e44-feedback_sequence_recipe_recommendation-v1.json": {
+   "sha256": "897e800b37e1fb8568ffab5c02e7dcd9ba64e462ec32c57f82211c92dda7578b",
+   "size": 161000,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/trajectory_pcub-v3-current_structured_simulator@1-pcub-v1-pcub-profile-0002-23d45e44-guarded_llm_score_vector-v1.json": {
+   "sha256": "4fe526b39859a4ef1d223eab9be26fa3f57bd9058536fced033751bb192686e8",
+   "size": 159153,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/trajectory_pcub-v3-usersimcrs_agenda_derived@1-pcub-v1-pcub-profile-0002-23d45e44-constraint_only_baseline-v1.json": {
+   "sha256": "b66aefeda438db23d1a3943d3e53b45eb944c877f317507ee3cf75cc2b8689d8",
+   "size": 149901,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/trajectory_pcub-v3-usersimcrs_agenda_derived@1-pcub-v1-pcub-profile-0002-23d45e44-deterministic_recipe_recommendation-v1.json": {
+   "sha256": "cf8bbd3abef1994804d33075f977cb190933bfb627a0e900a15adf6a3baff406",
+   "size": 169032,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/trajectory_pcub-v3-usersimcrs_agenda_derived@1-pcub-v1-pcub-profile-0002-23d45e44-feedback_sequence_recipe_recommendation-v1.json": {
+   "sha256": "c92b762b5da44074e09b40074f632559178727d3b4b4f9f64c1566f7bb009010",
+   "size": 164634,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/trajectory_pcub-v3-usersimcrs_agenda_derived@1-pcub-v1-pcub-profile-0002-23d45e44-guarded_llm_score_vector-v1.json": {
+   "sha256": "4915c2efd60dbd28a8d20a627941e2e5e1c0b160b8d1442d9b56873180e9a367",
+   "size": 159583,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/trajectory_pcub-v3-usersimcrs_agenda_derived@1-pcub-v1-pcub-profile-0295-0e9b0ec3-guarded_llm_score_vector-v1.json": {
+   "sha256": "5ba892183c305e22a2a647ca83e0972e127ac62c1469c59f4245b9154094789d",
+   "size": 159224,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/turns_current_structured_simulator@1.json": {
+   "sha256": "e50770c6d157665e3e6274454518d18c3630b38a6dbfb005b298ae3d1b745565",
+   "size": 7196387,
+   "origin": "backend"
+  },
+  "backend/assets/golden/fixtures/reference/turns_usersimcrs_agenda_derived@1.json": {
+   "sha256": "7a6763610335777933473987ecd1002364091e17ff8b48e2a5d1080cbf86c182",
+   "size": 8941518,
+   "origin": "backend"
+  },
+  "backend/assets/golden/git_after.json": {
+   "sha256": "31f5c305dcd333ceb60c25bd9278a8527688f16a3151c9c0734b322f4bc9f062",
+   "size": 889,
+   "origin": "backend"
+  },
+  "backend/assets/golden/git_before.json": {
+   "sha256": "31f5c305dcd333ceb60c25bd9278a8527688f16a3151c9c0734b322f4bc9f062",
+   "size": 889,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decision_subset_manifest.json": {
+   "sha256": "868eb3d34b7e0391c18828e87164475e4fb3df2caea8fcd4457fda083acaa717",
+   "size": 92916,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/0009bd087aee10ce867ac14ea794962aef4d719f8f57bfa80daf4fb3fea4d2b1.json": {
+   "sha256": "220e84797753f222f48b85ca1e171da5961c350aaee0a432345f44f334a53cf6",
+   "size": 9944,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/012d51ed56a955ebaa1462f6a48fc416ffd5624a5fc07d0b9280f6afcfd4e29f.json": {
+   "sha256": "91a36b876f63e586da49c7810499261020325a87885d0817c26bbf83dbdcc785",
+   "size": 10955,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/0408aea3e2f5cb45892d7bdfdd287d81a6e1a4392e94d05c0688da779c005fc9.json": {
+   "sha256": "f38747501eb683784da723f337a3474cfb608b2b85b95ee2d0c7ae9c6d7f2261",
+   "size": 10623,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/07bf336a180d6f1f20f87e87ffd7672966416094cb7a20d9251dde02d99e87a2.json": {
+   "sha256": "d11cfb2abdb5c582b2a4c8341d1c9d2731e3b703bdc37023efa4a3479a9feaa2",
+   "size": 10656,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/098ada3598ae8bbeaa21606bbd76824c30f8649c25cbbe5e0dcb316e8263f857.json": {
+   "sha256": "fb4243640f16d5d235b5de6f1144e65b413bab91a96010454a2fafa79351307a",
+   "size": 10775,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/0a3caaf67cc38687b0125fabe29788283c253478cb9caa74176da56cd863b349.json": {
+   "sha256": "d066fc31c6ffc9ec3b2254938628a7133c91c6a797864913721497da1bfc9578",
+   "size": 10767,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/0b6398e80c1b944291d79e87d303c36513a5716dc51e93778836c3108af273a6.json": {
+   "sha256": "f60909f705664f8fdce8e089a63ebb3c39e808fc55830276db8a8813c10de155",
+   "size": 10581,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/216a74252b1afe7013f06ee32d5c5631201624ad1ba1a8636e699701e363cbf2.json": {
+   "sha256": "a04837a456d51d19f93ff50acdb38b0aec29a5e9d44793cf586652a506e0315e",
+   "size": 10981,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/250feaa26c3bdb0521b9798b031daa8d03b6415a7e596a14a395352fd48a5b65.json": {
+   "sha256": "8281ca04de521af1aa3147ec3e2ee164d4eb175b67809a480064ee9d571cf4e6",
+   "size": 11005,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/2849ca7da5dece27a284ddcdb1acc880721924cdc68bcdc13d19f1abbccb9bdf.json": {
+   "sha256": "f8fae004429fff14759c3067161b90ec0f36c813ad69a06cd7468e6645529431",
+   "size": 10882,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/2b5c8188c95572bf42d285df3b11eb1f849ef84949b87392d2d66137ab7d787e.json": {
+   "sha256": "b740e106566f4cbd7b2cd6cf7763637fc90504e7adf43bdd9ee67ce643fd6d20",
+   "size": 10770,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/2d58d0ee4be634ea9f1762d997157bbf07d079c95dbc2ee91caf0dfbc7c93340.json": {
+   "sha256": "f719ddd2e9f0af2b71ea46b90fbde2be99c41a268a3b3e47443cde495366df17",
+   "size": 10821,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/322a5cfba798a01c53798fe86d3b1fa80c0fa361695436dd01779c155a389ed4.json": {
+   "sha256": "cb3cbc060e4fa25547c1efa2fec552902a8c59cdd4a76a9c933d20569cbbfbf3",
+   "size": 11271,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/32a5a446f363b0e9af638ef48cde2291aef11e2c0dcc2bc61f1208076723851c.json": {
+   "sha256": "514d6c7203f41111d8cc809a035b38a774a7643381441820e2fe15f534b30717",
+   "size": 10821,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/342a1d480335267c43e624bff45c1cdfed3e0f6c1a7a6d830acbc11581ec3f85.json": {
+   "sha256": "71a6d6a07916b048b08ff6d50dde8481f43485a205c1b0128d71b4aa58535dd2",
+   "size": 10944,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/36126fe4263a90bebd279770adbd8eef6947a2a42c3c9eda3a12a1de75e4faf8.json": {
+   "sha256": "1101fc4e42a3b1b46214a5b91758c650fdc8246eacd524c5e6fcf410de047c1f",
+   "size": 10928,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/38678fcc85611f39d41449ae1a9f70d4fa9a017296ccbf91a0dc996368781178.json": {
+   "sha256": "d9ce888c6fa3ca2418ca982c6b37c90d05daa74337566d10d73bbc83eb814901",
+   "size": 10992,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/3bca2226038dcd4512835787139318c6ed9bb243daf7399bb663338d8da6b2c1.json": {
+   "sha256": "97ebc4de8298e86b32c4555cd43467352918dd1b1c28a997f0fee7b840c1b0cf",
+   "size": 11445,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/3d042849f6db58c117785cde8eeaf2146ea93df60ec919fe7054b18fa0f0e2b1.json": {
+   "sha256": "4387886c74be17225c0b0724eb705484e788705434844cab44f05b1fcb964bd2",
+   "size": 10952,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/3e1b068c82932476a6e0ecd904787c84193d0c9bab0521dfaff0250cf5923ce8.json": {
+   "sha256": "7cbf70779c081fcb72b6cfa4713d161d71f36cf4e357d774536c0a40e8bd6649",
+   "size": 11530,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/47879fb6aeff4298eba0cebd5aedcc7f7ae3c6dda8ef3e8fa0da82a5aa6c13cd.json": {
+   "sha256": "1b0905cc4ac54542c58c92c420fff8320e6282103c7e0c18c6e20cb934a33711",
+   "size": 10827,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/486e2c3cdded5c9bd10de8795c5308f839274f227ec84819a03564147c9eab2e.json": {
+   "sha256": "78320b1988a6e5170e8a6575d880562f64a460cb6c5f906d6c12967b68224b16",
+   "size": 10584,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/4b0c5365c70df5783beb4068cefcd3580c97aa9ad024e7f858fa7207ad7085b3.json": {
+   "sha256": "aeaf4674ac44e69673d8502c6b314a543df3deae692be32e40083fd196593cb8",
+   "size": 10305,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/54b4e27a60cdd721948ba9447c17ca412283f970e2975beea20c67bb712430bd.json": {
+   "sha256": "0a31f90944d2b5dcbc032e62f14671e6646af95a5a7c645f32f9d9d5666b934e",
+   "size": 11435,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/5f8d563f8894a116a4c51bdc1ef252cc4a19e0d70f4b3260c72a56604c2b4036.json": {
+   "sha256": "998ce62b3f215343d8178ad920ed3e72c7268f2615c7a509059c0d4179a8f0f3",
+   "size": 9964,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/65dbf725efc55ae3cc83f2ec86910936044eea7a6f58d530e55f237d0c45106c.json": {
+   "sha256": "d3407d77fd111984f8a04dc4d97b97cbf3488a1240868b9d8a7256a8108ed33c",
+   "size": 11336,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/685794457c83d626d8578a7ebb017dcaf46c7e741f6855e8b2514e295908c4db.json": {
+   "sha256": "e194c90b8ec19eed1ff8df1179a08eb05460b3a389ce1518e6e43c34531dcf0d",
+   "size": 11421,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/6ab181182467dc9e93a9c769407c54598c97f375487a9b2ba3c78c81121c5ddd.json": {
+   "sha256": "5ce6194e40ed1c4b58a838cef78fe68f02abb4499ce59679b6654083fe8d5630",
+   "size": 11444,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/6c5eca2cfff0dfd05e3d99ff8ff3790794e54834093d414605ee5fce2357c213.json": {
+   "sha256": "802dc34e22ee1efb496c343b2b365e2fbac2cb910a45750306bffa1097df6a42",
+   "size": 11034,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/7108c467371f3d402da1b8f9a8cc9a17e1a31767fa869a556e9e5ac38f13510f.json": {
+   "sha256": "300150fb8f896690b9ab61aa7b00c726107dfa3589f1773fc279256bdaf426e3",
+   "size": 10568,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/741e45a42f07dff419f1b4f604b89246828bef56f222fb542712d7ec28dd2461.json": {
+   "sha256": "0fb9fe67e5d535f284a2644d252fea654e4f52d287cc888099f1ec455b3437a8",
+   "size": 11020,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/7488c46f44c96d2d00e0cef0e42f49752a0ce993d6272370613e376444653e93.json": {
+   "sha256": "648508ddcb54548003825888aafddefb5abe414e653dcdbb7ec01f6317cc8525",
+   "size": 10035,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/75e21be64c1e632225160b9f488ae0824f5ff0709891c333808b97dd13d65ed7.json": {
+   "sha256": "a549ddf152c31c5489c6e9c970c858bb7ebc60dd0476db7c07b460582e4b9dfd",
+   "size": 11014,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/7ca540a9f2d078804126ee19e355b512ad332a7708485586dfa73b257719e528.json": {
+   "sha256": "e23e3b74ed82035bd76f8a18736d29a8c510003ab55ee2d43756b0668abed0fb",
+   "size": 10939,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/7e949c17e3311402ef7afabff4d9bc1f8d2dd497c5462d2211a4f4936dc6f907.json": {
+   "sha256": "2ecded386f0f1640fe8b7a92c07dffa2b244174093273fd5208399ffb1e1120a",
+   "size": 10611,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/800788bc18936d93258677f6e03215854f63eed84c9e56903fee97edd3ae5d86.json": {
+   "sha256": "c5c33307ffa5e5cfb84acfee2370d60152bb7e4f1d10eec21b405491791a4042",
+   "size": 10450,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/844ee1ee1507e6b79c27ddcd5af24259137f398d1454931ed05de21967043557.json": {
+   "sha256": "b83a71eb806566f9c04a541d7989564b3d84e5b1309a1a9032c7227f112efadc",
+   "size": 10570,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/85cc3d04dc3e4719f18f3bebfedf63e86e68686a37fbb2ed9eb6141e9deec99c.json": {
+   "sha256": "d7dceba273686be0b6580a5730b1b3727d68b5a62b1438f72f6f47d9ceca0c35",
+   "size": 10805,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/8bb3592f8b78ac77cfdad23109cf6393bc11d43f78ab70b95bf727ce8aae52d4.json": {
+   "sha256": "80d47bc9fd33c775992cd99a77f74f4099ec5fbcd58a143967921996b5d1cb2e",
+   "size": 10012,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/8c4a0793db2bac6a810ebdbade607c1a8bc7f88afcbd825162019ba924db4b06.json": {
+   "sha256": "3a57291353a62807b011bc521f1417ee91a44a5e05b5ef2ff82c8915c53da25d",
+   "size": 10537,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/8e338999e7f663af88af678d1ced1b1820d9af469be322daaad50f275da310df.json": {
+   "sha256": "27cf1e742675caf33eba665868f557d45c652bb4eed22580562942686a65223d",
+   "size": 9314,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/9730c2f06c18819e20b9d309780295225ad36513e95a6667c9277d70ae547bfa.json": {
+   "sha256": "55b551ff1f70ebb75e888e77213805cfa995bb77999c3c46da4f57b0259c9be3",
+   "size": 11546,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/98e993d30ef03e118f0460dff1eadd446c6d83df5080435a6ba9f83e2b426264.json": {
+   "sha256": "42ff020ab616e9d1c1276fcbf4cdf642a8d6d30993202ba54885f5d5b4b614fe",
+   "size": 10666,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/9d3fa840afb646d820f5ea5b70be1d91a7ce4be2e8ce5658b932166913a60ddb.json": {
+   "sha256": "829e938d601b0cfcf3e00be11b3a6a42ffc570ee5e62fe3809f68972b5c633c9",
+   "size": 10734,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/9fb85cdfbec0871f8a68e9d07d4076854b7287289c30de007a000e80bab7b50b.json": {
+   "sha256": "c2e6b21354ae684bf3bf74976da480ef18defce9a22767b214a9bab0eac57a72",
+   "size": 11573,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/a3ac906ea17bf0d7ee6a854db2e7b490fe67c3ea3c9bda669c46abeb010bdd64.json": {
+   "sha256": "abdc21c492bb6e109226ae350a8c28dd3d9a77b84c537a5ba57f89f94c0b11bb",
+   "size": 10606,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/a3b612b33df3644cbcaa8dba25d0aaf949921c0baa1dba9f8960185026064145.json": {
+   "sha256": "2dceae7291334b7a1aa32c3eb0f98011be7db5e0df8332152b21f00690587bb2",
+   "size": 11111,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/b0010b14f02bc92eba675bd6cb6820bdaa6e16aa796cf594975efa14e61fabe9.json": {
+   "sha256": "eb4cef587b604168b8599aa0456e87e9f9bae5b6e78e6f7620b6280faa1192a2",
+   "size": 9437,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/b22e34c028a022bedacd27f3749277000b62857db3b12464cb936e04d481d011.json": {
+   "sha256": "708cc89d508521dd5f0e0b42314335ae6196d17f7e120052b77f94e3258482d7",
+   "size": 10810,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/b25dbf5487a81ae1f40983a4dfeb5689c2bf09eef8b01ba662c2596393d0a6bd.json": {
+   "sha256": "a1a6d5d721c3e8c6553369b0be5631f4386a34ec04054deb8026c598e3743adf",
+   "size": 7614,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/b485d4e2e055622c612aa2e3ec44e91171e31af05c7d84e4b99a541933a52bfe.json": {
+   "sha256": "547d8d809a59462764b1f9592f2a1a894e9c804120d13e6fe53dfc7f880e0eb2",
+   "size": 10743,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/be3cd550cfeb8a70e30f4f4d9e3a41b2b2f8d9c76243fc4b1739b117b5d79fb4.json": {
+   "sha256": "7e0445dc440eac63378a21bc6f51633e60cad3ae2981a9ed71c1ccdf196c704c",
+   "size": 11492,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/bf92731efb10cb77dda3b1272ec48b9582be39619557b65c411665c3e579c998.json": {
+   "sha256": "8917ca789121e2720d1c2e5eb7dfc3ba0170bff8aed5467b3927340790b4d282",
+   "size": 11521,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/c37329dc6e9ab45d70f923a7f18601a679997447bc94404113b3782e79a0beef.json": {
+   "sha256": "10bb4b85e9a0d4ca9c05d3aa8235838d1fa5abd270db9cc159667d7fad482465",
+   "size": 10790,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/c494c0e7c03d00c491b813fe7aee69e86f3990b5aeced1972e5041e3a41f6761.json": {
+   "sha256": "f310e810e4e652263b95377b59d58b1d624019a95c37295637ae735d240f0087",
+   "size": 10725,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/c87dc2f13e63eedb8a704df6e5bc8101d6753198549dcb3bd6eeccfade784d2a.json": {
+   "sha256": "997dc7057f595dc6f2053326ddaeeadf94dc5b66b9a6637a1d8d675cb3b10958",
+   "size": 10751,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/cb79ce4f6d2493831c2ddb9fc17966c280ee80c6cd7c6ae940a1f21d76fb841b.json": {
+   "sha256": "1a9ee31ec3b64285f814fd6553b8f6e97d356157650ecbb2a710c001cec7f300",
+   "size": 10382,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/cbf764ba3292520b989117ada801a49a9429c695df025b5ae80f1b2d037cca48.json": {
+   "sha256": "6331db26960fad9910c19daa201a8d5c5bd402a1a55ed7c7308a107c51d9555f",
+   "size": 10774,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/cdb816fd7b6bc056860aacd2d5a9b9de6490d26a5326ffbbc61933d39c276166.json": {
+   "sha256": "015998973b65a9ee8411b40038f32b3956f9f60cd955f8608be103e32304c3b2",
+   "size": 10784,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/cf390cf4ac1737b5efa9047ecc79e699c988e7f58d785f0d5d66ee93291e2996.json": {
+   "sha256": "7e29ee0be73b6dac9bd4c3f4707ad6ba4d1ee4557da1204610562a01e1cbbdc3",
+   "size": 10703,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/d136575d45dab3382b75b7a15c7291ed7460d918f5d195845315d80f41aaf335.json": {
+   "sha256": "b9f8c053a35c660c244af280cb98d2a9c788221ead11d77d5606337f2713e784",
+   "size": 10193,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/d136ea8232d9bd4386b116f107f2e7365ea5eefe21d588adf5fc229cfec205b6.json": {
+   "sha256": "f7ff887c307e2da85c9ac8603190b940c15d1d7ade2ae8c5191812649af15049",
+   "size": 11071,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/d19542da9bea8e64bdfd3d3356fb1cd59ab552782df2e3363cf0240362b5e38a.json": {
+   "sha256": "5da6bb5d7a34428c5216a78c086c0be444a5f7c485f548fa876b20851a5d09cb",
+   "size": 11334,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/d3e54d27f60c23e3d09b790c5bdcf8e7ce5a68585df116a6180a7655e11f60b5.json": {
+   "sha256": "deed9be19cac9fe70542d38930a0560d3ab8f85d58585a61067e7b2f7027a635",
+   "size": 10827,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/d56e73bf5aa01622e7556fc046b75546356c6a1867bb9396c132149595c33921.json": {
+   "sha256": "8d8ea139923ef78d2da68c3ecc59645cad37a482605691fb3e4f9b733a5874fb",
+   "size": 11313,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/d63a4ad2abf5ec5a0797652b40d3d73009cc9d9743b9df665760e2418182f13d.json": {
+   "sha256": "51c496688a45924161b0b27f6eb3409433fc4c6db86e5ae139b75100f4e3d75f",
+   "size": 10472,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/d6b6ac1c451542e903bcd821be9ab21a1ce971e8abad63e04acef1a283f7cde3.json": {
+   "sha256": "a17d918ef8e5ac4a0068d3b09d6a59eea1a12fecd60d8a969218f302ab14f2df",
+   "size": 11004,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/d965709717d80ef3273966ad511a019422ba3f3a54b35c7bf6238df82dfe9884.json": {
+   "sha256": "064b755986fc684e5a66a1bd0e28bdd6229bad322c4d0f731eda32b74a699b68",
+   "size": 9658,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/da68413e0403907021ef561b0d352a1a414cffcb787462935b2a292748a938f9.json": {
+   "sha256": "deee6ccbeef31d82e815818d6c83004c47f40cb7847cd24196c52940ca05513d",
+   "size": 10689,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/e0eb4bea9c3544ac67fd5bd222151cd7b6c0ea10f92c54628fc23cd9e1b1550c.json": {
+   "sha256": "523528b230ea26e406037becf84cebbd55983a7cafc207bb3d5300ab45a473be",
+   "size": 10716,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/e3b16521573fd79f95349befccee52739a19332e5f626c9c0a1d22d06dcf8565.json": {
+   "sha256": "21bb15157f4a69ebecb1329ae716d8cc910761c70150478dd13a174517b67f03",
+   "size": 11034,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/e6c344c167030402dda6eb83db5af060b29414a32e9b671871cac1a4a758f4cd.json": {
+   "sha256": "1338ca5b8c0f22f3f9d0b7453a5156e69d625c41cb50fee9e222005b191efe64",
+   "size": 11383,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/ea513c468c7fca7beb9a166cce06cee9a628483fbbb85f98b1d06d09b3f152ea.json": {
+   "sha256": "b6949734e4583d2428ff23dbeee3f556313c04e23a63718316f1b1fe28408e8a",
+   "size": 11527,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/f048da1c689438e24476acb9e47ca8acea3ed2f9ae823ed4b9443a990f02127c.json": {
+   "sha256": "4fa110bfbc19e3244d2410713dbd4af27840536e10883c4c66d98f8d690efb57",
+   "size": 10691,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/f136eb6d010b7bc72b11340f551a8c4f80092988db12cb91aa12afbb94eb7ddb.json": {
+   "sha256": "c2614d9a1525367339d7b42ba5de9ae06c838624fef12d992257b16111d05e73",
+   "size": 10793,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/f5508dd81617a4e72a0085921d8a103f26d31c69bd4bfe345334a1900716403b.json": {
+   "sha256": "d18c01ae0496a3706f2f37b1754e04953848e8d1858c17d1b70bb01c07ae2498",
+   "size": 11422,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/fd6af4dce532fda0b0eb64deee8105c99c2c6f42647e1fbf9284866ddf81ac44.json": {
+   "sha256": "95d741ddd4a116b07638ddf9c8a434b9a2ea3baaa7b69ee312721bb0b690417a",
+   "size": 10838,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/0009bd087aee10ce867ac14ea794962aef4d719f8f57bfa80daf4fb3fea4d2b1.json": {
+   "sha256": "14724ee0f6e6bcc49ed72fc045511705bb1f1f727e83cad4bef0b52f1989c49d",
+   "size": 16667,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/012d51ed56a955ebaa1462f6a48fc416ffd5624a5fc07d0b9280f6afcfd4e29f.json": {
+   "sha256": "9938cc8aa1941a8737995cd86c8d0d12570ffc4ca6d65321048c601ffaf00d8d",
+   "size": 18168,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/0408aea3e2f5cb45892d7bdfdd287d81a6e1a4392e94d05c0688da779c005fc9.json": {
+   "sha256": "23e1a58b96804e9db7c953f2eb2c00d0a6e93fb1765387e888e522995aa7a76c",
+   "size": 18026,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/07bf336a180d6f1f20f87e87ffd7672966416094cb7a20d9251dde02d99e87a2.json": {
+   "sha256": "a8c983f677ff4c5637cc24b626f64d8e2bd6af77269202de12be9b0da3cbc713",
+   "size": 18154,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/098ada3598ae8bbeaa21606bbd76824c30f8649c25cbbe5e0dcb316e8263f857.json": {
+   "sha256": "2498d1da84c76dcc4f35a5972da305738dc0fde7f76a449316a4591010a364cf",
+   "size": 18174,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/0a3caaf67cc38687b0125fabe29788283c253478cb9caa74176da56cd863b349.json": {
+   "sha256": "6e5b4f986fea98c7fc0fbc162498ccac86177acf6e8a4a48d5b07e3af22d16bb",
+   "size": 18146,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/0b6398e80c1b944291d79e87d303c36513a5716dc51e93778836c3108af273a6.json": {
+   "sha256": "ff3e4a705532028c32f5d9d94da75e87d60e8a26ce08b995ef8008368f8e0544",
+   "size": 18008,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/216a74252b1afe7013f06ee32d5c5631201624ad1ba1a8636e699701e363cbf2.json": {
+   "sha256": "ba36d18a561216cc7c3ee692b7cc7ed6946deab1670ce6111f3af4fc5a9cfb75",
+   "size": 18612,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/250feaa26c3bdb0521b9798b031daa8d03b6415a7e596a14a395352fd48a5b65.json": {
+   "sha256": "4015eaa42cdc0e4f4c143e996cdd0beb67aa188675342358caf716d4c342e42d",
+   "size": 18491,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/2849ca7da5dece27a284ddcdb1acc880721924cdc68bcdc13d19f1abbccb9bdf.json": {
+   "sha256": "734d8c2b1a7080556f76f7b5f682cb427ff0499436023d4868e87aca9a6ef8a3",
+   "size": 18342,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/2b5c8188c95572bf42d285df3b11eb1f849ef84949b87392d2d66137ab7d787e.json": {
+   "sha256": "42b7ea1ee2f28414694520443e7323ba03463ac47c5ba62784072b1dd4162ea0",
+   "size": 18312,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/2d58d0ee4be634ea9f1762d997157bbf07d079c95dbc2ee91caf0dfbc7c93340.json": {
+   "sha256": "971f58de60bdfb5b560cd45354b5f4b88a6dade11c18b25619fd275f391246ab",
+   "size": 18034,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/322a5cfba798a01c53798fe86d3b1fa80c0fa361695436dd01779c155a389ed4.json": {
+   "sha256": "ef37affd7829634cbe5a4f87e7f9b21ed9f297301d5e76faf26c72d750a59985",
+   "size": 19056,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/32a5a446f363b0e9af638ef48cde2291aef11e2c0dcc2bc61f1208076723851c.json": {
+   "sha256": "98f7be887bd7d417b5456144a1deae26488f475ed7a178e046b85d485fec598a",
+   "size": 18482,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/342a1d480335267c43e624bff45c1cdfed3e0f6c1a7a6d830acbc11581ec3f85.json": {
+   "sha256": "7dc737e5317acdeba55977747b7fc33e53340f923db3c86bceb67d8c6fc76c50",
+   "size": 18582,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/36126fe4263a90bebd279770adbd8eef6947a2a42c3c9eda3a12a1de75e4faf8.json": {
+   "sha256": "b1b5bd4b7d1bad8cf4d9dcefdcad43e4774b1b7a5fd9d40ca2c96cf6f07c2435",
+   "size": 18342,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/38678fcc85611f39d41449ae1a9f70d4fa9a017296ccbf91a0dc996368781178.json": {
+   "sha256": "164fcb63ef34b4440666f89bfbf8bcd567c6e1db6fad08edd5ba28cc542bcbad",
+   "size": 18182,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/3bca2226038dcd4512835787139318c6ed9bb243daf7399bb663338d8da6b2c1.json": {
+   "sha256": "7fa55fa88b0ba4c555bf56a0c18a62a926f72f8a9a621591b56ebfda67afed1e",
+   "size": 19594,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/3d042849f6db58c117785cde8eeaf2146ea93df60ec919fe7054b18fa0f0e2b1.json": {
+   "sha256": "1c74fd18572b3c0aa71989456c8a144d04a9d18a1afb615b074d7890024a9d3c",
+   "size": 18306,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/3e1b068c82932476a6e0ecd904787c84193d0c9bab0521dfaff0250cf5923ce8.json": {
+   "sha256": "bb095e6beb159f9489974b10c42a088e29e05560318c8ca34103204426158e89",
+   "size": 19645,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/47879fb6aeff4298eba0cebd5aedcc7f7ae3c6dda8ef3e8fa0da82a5aa6c13cd.json": {
+   "sha256": "548284eb306fe8c114dd448a1e4a20e100b4ab5bd9f3394785ce33e6cb373e43",
+   "size": 18075,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/486e2c3cdded5c9bd10de8795c5308f839274f227ec84819a03564147c9eab2e.json": {
+   "sha256": "2ec30d752f70750d9cc3c7fffea4a03646bd95a6c7f2946d4429e8547d86c940",
+   "size": 18030,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/4b0c5365c70df5783beb4068cefcd3580c97aa9ad024e7f858fa7207ad7085b3.json": {
+   "sha256": "bfd196094e2406b619aa818fcd650fc95f7e36c31a31224df2fea25ebc045b5d",
+   "size": 17030,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/54b4e27a60cdd721948ba9447c17ca412283f970e2975beea20c67bb712430bd.json": {
+   "sha256": "ccbfafc74b5f3a88f1c1808c13820d2fafa0e77afaaf1e895dbf2ccd188214a4",
+   "size": 19221,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/5f8d563f8894a116a4c51bdc1ef252cc4a19e0d70f4b3260c72a56604c2b4036.json": {
+   "sha256": "f47ea091516127f33932910121ddf21fac84d91c586093b4166db6f7ecd127e1",
+   "size": 16134,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/65dbf725efc55ae3cc83f2ec86910936044eea7a6f58d530e55f237d0c45106c.json": {
+   "sha256": "f677d42d99acf07403416ff4b363fa31e1fbdc15d00d49be5f8fa16feab1056c",
+   "size": 19076,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/685794457c83d626d8578a7ebb017dcaf46c7e741f6855e8b2514e295908c4db.json": {
+   "sha256": "d48f618a37a373fa12dd7832d499daa433c9d185edca4d7064234310fc6fdde0",
+   "size": 19454,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/6ab181182467dc9e93a9c769407c54598c97f375487a9b2ba3c78c81121c5ddd.json": {
+   "sha256": "6eaf83c3d81f65851e4476dd0fadd52fed69904072ee0e23417c2d2ad97b94b1",
+   "size": 19434,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/6c5eca2cfff0dfd05e3d99ff8ff3790794e54834093d414605ee5fce2357c213.json": {
+   "sha256": "a80ce086bb1635e7517c7539d32d8d9a6b6d45a1c24fa534a0e98f7844684524",
+   "size": 18375,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/7108c467371f3d402da1b8f9a8cc9a17e1a31767fa869a556e9e5ac38f13510f.json": {
+   "sha256": "eb5323e7e64b5f99eac18b929c971e6caa065a2184614c5f1f2ed3fe1f10e125",
+   "size": 17628,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/741e45a42f07dff419f1b4f604b89246828bef56f222fb542712d7ec28dd2461.json": {
+   "sha256": "b9116f0a3b9d1d5d34828e6c2160aa21e85d1c0ca11c599fa50dd8c1c7f4291f",
+   "size": 18314,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/7488c46f44c96d2d00e0cef0e42f49752a0ce993d6272370613e376444653e93.json": {
+   "sha256": "0b21d86cd664a5c73e97efcd025fcc20df30b6e7551888013cc2652aca04267e",
+   "size": 16359,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/75e21be64c1e632225160b9f488ae0824f5ff0709891c333808b97dd13d65ed7.json": {
+   "sha256": "5e7dfe65f076f79913a0f93b714e53c90bfd26d9e3f02b8ed8e5f6d68cb9104e",
+   "size": 18322,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/7ca540a9f2d078804126ee19e355b512ad332a7708485586dfa73b257719e528.json": {
+   "sha256": "60d5d3dd9511ebb922f046f5cfaccc02574ee4da07737f72a45d63cc7b0e54a5",
+   "size": 18174,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/7e949c17e3311402ef7afabff4d9bc1f8d2dd497c5462d2211a4f4936dc6f907.json": {
+   "sha256": "b8a74bed8faff32171d277311ba1b96ca9d7ee47036864d876741e0ae9f905ae",
+   "size": 17910,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/800788bc18936d93258677f6e03215854f63eed84c9e56903fee97edd3ae5d86.json": {
+   "sha256": "e82910dee5229d752458ccee5cc358092735d77cd77816bcdb5b42673b4a4118",
+   "size": 17160,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/844ee1ee1507e6b79c27ddcd5af24259137f398d1454931ed05de21967043557.json": {
+   "sha256": "26f874c4384fa19f5b670b33d9828adf70cb3dd418fba62385a7c332ceb22c77",
+   "size": 17850,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/85cc3d04dc3e4719f18f3bebfedf63e86e68686a37fbb2ed9eb6141e9deec99c.json": {
+   "sha256": "ad4708e75026bd497c23658d62e476fd1b8c3a96589bb163f301706d16249a5b",
+   "size": 18166,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/8bb3592f8b78ac77cfdad23109cf6393bc11d43f78ab70b95bf727ce8aae52d4.json": {
+   "sha256": "69b788af7eff46d7599dec735d2373f4fe4d1bb708a8744edd1e0d0fa99b9eaf",
+   "size": 16486,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/8c4a0793db2bac6a810ebdbade607c1a8bc7f88afcbd825162019ba924db4b06.json": {
+   "sha256": "f3724f8504bc4dcb486a483c3613454fb19c321dedf7dd29a67b4d5144c325a0",
+   "size": 17489,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/8e338999e7f663af88af678d1ced1b1820d9af469be322daaad50f275da310df.json": {
+   "sha256": "077c2b363becbbe7d608d2469be3b47794835fc3e7f88ace592570868b741cf2",
+   "size": 15257,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/9730c2f06c18819e20b9d309780295225ad36513e95a6667c9277d70ae547bfa.json": {
+   "sha256": "6edd1186c937645e0362b281148d16b7e041cfc822e1cfe5847b2ba4a03712ab",
+   "size": 19454,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/98e993d30ef03e118f0460dff1eadd446c6d83df5080435a6ba9f83e2b426264.json": {
+   "sha256": "d06ef20564171a730be7b42f42728a39c1c5f82d7fa747c7a10afc0121d8597c",
+   "size": 18006,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/9d3fa840afb646d820f5ea5b70be1d91a7ce4be2e8ce5658b932166913a60ddb.json": {
+   "sha256": "f3bd491f5ab12ce703ca901bf3bcc98543cc7719af126a76f8112aa7d689784d",
+   "size": 18204,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/9fb85cdfbec0871f8a68e9d07d4076854b7287289c30de007a000e80bab7b50b.json": {
+   "sha256": "d9c302c0105d05116d9b851b35d6126330d93f2fbf25a2b5355066a0710df40f",
+   "size": 19461,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/a3ac906ea17bf0d7ee6a854db2e7b490fe67c3ea3c9bda669c46abeb010bdd64.json": {
+   "sha256": "7604da1b9bb08a1dcb7e648f7fd2bd5499e70f751c0cf139776c2aa6b2ed8ea1",
+   "size": 18014,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/a3b612b33df3644cbcaa8dba25d0aaf949921c0baa1dba9f8960185026064145.json": {
+   "sha256": "b10f7fbe8a7e742269b953ffeac0f1ee44b85dc919f2797bf27f3c3b230c29d6",
+   "size": 18814,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/b0010b14f02bc92eba675bd6cb6820bdaa6e16aa796cf594975efa14e61fabe9.json": {
+   "sha256": "de156ff4ad1f2ba0031945020e0f8924ec7f3f3ce10d405c02378dbde1e61d32",
+   "size": 15395,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/b22e34c028a022bedacd27f3749277000b62857db3b12464cb936e04d481d011.json": {
+   "sha256": "b52408b29edbba5769e14262c048244c8db9a11767fb6496d8ee11a510d4a497",
+   "size": 18138,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/b25dbf5487a81ae1f40983a4dfeb5689c2bf09eef8b01ba662c2596393d0a6bd.json": {
+   "sha256": "6c87107c4db4045151402509ca6fc8e5d5fcdc80fc2f934c1b8510aa31a791da",
+   "size": 12106,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/b485d4e2e055622c612aa2e3ec44e91171e31af05c7d84e4b99a541933a52bfe.json": {
+   "sha256": "a9741fa42e07c35600758574801fb63abe66042657b0ed8c20ff2d07ec7ed5c2",
+   "size": 18030,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/be3cd550cfeb8a70e30f4f4d9e3a41b2b2f8d9c76243fc4b1739b117b5d79fb4.json": {
+   "sha256": "943ed46641ec35c3e542d92e427cd096ebb49fcb2487b588068b0f759c3101db",
+   "size": 19480,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/bf92731efb10cb77dda3b1272ec48b9582be39619557b65c411665c3e579c998.json": {
+   "sha256": "ff6deebc9ae308882d15e3119c1c20f7ddbb355bc11c41e1acdfdbd1056edec0",
+   "size": 19656,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/c37329dc6e9ab45d70f923a7f18601a679997447bc94404113b3782e79a0beef.json": {
+   "sha256": "1eb49243a1a01d3904092d3911653828ad084c8baf51a56058652d5ef84ec76c",
+   "size": 18101,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/c494c0e7c03d00c491b813fe7aee69e86f3990b5aeced1972e5041e3a41f6761.json": {
+   "sha256": "ba144de1bb1b2a29dcad4b5443e0f064924d48b083fe774b1fdfb1bd36fde8ea",
+   "size": 18026,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/c87dc2f13e63eedb8a704df6e5bc8101d6753198549dcb3bd6eeccfade784d2a.json": {
+   "sha256": "8238a96336bfe272d2fcd0fefe69ee0dc52b236072fb750cfd86e961340e042e",
+   "size": 18208,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/cb79ce4f6d2493831c2ddb9fc17966c280ee80c6cd7c6ae940a1f21d76fb841b.json": {
+   "sha256": "74f4fc0ffd7e4231b6b75bb8c7fce65596608486df84ffe4a94348863666aa0d",
+   "size": 16987,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/cbf764ba3292520b989117ada801a49a9429c695df025b5ae80f1b2d037cca48.json": {
+   "sha256": "b89f8057ef78b37dc7a1b042b832245f06a1e3f4001736ad8ccad1e45bfba7f1",
+   "size": 18074,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/cdb816fd7b6bc056860aacd2d5a9b9de6490d26a5326ffbbc61933d39c276166.json": {
+   "sha256": "b74577e1d0111835692bb0db4215989635b19de50358ee2b8fe324d57364b870",
+   "size": 18172,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/cf390cf4ac1737b5efa9047ecc79e699c988e7f58d785f0d5d66ee93291e2996.json": {
+   "sha256": "c9424ccdf1371ccd6de7445959c492b7d3c3e59223a5afccef53acf712439870",
+   "size": 18228,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/d136575d45dab3382b75b7a15c7291ed7460d918f5d195845315d80f41aaf335.json": {
+   "sha256": "2ab65d26dd4d8cc28e88f26d2d58ab475bdf56a39ade3a9c4ac1f04f9cc7ed47",
+   "size": 17973,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/d136ea8232d9bd4386b116f107f2e7365ea5eefe21d588adf5fc229cfec205b6.json": {
+   "sha256": "3fd9fc69757cc378e979063a30a222f557b4b8b897050062e2624320368ee232",
+   "size": 18565,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/d19542da9bea8e64bdfd3d3356fb1cd59ab552782df2e3363cf0240362b5e38a.json": {
+   "sha256": "dccc509181a1b42834335519066d4661b8ae70710164dfd2568b0cf392688392",
+   "size": 19116,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/d3e54d27f60c23e3d09b790c5bdcf8e7ce5a68585df116a6180a7655e11f60b5.json": {
+   "sha256": "5d55d2dabf1c96bab5d5128774daf62d30a4f981aad079a648cc6ea53320ecfd",
+   "size": 18368,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/d56e73bf5aa01622e7556fc046b75546356c6a1867bb9396c132149595c33921.json": {
+   "sha256": "330810e1d87cb40771c38b2ab70e02dbc34209764d02fce486295ab49293b183",
+   "size": 19076,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/d63a4ad2abf5ec5a0797652b40d3d73009cc9d9743b9df665760e2418182f13d.json": {
+   "sha256": "b9902b0d41da1764aea9d174e3a4461e580a1de788baa5068e66313066480e3f",
+   "size": 17720,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/d6b6ac1c451542e903bcd821be9ab21a1ce971e8abad63e04acef1a283f7cde3.json": {
+   "sha256": "b624672941d76b92f982a7b58d14f62a57b772c4d0e707810084b1ed99a3da89",
+   "size": 18909,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/d965709717d80ef3273966ad511a019422ba3f3a54b35c7bf6238df82dfe9884.json": {
+   "sha256": "5d5701014fb5a1c993e689b915ea74a70f96473053f1111e862336575ebde280",
+   "size": 15952,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/da68413e0403907021ef561b0d352a1a414cffcb787462935b2a292748a938f9.json": {
+   "sha256": "9f5edf755e300576b5db41ca0cc1e63549925ac712a9b9f7085d94c59bb6afe2",
+   "size": 18059,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/e0eb4bea9c3544ac67fd5bd222151cd7b6c0ea10f92c54628fc23cd9e1b1550c.json": {
+   "sha256": "224d5e38e85b069a8c15d7643ea8992ddc2636534b539ad0c3e9b96a081b5e5c",
+   "size": 18050,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/e3b16521573fd79f95349befccee52739a19332e5f626c9c0a1d22d06dcf8565.json": {
+   "sha256": "6ca0d6418d7b181742de293ff671b7440b85d4afd22384d09778f3eb8fbaedf9",
+   "size": 18525,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/e6c344c167030402dda6eb83db5af060b29414a32e9b671871cac1a4a758f4cd.json": {
+   "sha256": "0ae70ab9ef06afe7699b339c2c471d742c30a83ebafc39017a157b25176457dd",
+   "size": 19583,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/ea513c468c7fca7beb9a166cce06cee9a628483fbbb85f98b1d06d09b3f152ea.json": {
+   "sha256": "00865247a6787d4bec56bb541b6915119cb78aaaea2520fb7117aa312f34d22c",
+   "size": 19488,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/f048da1c689438e24476acb9e47ca8acea3ed2f9ae823ed4b9443a990f02127c.json": {
+   "sha256": "e289cb114f8a664e14011fe423bca8720e236590b5933d1dcdb36d90d631dafb",
+   "size": 17924,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/f136eb6d010b7bc72b11340f551a8c4f80092988db12cb91aa12afbb94eb7ddb.json": {
+   "sha256": "ba125474101e386c59e6fc8ee8a3033adc048169465c71c402445ee961c26248",
+   "size": 18166,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/f5508dd81617a4e72a0085921d8a103f26d31c69bd4bfe345334a1900716403b.json": {
+   "sha256": "80633ecffd7ce3d448dae8e7b0d205ed161786004d38a6e37df4d04325155c9a",
+   "size": 19216,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/requests/fd6af4dce532fda0b0eb64deee8105c99c2c6f42647e1fbf9284866ddf81ac44.json": {
+   "sha256": "452287c035b46bed94100fc750d376d8b3d617acb920aed55fe6d659c69e4246",
+   "size": 17944,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/0009bd087aee10ce867ac14ea794962aef4d719f8f57bfa80daf4fb3fea4d2b1.json": {
+   "sha256": "7801565c1766948f67202f1d53afbd2ba5b701072e4219935b91463949aa5f43",
+   "size": 6436,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/012d51ed56a955ebaa1462f6a48fc416ffd5624a5fc07d0b9280f6afcfd4e29f.json": {
+   "sha256": "c32686a98c7fe928351f5f6ce413cff09840e22288c3d05832ddfe3f5b598cf8",
+   "size": 5100,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/0408aea3e2f5cb45892d7bdfdd287d81a6e1a4392e94d05c0688da779c005fc9.json": {
+   "sha256": "35640c52cc4c12370e034e640271ec5af6ad5f321fc1f3771af3b57e753ff22a",
+   "size": 6259,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/07bf336a180d6f1f20f87e87ffd7672966416094cb7a20d9251dde02d99e87a2.json": {
+   "sha256": "742892768caffd3e690e562ee7c708339edd44732f1bc6c64cdfaa5514346b23",
+   "size": 5121,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/098ada3598ae8bbeaa21606bbd76824c30f8649c25cbbe5e0dcb316e8263f857.json": {
+   "sha256": "29b05996c4ed5a099c10318845af7fed474bb92d1cd7995ea34077a8c63f6e0e",
+   "size": 5661,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/0a3caaf67cc38687b0125fabe29788283c253478cb9caa74176da56cd863b349.json": {
+   "sha256": "5f2f0ed008725000a2fc111f3dada67bab5a41ab79eba6c2414f0e77b377610a",
+   "size": 6407,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/0b6398e80c1b944291d79e87d303c36513a5716dc51e93778836c3108af273a6.json": {
+   "sha256": "5a48ac45eedf4f48ece1c39079f00008fdced2349ccdeed0a7c3269ea3dc4c06",
+   "size": 4625,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/216a74252b1afe7013f06ee32d5c5631201624ad1ba1a8636e699701e363cbf2.json": {
+   "sha256": "6495b5ea5b74bba56ddffb9147d9393c47d8d6c0bdb5ea024a11d929bf225b8b",
+   "size": 8386,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/250feaa26c3bdb0521b9798b031daa8d03b6415a7e596a14a395352fd48a5b65.json": {
+   "sha256": "23c028429d0ef1ec7ab6843df15bec18abf0fa8c75c820f1bb1a8b98d6807410",
+   "size": 7935,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/2849ca7da5dece27a284ddcdb1acc880721924cdc68bcdc13d19f1abbccb9bdf.json": {
+   "sha256": "899be992e0448367be10e719fc47f889444eead6b162756ff95124202975b944",
+   "size": 7581,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/2b5c8188c95572bf42d285df3b11eb1f849ef84949b87392d2d66137ab7d787e.json": {
+   "sha256": "9ec4d877399526bbe1d7508e470b6a71c4b4c1156d4b6625a0d83fc28f2ea677",
+   "size": 6606,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/2d58d0ee4be634ea9f1762d997157bbf07d079c95dbc2ee91caf0dfbc7c93340.json": {
+   "sha256": "3189d2e0f0a620beca8cf90440a7b341954e217afeef2a98029daf60691ffbd3",
+   "size": 6312,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/322a5cfba798a01c53798fe86d3b1fa80c0fa361695436dd01779c155a389ed4.json": {
+   "sha256": "6778d3e74637625804610d8b8fa4a36921461160cefa3a296f4ea4e155cc2cf4",
+   "size": 5067,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/32a5a446f363b0e9af638ef48cde2291aef11e2c0dcc2bc61f1208076723851c.json": {
+   "sha256": "d96ca0de562b8b9f301a8152f752f570a53778af9f842e4c6e2099a077d4dbac",
+   "size": 8253,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/342a1d480335267c43e624bff45c1cdfed3e0f6c1a7a6d830acbc11581ec3f85.json": {
+   "sha256": "092efaef2d33d4bbfad60a626ef07320f2f1fcd03623e8d037610ea324245f1e",
+   "size": 6441,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/36126fe4263a90bebd279770adbd8eef6947a2a42c3c9eda3a12a1de75e4faf8.json": {
+   "sha256": "fc10e86d919b1566a05af547701919f41627b0513f2265edf4dd3d8b25987db9",
+   "size": 8499,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/38678fcc85611f39d41449ae1a9f70d4fa9a017296ccbf91a0dc996368781178.json": {
+   "sha256": "4875b7913c1f7b51050e6426e519b6045dd30f4efb72c86b8eca380cc1aa9854",
+   "size": 6506,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/3bca2226038dcd4512835787139318c6ed9bb243daf7399bb663338d8da6b2c1.json": {
+   "sha256": "6d190285027725cfa8ad8322ec2e353f3f6ac5a55a94473e59c8a43fef3d865c",
+   "size": 6058,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/3d042849f6db58c117785cde8eeaf2146ea93df60ec919fe7054b18fa0f0e2b1.json": {
+   "sha256": "88f3e03728ebbd09bc5bc0b583a99755c2f8d3f182de6a7d1f9d426e1cffb3b1",
+   "size": 6326,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/3e1b068c82932476a6e0ecd904787c84193d0c9bab0521dfaff0250cf5923ce8.json": {
+   "sha256": "48a8763c3abeb8241fed3b0b9c59bd7434ccae4f25cd9bbe62df1410f8cc02a2",
+   "size": 7415,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/47879fb6aeff4298eba0cebd5aedcc7f7ae3c6dda8ef3e8fa0da82a5aa6c13cd.json": {
+   "sha256": "802e44405629180865ce04a4f62a328144acd9a3ecacd00e3c24162723394123",
+   "size": 6430,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/486e2c3cdded5c9bd10de8795c5308f839274f227ec84819a03564147c9eab2e.json": {
+   "sha256": "cf05f2b3d09963ff052ae7fca483714c7d2b38adeab8aebe5a020d6daec30be5",
+   "size": 5454,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/4b0c5365c70df5783beb4068cefcd3580c97aa9ad024e7f858fa7207ad7085b3.json": {
+   "sha256": "5ba7ad942f4f6aaa52a4bee740a6db093a70135e04bd6c86f10e7acb15fc211d",
+   "size": 5958,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/54b4e27a60cdd721948ba9447c17ca412283f970e2975beea20c67bb712430bd.json": {
+   "sha256": "2a003300b0fdc8c1aaa519e76f31c2eb99f238f19d7fd7a79c85c85591682e1a",
+   "size": 6242,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/5f8d563f8894a116a4c51bdc1ef252cc4a19e0d70f4b3260c72a56604c2b4036.json": {
+   "sha256": "b8ff77743347017ae04b0b6efd6e9f3ed494f344bf50d6f3f35edc653fd0c7d1",
+   "size": 5395,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/65dbf725efc55ae3cc83f2ec86910936044eea7a6f58d530e55f237d0c45106c.json": {
+   "sha256": "11725a82800adce1102a64d218b277cfbef6b492f6da91c146b45a42a7c1ae55",
+   "size": 7480,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/685794457c83d626d8578a7ebb017dcaf46c7e741f6855e8b2514e295908c4db.json": {
+   "sha256": "446437aac2b4add2f2937e37741c756d3412761da798aacec8ab6a4de5f10793",
+   "size": 6280,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/6ab181182467dc9e93a9c769407c54598c97f375487a9b2ba3c78c81121c5ddd.json": {
+   "sha256": "988c19e0b658fc9849c1f6b5f547180108c95bf45446e6fb5d92cc917e56514f",
+   "size": 5782,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/6c5eca2cfff0dfd05e3d99ff8ff3790794e54834093d414605ee5fce2357c213.json": {
+   "sha256": "9e36720549329c8972cd6366931444e70600fddc30732615954354e6485aae50",
+   "size": 4667,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/7108c467371f3d402da1b8f9a8cc9a17e1a31767fa869a556e9e5ac38f13510f.json": {
+   "sha256": "a6bc854f14c95536fb065de16cc788ff595fcc97f4d21fa549c98f49c27846e5",
+   "size": 5252,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/741e45a42f07dff419f1b4f604b89246828bef56f222fb542712d7ec28dd2461.json": {
+   "sha256": "7dec0a1563bece8fe42f69c8f85989b9198658ea84aa3ee2e9ad2480d483adf9",
+   "size": 6488,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/7488c46f44c96d2d00e0cef0e42f49752a0ce993d6272370613e376444653e93.json": {
+   "sha256": "6faeebace74ce1057c3311f224554ea311bd69a141c75c430490abbe08de6f67",
+   "size": 7368,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/75e21be64c1e632225160b9f488ae0824f5ff0709891c333808b97dd13d65ed7.json": {
+   "sha256": "abaa8e9cb2029efa883b69fd0f2be2a0366cd11614a25948e360b4259c758273",
+   "size": 6657,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/7ca540a9f2d078804126ee19e355b512ad332a7708485586dfa73b257719e528.json": {
+   "sha256": "9dafcb1e8a201cc1b297d270960cac8408ecaf12d15b3b85a4eefee6ab730571",
+   "size": 8248,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/7e949c17e3311402ef7afabff4d9bc1f8d2dd497c5462d2211a4f4936dc6f907.json": {
+   "sha256": "df0dd591b244d0d5cea88b8fe6d095e01710e2eac79f091df3041292075653c8",
+   "size": 5295,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/800788bc18936d93258677f6e03215854f63eed84c9e56903fee97edd3ae5d86.json": {
+   "sha256": "2d3c217e45836cd6effac06841a13c467f71eca32369d7b996d7a4523bc1eb05",
+   "size": 7083,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/844ee1ee1507e6b79c27ddcd5af24259137f398d1454931ed05de21967043557.json": {
+   "sha256": "8b9014ca40f021ca70a08ab180508c4f26fb4171128ca063b67f7a6aeafc6e4d",
+   "size": 5731,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/85cc3d04dc3e4719f18f3bebfedf63e86e68686a37fbb2ed9eb6141e9deec99c.json": {
+   "sha256": "68e844359613f90516f41c16200b4bb3cbbf41c40064afa7d4bc7c78b527e488",
+   "size": 6988,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/8bb3592f8b78ac77cfdad23109cf6393bc11d43f78ab70b95bf727ce8aae52d4.json": {
+   "sha256": "190aaa3f18b4f9f4e33c6f5032c30ff1f02ea84983a644d1eebe83884afedded",
+   "size": 6357,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/8c4a0793db2bac6a810ebdbade607c1a8bc7f88afcbd825162019ba924db4b06.json": {
+   "sha256": "7bd64a97df555279f370e4e8d18384c7ff0e7f435497129d7e40d9c485c75d99",
+   "size": 6847,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/8e338999e7f663af88af678d1ced1b1820d9af469be322daaad50f275da310df.json": {
+   "sha256": "d1722f6a4923cf9ff28b747ed7a96419190835c90108f1a248e81a243534c674",
+   "size": 6926,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/9730c2f06c18819e20b9d309780295225ad36513e95a6667c9277d70ae547bfa.json": {
+   "sha256": "31d241583688762730c00ae9851b88e893ea43705cc00781cb1c54f83600538f",
+   "size": 8297,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/98e993d30ef03e118f0460dff1eadd446c6d83df5080435a6ba9f83e2b426264.json": {
+   "sha256": "f0910ba36e5a886ffa8b0e434b5faeb4a24db7e4ed7c1f965aeb0a7edb52d26d",
+   "size": 5878,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/9d3fa840afb646d820f5ea5b70be1d91a7ce4be2e8ce5658b932166913a60ddb.json": {
+   "sha256": "b91b1a8b9221f0852febbf7a8ee26c46de5e1c761fd32e95b2a65d3ed2bcd776",
+   "size": 7194,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/9fb85cdfbec0871f8a68e9d07d4076854b7287289c30de007a000e80bab7b50b.json": {
+   "sha256": "eacc3dbf7e786b31e408d3cae76828a1481d9278facbb89ef0b88677ae1a26bd",
+   "size": 4656,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/a3ac906ea17bf0d7ee6a854db2e7b490fe67c3ea3c9bda669c46abeb010bdd64.json": {
+   "sha256": "d6b920e88a75164fdae21cdd80c5bc6f6f7c76acec3691d112459dcb53de85b6",
+   "size": 5118,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/a3b612b33df3644cbcaa8dba25d0aaf949921c0baa1dba9f8960185026064145.json": {
+   "sha256": "823f90e6133fab5a2db833f1894386681310323644347c6e5100bc6e3c4731e9",
+   "size": 6097,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/b0010b14f02bc92eba675bd6cb6820bdaa6e16aa796cf594975efa14e61fabe9.json": {
+   "sha256": "f7dfc88650ea35107372d930f0ff19058a830a24d511aa21881fa948bd2b8415",
+   "size": 6627,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/b22e34c028a022bedacd27f3749277000b62857db3b12464cb936e04d481d011.json": {
+   "sha256": "1cc58080b0729f29a91b2c8dd298afbdd1315153e0adc39aec7cafec8351306a",
+   "size": 7540,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/b25dbf5487a81ae1f40983a4dfeb5689c2bf09eef8b01ba662c2596393d0a6bd.json": {
+   "sha256": "0d5bba77466a1e8cc141bf7250930869f7a5cf9a6a2ec2254eba44a12ff51adb",
+   "size": 6536,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/b485d4e2e055622c612aa2e3ec44e91171e31af05c7d84e4b99a541933a52bfe.json": {
+   "sha256": "a957861bc770c3017dd1dca0b8fd0842a4c78ffbe84ef63e0c66cc9abc2ef1e7",
+   "size": 5385,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/be3cd550cfeb8a70e30f4f4d9e3a41b2b2f8d9c76243fc4b1739b117b5d79fb4.json": {
+   "sha256": "b5c353ea075be9f5d6408af3423533f5ca861466477d690b7d8082d68012d59d",
+   "size": 4772,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/bf92731efb10cb77dda3b1272ec48b9582be39619557b65c411665c3e579c998.json": {
+   "sha256": "9be91e9480c7de52b6a9a2dc5cb25f7bf73400045b19dd4029089ce213a8bf14",
+   "size": 5734,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/c37329dc6e9ab45d70f923a7f18601a679997447bc94404113b3782e79a0beef.json": {
+   "sha256": "e184dc6baa44350eae3a6dc7a35476719622ab01d221389cfc4c2a8edaa256ee",
+   "size": 4859,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/c494c0e7c03d00c491b813fe7aee69e86f3990b5aeced1972e5041e3a41f6761.json": {
+   "sha256": "f4c367acb1d4691565aa2d674e2a4fd6318ef2e9769af594d96d1e007f4e25a2",
+   "size": 6317,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/c87dc2f13e63eedb8a704df6e5bc8101d6753198549dcb3bd6eeccfade784d2a.json": {
+   "sha256": "a7b97a5050df059d7e6918add5312d88f6f55fa3f4a69dca2bd6008daa7896f9",
+   "size": 6474,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/cb79ce4f6d2493831c2ddb9fc17966c280ee80c6cd7c6ae940a1f21d76fb841b.json": {
+   "sha256": "165535c3191eeb69cc929cf1badf81318ad49fa9913422dbd093e0bf6f58004e",
+   "size": 4600,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/cbf764ba3292520b989117ada801a49a9429c695df025b5ae80f1b2d037cca48.json": {
+   "sha256": "afbc3da1c9f2e51d83bc858756cb89934cd679842009a2de5ec999be8053edc6",
+   "size": 8945,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/cdb816fd7b6bc056860aacd2d5a9b9de6490d26a5326ffbbc61933d39c276166.json": {
+   "sha256": "a7a033fb8816eaa539db338f64507158c7c75510586969975ad0c3d55be5cff4",
+   "size": 6662,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/cf390cf4ac1737b5efa9047ecc79e699c988e7f58d785f0d5d66ee93291e2996.json": {
+   "sha256": "e3e3503b92b6a6fc0a8fe3d3d2b8b8c9f019a11a6d7fb188169b52426e58fdf8",
+   "size": 6733,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/d136575d45dab3382b75b7a15c7291ed7460d918f5d195845315d80f41aaf335.json": {
+   "sha256": "56bfe4ff917076a11bafe097074bd453e575a2d8c6b5c4badbe6f2bfc2bb54b4",
+   "size": 6728,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/d136ea8232d9bd4386b116f107f2e7365ea5eefe21d588adf5fc229cfec205b6.json": {
+   "sha256": "16e538f91cdced181ab8c62a4868a86e05f002274c234353274f64f1132a9df7",
+   "size": 5996,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/d19542da9bea8e64bdfd3d3356fb1cd59ab552782df2e3363cf0240362b5e38a.json": {
+   "sha256": "70ecdc81416c571a6ea87fa1cdf6698be8d94e432865cf757c52290445a6e3e5",
+   "size": 5003,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/d3e54d27f60c23e3d09b790c5bdcf8e7ce5a68585df116a6180a7655e11f60b5.json": {
+   "sha256": "0c81d0a5d9375b6d97839a966dd4a08216ba7db158010daa44c68272812983f3",
+   "size": 6362,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/d56e73bf5aa01622e7556fc046b75546356c6a1867bb9396c132149595c33921.json": {
+   "sha256": "d8047298ecbddd8054b12efcd1c5ac3ef323af451ccedc5f80b5a72703c3aa65",
+   "size": 6200,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/d63a4ad2abf5ec5a0797652b40d3d73009cc9d9743b9df665760e2418182f13d.json": {
+   "sha256": "98fe451ec68826e92d444416701f04191ceb44482923d8d7ab297f56ffb85ffb",
+   "size": 6739,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/d6b6ac1c451542e903bcd821be9ab21a1ce971e8abad63e04acef1a283f7cde3.json": {
+   "sha256": "e19c5f440a6285279b0469778774afd8e052db68a46ef094326129043230a56c",
+   "size": 5648,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/d965709717d80ef3273966ad511a019422ba3f3a54b35c7bf6238df82dfe9884.json": {
+   "sha256": "86fc1175ba7b11eaf840275e56c055948738f40f5e1b1a5dd4942e34eadd0df5",
+   "size": 5890,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/da68413e0403907021ef561b0d352a1a414cffcb787462935b2a292748a938f9.json": {
+   "sha256": "a15d11d77f9983c88abfc453bf2bc8ecdadef726218d6818a39fec9d850ce201",
+   "size": 6924,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/e0eb4bea9c3544ac67fd5bd222151cd7b6c0ea10f92c54628fc23cd9e1b1550c.json": {
+   "sha256": "3f728b23ad49b16f62c13f51aff84bb67a18697ab34f88f9a996fcaedac4c18a",
+   "size": 6095,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/e3b16521573fd79f95349befccee52739a19332e5f626c9c0a1d22d06dcf8565.json": {
+   "sha256": "28cae0e29d2a2c3b710258d09749c1edc8a591f211bf9c5cc0952622ad44aa7f",
+   "size": 4342,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/e6c344c167030402dda6eb83db5af060b29414a32e9b671871cac1a4a758f4cd.json": {
+   "sha256": "e4983e060b7300bfb9a1451e4875db828e3c815c9b6bbd9b66073f62dd1cb39e",
+   "size": 4198,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/ea513c468c7fca7beb9a166cce06cee9a628483fbbb85f98b1d06d09b3f152ea.json": {
+   "sha256": "80695e57398dc5268d7478cd222f2929c2e30f3a1a03df6bd72e682f408761f1",
+   "size": 5406,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/f048da1c689438e24476acb9e47ca8acea3ed2f9ae823ed4b9443a990f02127c.json": {
+   "sha256": "c268be9e9a26f8abbfb5b19906993ef339377fa64290669274b0bf2403b31687",
+   "size": 5975,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/f136eb6d010b7bc72b11340f551a8c4f80092988db12cb91aa12afbb94eb7ddb.json": {
+   "sha256": "2cb3e275c92be61b14d1a9053cda7cf578dc067fdf0381fd89372c31e256c245",
+   "size": 7155,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/f5508dd81617a4e72a0085921d8a103f26d31c69bd4bfe345334a1900716403b.json": {
+   "sha256": "2dc4bd06d67bf6d12df7efc11c81b5f3d6eae09edcf7b6d204cb14a26a3e84c8",
+   "size": 8149,
+   "origin": "backend"
+  },
+  "backend/assets/golden/recorded_decisions/responses/fd6af4dce532fda0b0eb64deee8105c99c2c6f42647e1fbf9284866ddf81ac44.json": {
+   "sha256": "e3bf083bd4e28ee475be3a13fb7b0ea5b51ed98a564bcb4f28686ea699799381",
+   "size": 7662,
+   "origin": "backend"
+  },
+  "backend/assets/golden/reference_source_manifest.json": {
+   "sha256": "025f926a3a6e3d29d35412460a61d0b1856caa0e7fa4d6058de6f89797d55eb2",
+   "size": 91251,
+   "origin": "backend"
+  },
+  "backend/assets/golden/safety_record.json": {
+   "sha256": "0d1993cd591c20ab51759f3795c93d569c88b7ba0d6559007c08823250f9fdd9",
+   "size": 143,
+   "origin": "backend"
+  },
+  "backend/assets/golden/selectors.json": {
+   "sha256": "93bbe5ab518a1525a0ee5364a95f5bc4fa27f6b1f98b4b501fc63c61c0b375bc",
+   "size": 5440,
+   "origin": "backend"
+  },
+  "backend/assets/models/current_structured_simulator_1/development.json": {
+   "sha256": "e1560397d288845fc50b392d9445c6ae1b34656f8a502d98db7df4e8ef3b4469",
+   "size": 17958,
+   "origin": "backend"
+  },
+  "backend/assets/models/current_structured_simulator_1/features.json": {
+   "sha256": "e4a0e3e4cd075e6c16306266de3f685fb66e987b0104bdf0d2658e82a8fecc83",
+   "size": 9603,
+   "origin": "backend"
+  },
+  "backend/assets/models/current_structured_simulator_1/manifest.json": {
+   "sha256": "fe9b5c7c1fe7cbb5baee80a29e4e6980b27a33364bdda8ae189dc577703549a9",
+   "size": 1033,
+   "origin": "backend"
+  },
+  "backend/assets/models/current_structured_simulator_1/markov.json": {
+   "sha256": "70c4b0f091f4bd6fd14d3d9e9f5fa8f0403b40c77439b8dbb6e630a7c6060efa",
+   "size": 617,
+   "origin": "backend"
+  },
+  "backend/assets/models/current_structured_simulator_1/population.json": {
+   "sha256": "8c46a3e82405f14b0a660ef49f748655fd09fde3fcac0d3c0d6424666e6a62fa",
+   "size": 12145,
+   "origin": "backend"
+  },
+  "backend/assets/models/current_structured_simulator_1/prior.json": {
+   "sha256": "019162fe489746cc98e0e740f8dfafe9acc01184d0decea6470067c3a6463802",
+   "size": 263,
+   "origin": "backend"
+  },
+  "backend/assets/models/current_structured_simulator_1/settings.json": {
+   "sha256": "fec3618b050f82695c4943686843dadb7de61f772c44f465e41ba8b89f65dc82",
+   "size": 695,
+   "origin": "backend"
+  },
+  "backend/assets/models/current_structured_simulator_1/thresholds.json": {
+   "sha256": "30019269fbd8527d5800c65fe7e58b367e56f308e4af3bb47baf0cede09919c3",
+   "size": 325,
+   "origin": "backend"
+  },
+  "backend/assets/models/usersimcrs_agenda_derived_1/development.json": {
+   "sha256": "bea79e5db83c0867392ee038daafd7ac6944b63d9bb9d3c1860cd004f1f16a4f",
+   "size": 18096,
+   "origin": "backend"
+  },
+  "backend/assets/models/usersimcrs_agenda_derived_1/features.json": {
+   "sha256": "cae59794c2b278ee1fa0b9956f53e404e37f0bd7fef0938625e9d4ad05e2af1b",
+   "size": 9466,
+   "origin": "backend"
+  },
+  "backend/assets/models/usersimcrs_agenda_derived_1/manifest.json": {
+   "sha256": "afc14acdbdabdd8ac7e5f8d753038d45b15ce952bc7384d8829905bb5bab904a",
+   "size": 1033,
+   "origin": "backend"
+  },
+  "backend/assets/models/usersimcrs_agenda_derived_1/markov.json": {
+   "sha256": "06862722842aa9d5ec3a3d63e0c504ef02e68d18125cd0010077cb27cb5ac7ba",
+   "size": 567,
+   "origin": "backend"
+  },
+  "backend/assets/models/usersimcrs_agenda_derived_1/population.json": {
+   "sha256": "787d9cbab8e8419fc38a0912d59fa1f27f7919e215819513a9fd0942ab3a20ee",
+   "size": 11837,
+   "origin": "backend"
+  },
+  "backend/assets/models/usersimcrs_agenda_derived_1/prior.json": {
+   "sha256": "93d085e6d13e4e6d122b0251035746b938ad767c714f58fbc0bf14c710f4e88c",
+   "size": 266,
+   "origin": "backend"
+  },
+  "backend/assets/models/usersimcrs_agenda_derived_1/settings.json": {
+   "sha256": "3ea2bc0f788a95ddc21a86c16320645adc2bdeb6189d643b90c801b2ddece780",
+   "size": 693,
+   "origin": "backend"
+  },
+  "backend/assets/models/usersimcrs_agenda_derived_1/thresholds.json": {
+   "sha256": "d9334c7ea5c8d153fde2202c9988373c4e019c8b2e86c1300d3516d0a77d91f5",
+   "size": 341,
+   "origin": "backend"
+  },
+  "backend/assets/reference-results/branch_metrics.json": {
+   "sha256": "839450d37fc9d5113b0c6b4820fb596e7a52735b9e0ca790200e56a8cf976648",
+   "size": 94365,
+   "origin": "backend"
+  },
+  "backend/assets/reference-results/llm_accounting.json": {
+   "sha256": "7a9e793f87f0f91acc3b40cfd6e9d09eed6832b8fa078703264cd3fe32ee93ac",
+   "size": 360,
+   "origin": "backend"
+  },
+  "backend/assets/reference-results/longitudinal_metrics.json": {
+   "sha256": "2528814a19e156684292fc6c783247a80eadbbcbca7863b7dafd56baca7ce75a",
+   "size": 6151,
+   "origin": "backend"
+  },
+  "backend/assets/reference-results/primary_comparison.json": {
+   "sha256": "f57b003489fa0e1e2450f2c090e207edf1a214a5586f371e7562b1cd6b876a04",
+   "size": 23501,
+   "origin": "backend"
+  },
+  "backend/assets/reference-results/replay_record.json": {
+   "sha256": "bb145329bb26c836bf6303ca33d8502e5480ed6f8b63d9254053b0a832783049",
+   "size": 570453,
+   "origin": "backend"
+  },
+  "backend/assets/subset_manifest.json": {
+   "sha256": "9b50d6cfef9a5a0d814d5bfec99a1399539cdcd0731455bffd4b5f7945836fcf",
+   "size": 120301,
+   "origin": "backend"
+  },
+  "backend/assets/weights/current_structured_simulator_1/selection.json": {
+   "sha256": "aa53f59344e1e2991a1883a05bb532ae126fddc398dffa4db71b3d0350c8a1e4",
+   "size": 586,
+   "origin": "backend"
+  },
+  "backend/assets/weights/usersimcrs_agenda_derived_1/selection.json": {
+   "sha256": "0214af9114707f00a1a5008173dd48c1eae3a5fbe8b6e2ead7ad3cddaffca46e",
+   "size": 576,
+   "origin": "backend"
+  },
+  "backend/docs/CODE_ARCHITECTURE_REFERENCE.md": {
+   "sha256": "b6067f8154bd1c89be815dfa866970bf86ccdfa53320ee2798704e5981d6ffe9",
+   "size": 430654,
+   "origin": "backend"
+  },
+  "backend/docs/MASTER_SYSTEM_REPORT.md": {
+   "sha256": "4c6096f4aad71d3dd90bab3f6963a7b68ea82d5e69b8b9140f4d028434eb50f2",
+   "size": 86893,
+   "origin": "backend"
+  },
+  "backend/implementation_ledger.json": {
+   "sha256": "6c3c614ba3e9800b7289e575e4b258042623f492c084ab0d1b62e8ea6b7e4086",
+   "size": 37516,
+   "origin": "backend"
+  },
+  "backend/pyproject.toml": {
+   "sha256": "8ea1d4e3b98b7e71a09ff1074c43b3af8ffac0fb74590ff3ccd41e033d2f01a1",
+   "size": 174,
+   "origin": "backend"
+  },
+  "backend/release_evidence/capture_fingerprint.txt": {
+   "sha256": "7b68822f89cff9c00f195f274d36c44cc863f3f7d2b53fa22e7063ffce386d60",
+   "size": 134,
+   "origin": "backend"
+  },
+  "backend/release_evidence/complete_test_output.txt": {
+   "sha256": "fe507acbb497ed09a339bc09c92faf56a66966eb990a42b17ea13705c7d9588a",
+   "size": 4146,
+   "origin": "backend"
+  },
+  "backend/release_evidence/implementation_ledger.json": {
+   "sha256": "6c3c614ba3e9800b7289e575e4b258042623f492c084ab0d1b62e8ea6b7e4086",
+   "size": 37516,
+   "origin": "backend"
+  },
+  "backend/release_evidence/offline_capabilities.json": {
+   "sha256": "a0d4f5235119814c9b7435d653c4547c550d506e9a039bb533f853b09d0d5d4c",
+   "size": 1345,
+   "origin": "backend"
+  },
+  "backend/release_evidence/package_versions.txt": {
+   "sha256": "c9db1e83cfea2524d58915ac6e72cd6f960b921dac32cdaf9fd0109a55d22e3f",
+   "size": 410,
+   "origin": "backend"
+  },
+  "backend/release_evidence/phase11_restart_persistence.txt": {
+   "sha256": "a4d17f1b5996e77349de812cb007c12f00e22127be529d1b08e31be650616eb5",
+   "size": 231,
+   "origin": "backend"
+  },
+  "backend/release_evidence/python_version.txt": {
+   "sha256": "3420fa50df5802f6ba656b26fae87a9e23c2285c197d05b226bd31475db7dc5f",
+   "size": 34,
+   "origin": "backend"
+  },
+  "backend/release_evidence/source_verification.txt": {
+   "sha256": "b4b4c7375840a90aae31688b1f592db4b2da509ac2ced28509d82899a293ce64",
+   "size": 104,
+   "origin": "backend"
+  },
+  "backend/release_evidence/subset_manifest.json": {
+   "sha256": "9b50d6cfef9a5a0d814d5bfec99a1399539cdcd0731455bffd4b5f7945836fcf",
+   "size": 120301,
+   "origin": "backend"
+  },
+  "backend/requirements.txt": {
+   "sha256": "ce4276a9d65d0a96786a62046def663165a0578b35168632af5a775ba90a44c9",
+   "size": 60,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/adapters/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/adapters/catalog.py": {
+   "sha256": "3979c597556458452a0c041eb3958961e1e82f2b164b9c4f51bd1dfda840609a",
+   "size": 8097,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/adapters/live.py": {
+   "sha256": "d547e397997e361bf2bad674efad627873846f38ee622a61d91896f599aeb003",
+   "size": 8603,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/adapters/recorded.py": {
+   "sha256": "672d471c0aa44f0aaf032909f3cf7e0cd9b58eb81c3f3e2165649d4f88bbb80b",
+   "size": 2139,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/adapters/resources.py": {
+   "sha256": "7181ccb11afe30b69fc38faf25fe8950f30dc6e10ea937f25733acd7bd19709a",
+   "size": 3941,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/adapters/sqlite.py": {
+   "sha256": "b33ef72cc81c2ecbfd18afb8c3cbde02a8ac8d8442bfdaa9874d169a8181d6b8",
+   "size": 2494,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/api/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/api/server.py": {
+   "sha256": "40e53c6965b6b48768a85724e310798e8d3a98999cf912a565ef57e081476dc2",
+   "size": 6744,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/application/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/application/backend.py": {
+   "sha256": "61600b85538551f1ef75fe2312a2fc65f4f01e17327e3086f79e4870831f2776",
+   "size": 1851,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/application/comparisons.py": {
+   "sha256": "93b5c7651924083a1b0624d824eaae22f4a8eafc7322d4d17c135b20fd00e33b",
+   "size": 5873,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/application/policies.py": {
+   "sha256": "7b1aeb71e8b08a81c348f26513476cd9559c1242f04f7cc84191c0caf19944a4",
+   "size": 953,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/application/prediction.py": {
+   "sha256": "fc99c834a4a1444d72bceb622a32c0b06b446b569b496eac6d3d21fdbcb33583",
+   "size": 2809,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/application/reference_trajectory.py": {
+   "sha256": "531a34f5d169f4e588cd4cd656ece02e6c2652c6e2e7f77792e16807ee816e10",
+   "size": 5464,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/application/roots.py": {
+   "sha256": "fb49c8fcd6b35f1d67590a4125862e70cc37b213e90b77f663ef54f65356226a",
+   "size": 1365,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/application/sessions.py": {
+   "sha256": "e9d95054680733771b3ba7c65cd5fb58e31f87bc74c7e7c75b078ad3c0a9f88d",
+   "size": 12724,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/branching/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/branching/allocators.py": {
+   "sha256": "7838f83a1b2a8b8ba21062bd4c353c5679e473b456114557bdc20011f3f9d8ca",
+   "size": 3246,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/branching/contracts.py": {
+   "sha256": "51cd1d0b456a279e6edb6210e2664651d853f2f92f9f26b5165d90baf93c59ec",
+   "size": 3760,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/branching/engine.py": {
+   "sha256": "2e1c19f92ac48facecbce731a7c2909c10c14b05702a3eb4cdc343c89acb15cc",
+   "size": 20820,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/branching/predictor.py": {
+   "sha256": "2e9ecacae8426241088f42754c2896dff97e1bfe698c2b63f6a95940e3974408",
+   "size": 808,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/branching/simulator.py": {
+   "sha256": "b35c5a263976bbaffbfecc12512af1fcf60bda78592b9f8f72e169c019a10180",
+   "size": 2539,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/catalog/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/catalog/health.py": {
+   "sha256": "2db208630f91f64a7d8212e731950f67b18c69f6da0006429cebfb03326ba842",
+   "size": 1647,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/catalog/windows.py": {
+   "sha256": "59d6755614d9983e8f4a63e19ba11bee3f2fcc028c7628443eff44552a266068",
+   "size": 1219,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/canonical.py": {
+   "sha256": "ea706d52f75390ea307b9a0d526bc3c61e9b675b4de929bdf7486e96f7835776",
+   "size": 1247,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/ontology.py": {
+   "sha256": "5fad6d98ffa7b0f2c5fa087f428a2d2d57839870d7daf0659436470369c29fd7",
+   "size": 786,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/platform.py": {
+   "sha256": "9eaed96ba17c6dc002a5e8566c4618be8395e13b08f1831c6af545244980bc93",
+   "size": 4874,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/provenance.py": {
+   "sha256": "6225c62f47062f4964313e32c5b9fb638a8ebf1f598726aa04f3c51e0158cfeb",
+   "size": 1112,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/research.py": {
+   "sha256": "1fbbeaf82dcf90ea14cfdd648e4fca7ab63f4a1342be20935719478c65be9332",
+   "size": 11083,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/roots.py": {
+   "sha256": "51f504fe2a28845969ed223a68384e1c79116c26bbb0db077319f36bf61e1500",
+   "size": 931,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/seeds.py": {
+   "sha256": "34cdfd29999c59d58942867f36e2946acd6974a2c32d392f5fe3f78bcce53675",
+   "size": 426,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/service.py": {
+   "sha256": "18a0ce790fadf2cf96085ba0497b85d093b8d2213392860571a605f72fe7df3c",
+   "size": 2637,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/split.py": {
+   "sha256": "09894e1625da9e5018dfb2dfdbe66f8e415d1670d910ec469807877669cdd10c",
+   "size": 192,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/domain/versions.py": {
+   "sha256": "49fd523277598d9b159076ca8dd6077dfdbbb6a2419b3af6990803e3eaa36fa8",
+   "size": 3562,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/evaluation/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/evaluation/comparison.py": {
+   "sha256": "2426dc2d8f8559ba57ae756e1f9ff0da12144ea850c1b00bb1c72e5e05c08767",
+   "size": 1629,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/evaluation/oracle.py": {
+   "sha256": "06454a26c495333d5420e5824d864d7a4ad86c47bd8ad7747f20160513b0773d",
+   "size": 5015,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/evaluation/prediction_metrics.py": {
+   "sha256": "f661bd9a7b661fb13b3cd470326fa28b5141e0848adfffeb7ef7ca69fbf6e309",
+   "size": 686,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/evaluation/prequential.py": {
+   "sha256": "fb9317280a1cfe2a42e9c6c7b8cb01d9966eda57eba1299ca8749ce1d218a936",
+   "size": 3901,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/ports/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/ports/errors.py": {
+   "sha256": "ef41d2e1301bb4c175bb68043ae7c7178beb841b771b9451472967de95545ab6",
+   "size": 541,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/ports/prediction.py": {
+   "sha256": "6cb54d8cf37981f65a9d87b282c8d9598925a006c1e17e47efb89b82357229d2",
+   "size": 219,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/ports/recommendation.py": {
+   "sha256": "fce85e1e3c0d4e99732c88f22cf1413bc70fb5ff9a88121c8ee0c1d018c80c46",
+   "size": 924,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/prediction/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/prediction/base_features.py": {
+   "sha256": "f08178b127d62f4abafa1b571a9e56cf73c5cbc6fd6b8cc48e993f95a0890be4",
+   "size": 10292,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/prediction/contextual.py": {
+   "sha256": "71525cc93ed74019f51873d6584e3355ea34ad5df07d575edd2226f1e8f801b5",
+   "size": 3069,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/prediction/encode.py": {
+   "sha256": "092e563efffd617299f881e91848e9fcd6037addf67e34c964202551fc519a17",
+   "size": 666,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/prediction/features.py": {
+   "sha256": "acb5befe2e2ff057f9bee1b7c458010136196fe0e7842040fe6fd1796c998c52",
+   "size": 1577,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/prediction/population.py": {
+   "sha256": "d50fa4540ab96cf658fc57edee04f3003e3ef3a067fd7824ecf91004368786f8",
+   "size": 6834,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/prediction/records.py": {
+   "sha256": "e53951e8df14f43cd26be49983cc760ca98e9a10e64db11db878dd318e0fb04b",
+   "size": 1713,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/recommendation/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/recommendation/baselines.py": {
+   "sha256": "e24b72a712850af53e819f9b8d72d7f574ec17f1d70eb70638bc3a097809db23",
+   "size": 2400,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/recommendation/deterministic.py": {
+   "sha256": "f4e87392f61dadbace9e4e8b734b0a71d20e7fb7fc31a4bf2f8845a3a90da48f",
+   "size": 5868,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/recommendation/feedback.py": {
+   "sha256": "177afda2430431161a09b1413c73077bb4213dfbf5a8786a28cb30e8563cd26a",
+   "size": 5330,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/recommendation/guard_contracts.py": {
+   "sha256": "c5bc0b8d0271eb77d04c6b688faca380837e61d0bc118a1eb898620e794df45b",
+   "size": 2483,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/recommendation/guarded.py": {
+   "sha256": "20aba18d7fbd9158e9518d8bd6d61985662ca27712f13cbcbafc35b90610ab21",
+   "size": 8705,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/recommendation/json_extract.py": {
+   "sha256": "6cbf02833f71259943ce9a8cdcb621bc731991ae7dc7d67349a6e9454c223ec3",
+   "size": 1971,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/recommendation/prompt.py": {
+   "sha256": "b66ff6aa08305d22765bfc1d4daa5f7c4aaaf05e7c827c344dc589ef9e56ae34",
+   "size": 5552,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/recommendation/shortlist.py": {
+   "sha256": "c7a68c5a10316cfb893d80adf9322190786dd7dcf4f2f3bd2c7ba723eeb42622",
+   "size": 1011,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/recommendation/usage.py": {
+   "sha256": "336a0642272b5ec67dc9ee671a24bab3fed4a4c659bfd10b6d3a9acf41e24197",
+   "size": 440,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/safety/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/safety/attributes.py": {
+   "sha256": "606e5b6e367b80baba4536de1eb962daf16539237f2cf8205a4825d58bb96312",
+   "size": 4000,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/safety/gate.py": {
+   "sha256": "87d5a59ad794ccea220313e6405492158c180ae6b78760221500ff9681fa7adf",
+   "size": 982,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/simulation/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/simulation/agenda.py": {
+   "sha256": "6a4f123ab400968a70ecd27837ac7b5b1b8355158695c163eb148145f74c5d40",
+   "size": 5042,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/simulation/archetypes.py": {
+   "sha256": "8203e32601683e0d1202a787eb895bb71ff7665992d7f652c96a5be0329e30bf",
+   "size": 440,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/simulation/numeric.py": {
+   "sha256": "c287abdf0a94ff1c9129d582c3d5d01bdcd926d5f7cd97ff9c91622d7711436e",
+   "size": 2856,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/simulation/profile_adapter.py": {
+   "sha256": "9bfb182af05bafffcc60322eba785add345e8de73d45751cfcd10b35f8861c70",
+   "size": 1922,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/simulation/structured.py": {
+   "sha256": "feea8e35e7d884e01a19a9f8f8e6f258b051626e711ed3fbc14a4c266094c5ac",
+   "size": 11870,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/simulation/trajectory_contract.py": {
+   "sha256": "63dc35ece12aea6025659f49ef989e494a2471a96f8297907c50cb9d179501c1",
+   "size": 372,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/simulation/transition.py": {
+   "sha256": "59b13eff8ab20345133d671d25a9d688fe5cfba76a9be97a83ddfdeb13723418",
+   "size": 2476,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/uncertainty/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/uncertainty/aps.py": {
+   "sha256": "95e296ce8392aa1f7d90d97f7ee2e4bba475b77baa978c9aa7e80b54256718b7",
+   "size": 2237,
+   "origin": "backend"
+  },
+  "backend/src/demo_backend/uncertainty/conformal.py": {
+   "sha256": "df0d3f114e37fea8e1d45ad93ae59097e9aad3050d8e3002d5e34cd715eab5e2",
+   "size": 2587,
+   "origin": "backend"
+  },
+  "backend/tests/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0,
+   "origin": "backend"
+  },
+  "backend/tests/support.py": {
+   "sha256": "4f9ff803bf24b7f8379a6acb7495fa88986dd57ff9612f34228bac1710e95714",
+   "size": 2169,
+   "origin": "backend"
+  },
+  "backend/tests/test_live_journal.py": {
+   "sha256": "e459ffda612f547c59ca4bbc0245bc751342d177362a91aac693fe9e732f50ef",
+   "size": 3702,
+   "origin": "backend"
+  },
+  "backend/tests/test_science.py": {
+   "sha256": "069dc9abe43863116b1bdf4ae7b13e65b22ebb9157f3e4867a399d21cedf8221",
+   "size": 21640,
+   "origin": "backend"
+  },
+  "backend/tests/test_service.py": {
+   "sha256": "ecc81eae5477e1bc91c4295883d346b347098a537dbd506762a70e361f1c9732",
+   "size": 9301,
+   "origin": "backend"
+  },
+  "backend/tools/copy_assets.py": {
+   "sha256": "545e9da60d999eda3b8bb2664d9d216642af05ea726008d65271ffe4be316304",
+   "size": 2370,
+   "origin": "backend"
+  },
+  "backend/tools/verify_source.py": {
+   "sha256": "08b621bd67dcdc15b3c17f718384298b1e1bb7959a703441d7179d8d7b9ee3ea",
+   "size": 926,
+   "origin": "backend"
+  }
+ }
+}

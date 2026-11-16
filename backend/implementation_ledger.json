@@ -1,0 +1,1003 @@
+{
+  "files": [
+    {
+      "path": "src/demo_backend/domain/platform.py",
+      "phase": 2,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "9eaed96ba17c6dc002a5e8566c4618be8395e13b08f1831c6af545244980bc93",
+      "dependencies": [],
+      "creation_document": "docs/02.md"
+    },
+    {
+      "path": "src/demo_backend/domain/versions.py",
+      "phase": 2,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "49fd523277598d9b159076ca8dd6077dfdbbb6a2419b3af6990803e3eaa36fa8",
+      "dependencies": [],
+      "creation_document": "docs/02.md"
+    },
+    {
+      "path": "src/demo_backend/domain/ontology.py",
+      "phase": 2,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "5fad6d98ffa7b0f2c5fa087f428a2d2d57839870d7daf0659436470369c29fd7",
+      "dependencies": [],
+      "creation_document": "docs/02.md"
+    },
+    {
+      "path": "src/demo_backend/domain/research.py",
+      "phase": 2,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "1fbbeaf82dcf90ea14cfdd648e4fca7ab63f4a1342be20935719478c65be9332",
+      "dependencies": [
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/domain/versions.py"
+      ],
+      "creation_document": "docs/02.md"
+    },
+    {
+      "path": "src/demo_backend/domain/split.py",
+      "phase": 2,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "09894e1625da9e5018dfb2dfdbe66f8e415d1670d910ec469807877669cdd10c",
+      "dependencies": [],
+      "creation_document": "docs/02.md"
+    },
+    {
+      "path": "src/demo_backend/domain/canonical.py",
+      "phase": 2,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "ea706d52f75390ea307b9a0d526bc3c61e9b675b4de929bdf7486e96f7835776",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py"
+      ],
+      "creation_document": "docs/02.md"
+    },
+    {
+      "path": "src/demo_backend/domain/seeds.py",
+      "phase": 2,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "34cdfd29999c59d58942867f36e2946acd6974a2c32d392f5fe3f78bcce53675",
+      "dependencies": [
+        "src/demo_backend/domain/canonical.py"
+      ],
+      "creation_document": "docs/02.md"
+    },
+    {
+      "path": "src/demo_backend/catalog/health.py",
+      "phase": 3,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "2db208630f91f64a7d8212e731950f67b18c69f6da0006429cebfb03326ba842",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py"
+      ],
+      "creation_document": "docs/03.md"
+    },
+    {
+      "path": "src/demo_backend/safety/attributes.py",
+      "phase": 3,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "606e5b6e367b80baba4536de1eb962daf16539237f2cf8205a4825d58bb96312",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py"
+      ],
+      "creation_document": "docs/03.md"
+    },
+    {
+      "path": "src/demo_backend/simulation/numeric.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "c287abdf0a94ff1c9129d582c3d5d01bdcd926d5f7cd97ff9c91622d7711436e",
+      "dependencies": [],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/recommendation/deterministic.py",
+      "phase": 3,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "f4e87392f61dadbace9e4e8b734b0a71d20e7fb7fc31a4bf2f8845a3a90da48f",
+      "dependencies": [
+        "src/demo_backend/catalog/health.py",
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/safety/attributes.py"
+      ],
+      "creation_document": "docs/03.md"
+    },
+    {
+      "path": "src/demo_backend/ports/recommendation.py",
+      "phase": 3,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "fce85e1e3c0d4e99732c88f22cf1413bc70fb5ff9a88121c8ee0c1d018c80c46",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py"
+      ],
+      "creation_document": "docs/03.md"
+    },
+    {
+      "path": "src/demo_backend/recommendation/baselines.py",
+      "phase": 3,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "e24b72a712850af53e819f9b8d72d7f574ec17f1d70eb70638bc3a097809db23",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/ports/recommendation.py",
+        "src/demo_backend/recommendation/deterministic.py",
+        "src/demo_backend/safety/attributes.py"
+      ],
+      "creation_document": "docs/03.md"
+    },
+    {
+      "path": "src/demo_backend/recommendation/feedback.py",
+      "phase": 3,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "177afda2430431161a09b1413c73077bb4213dfbf5a8786a28cb30e8563cd26a",
+      "dependencies": [
+        "src/demo_backend/catalog/health.py",
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/ports/recommendation.py",
+        "src/demo_backend/recommendation/deterministic.py",
+        "src/demo_backend/safety/attributes.py"
+      ],
+      "creation_document": "docs/03.md"
+    },
+    {
+      "path": "src/demo_backend/safety/gate.py",
+      "phase": 3,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "87d5a59ad794ccea220313e6405492158c180ae6b78760221500ff9681fa7adf",
+      "dependencies": [
+        "src/demo_backend/recommendation/deterministic.py",
+        "src/demo_backend/recommendation/feedback.py"
+      ],
+      "creation_document": "docs/03.md"
+    },
+    {
+      "path": "src/demo_backend/recommendation/shortlist.py",
+      "phase": 4,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "c7a68c5a10316cfb893d80adf9322190786dd7dcf4f2f3bd2c7ba723eeb42622",
+      "dependencies": [
+        "src/demo_backend/recommendation/baselines.py",
+        "src/demo_backend/recommendation/feedback.py",
+        "src/demo_backend/safety/gate.py"
+      ],
+      "creation_document": "docs/04.md"
+    },
+    {
+      "path": "src/demo_backend/recommendation/json_extract.py",
+      "phase": 4,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "6cbf02833f71259943ce9a8cdcb621bc731991ae7dc7d67349a6e9454c223ec3",
+      "dependencies": [
+        "src/demo_backend/ports/errors.py"
+      ],
+      "creation_document": "docs/04.md"
+    },
+    {
+      "path": "src/demo_backend/ports/errors.py",
+      "phase": 4,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "ef41d2e1301bb4c175bb68043ae7c7178beb841b771b9451472967de95545ab6",
+      "dependencies": [],
+      "creation_document": "docs/04.md"
+    },
+    {
+      "path": "src/demo_backend/recommendation/guard_contracts.py",
+      "phase": 4,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "c5bc0b8d0271eb77d04c6b688faca380837e61d0bc118a1eb898620e794df45b",
+      "dependencies": [],
+      "creation_document": "docs/04.md"
+    },
+    {
+      "path": "src/demo_backend/recommendation/prompt.py",
+      "phase": 4,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "b66ff6aa08305d22765bfc1d4daa5f7c4aaaf05e7c827c344dc589ef9e56ae34",
+      "dependencies": [
+        "src/demo_backend/catalog/health.py",
+        "src/demo_backend/recommendation/guard_contracts.py"
+      ],
+      "creation_document": "docs/04.md"
+    },
+    {
+      "path": "src/demo_backend/recommendation/usage.py",
+      "phase": 4,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "336a0642272b5ec67dc9ee671a24bab3fed4a4c659bfd10b6d3a9acf41e24197",
+      "dependencies": [],
+      "creation_document": "docs/04.md"
+    },
+    {
+      "path": "src/demo_backend/recommendation/guarded.py",
+      "phase": 4,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "20aba18d7fbd9158e9518d8bd6d61985662ca27712f13cbcbafc35b90610ab21",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/ports/errors.py",
+        "src/demo_backend/recommendation/guard_contracts.py",
+        "src/demo_backend/recommendation/json_extract.py",
+        "src/demo_backend/recommendation/prompt.py",
+        "src/demo_backend/recommendation/shortlist.py",
+        "src/demo_backend/recommendation/usage.py",
+        "src/demo_backend/safety/attributes.py"
+      ],
+      "creation_document": "docs/04.md"
+    },
+    {
+      "path": "src/demo_backend/adapters/catalog.py",
+      "phase": 3,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "3979c597556458452a0c041eb3958961e1e82f2b164b9c4f51bd1dfda840609a",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py"
+      ],
+      "creation_document": "docs/03.md"
+    },
+    {
+      "path": "src/demo_backend/catalog/windows.py",
+      "phase": 3,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "59d6755614d9983e8f4a63e19ba11bee3f2fcc028c7628443eff44552a266068",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/domain/seeds.py",
+        "src/demo_backend/domain/versions.py"
+      ],
+      "creation_document": "docs/03.md"
+    },
+    {
+      "path": "src/demo_backend/simulation/profile_adapter.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "9bfb182af05bafffcc60322eba785add345e8de73d45751cfcd10b35f8861c70",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/domain/versions.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/simulation/archetypes.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "8203e32601683e0d1202a787eb895bb71ff7665992d7f652c96a5be0329e30bf",
+      "dependencies": [
+        "src/demo_backend/domain/research.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/simulation/structured.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "feea8e35e7d884e01a19a9f8f8e6f258b051626e711ed3fbc14a4c266094c5ac",
+      "dependencies": [
+        "src/demo_backend/catalog/health.py",
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/domain/seeds.py",
+        "src/demo_backend/domain/versions.py",
+        "src/demo_backend/simulation/archetypes.py",
+        "src/demo_backend/simulation/numeric.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/simulation/transition.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "59b13eff8ab20345133d671d25a9d688fe5cfba76a9be97a83ddfdeb13723418",
+      "dependencies": [
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/domain/versions.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/simulation/agenda.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "6a4f123ab400968a70ecd27837ac7b5b1b8355158695c163eb148145f74c5d40",
+      "dependencies": [
+        "src/demo_backend/catalog/health.py",
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/recommendation/feedback.py",
+        "src/demo_backend/simulation/structured.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/prediction/records.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "e53951e8df14f43cd26be49983cc760ca98e9a10e64db11db878dd318e0fb04b",
+      "dependencies": [
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/split.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/prediction/base_features.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "f08178b127d62f4abafa1b571a9e56cf73c5cbc6fd6b8cc48e993f95a0890be4",
+      "dependencies": [
+        "src/demo_backend/domain/canonical.py",
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/domain/split.py",
+        "src/demo_backend/domain/versions.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/prediction/features.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "acb5befe2e2ff057f9bee1b7c458010136196fe0e7842040fe6fd1796c998c52",
+      "dependencies": [
+        "src/demo_backend/catalog/health.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/prediction/base_features.py",
+        "src/demo_backend/recommendation/feedback.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/prediction/population.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "d50fa4540ab96cf658fc57edee04f3003e3ef3a067fd7824ecf91004368786f8",
+      "dependencies": [
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/split.py",
+        "src/demo_backend/domain/versions.py",
+        "src/demo_backend/prediction/records.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/prediction/contextual.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "71525cc93ed74019f51873d6584e3355ea34ad5df07d575edd2226f1e8f801b5",
+      "dependencies": [
+        "src/demo_backend/prediction/population.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/prediction/encode.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "092e563efffd617299f881e91848e9fcd6037addf67e34c964202551fc519a17",
+      "dependencies": [
+        "src/demo_backend/domain/split.py",
+        "src/demo_backend/prediction/records.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/evaluation/prediction_metrics.py",
+      "phase": 6,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "f661bd9a7b661fb13b3cd470326fa28b5141e0848adfffeb7ef7ca69fbf6e309",
+      "dependencies": [
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/prediction/population.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/evaluation/prequential.py",
+      "phase": 6,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "fb9317280a1cfe2a42e9c6c7b8cb01d9966eda57eba1299ca8749ce1d218a936",
+      "dependencies": [
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/versions.py",
+        "src/demo_backend/evaluation/prediction_metrics.py",
+        "src/demo_backend/prediction/population.py",
+        "src/demo_backend/prediction/records.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/uncertainty/aps.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "95e296ce8392aa1f7d90d97f7ee2e4bba475b77baa978c9aa7e80b54256718b7",
+      "dependencies": [
+        "src/demo_backend/prediction/population.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/uncertainty/conformal.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "df0d3f114e37fea8e1d45ad93ae59097e9aad3050d8e3002d5e34cd715eab5e2",
+      "dependencies": [
+        "src/demo_backend/prediction/population.py",
+        "src/demo_backend/uncertainty/aps.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/branching/contracts.py",
+      "phase": 6,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "51cd1d0b456a279e6edb6210e2664651d853f2f92f9f26b5165d90baf93c59ec",
+      "dependencies": [
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/domain/versions.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/branching/allocators.py",
+      "phase": 6,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "7838f83a1b2a8b8ba21062bd4c353c5679e473b456114557bdc20011f3f9d8ca",
+      "dependencies": [
+        "src/demo_backend/branching/contracts.py",
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/versions.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/branching/engine.py",
+      "phase": 6,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "2e1c19f92ac48facecbce731a7c2909c10c14b05702a3eb4cdc343c89acb15cc",
+      "dependencies": [
+        "src/demo_backend/branching/contracts.py",
+        "src/demo_backend/catalog/health.py",
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/domain/roots.py",
+        "src/demo_backend/domain/versions.py",
+        "src/demo_backend/ports/prediction.py",
+        "src/demo_backend/recommendation/baselines.py",
+        "src/demo_backend/simulation/transition.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/branching/predictor.py",
+      "phase": 6,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "2e9ecacae8426241088f42754c2896dff97e1bfe698c2b63f6a95940e3974408",
+      "dependencies": [
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/simulation/profile_adapter.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/evaluation/comparison.py",
+      "phase": 6,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "2426dc2d8f8559ba57ae756e1f9ff0da12144ea850c1b00bb1c72e5e05c08767",
+      "dependencies": [],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/evaluation/oracle.py",
+      "phase": 6,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "06454a26c495333d5420e5824d864d7a4ad86c47bd8ad7747f20160513b0773d",
+      "dependencies": [
+        "src/demo_backend/branching/engine.py",
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/simulation/structured.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/branching/simulator.py",
+      "phase": 6,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "b35c5a263976bbaffbfecc12512af1fcf60bda78592b9f8f72e169c019a10180",
+      "dependencies": [
+        "src/demo_backend/branching/engine.py",
+        "src/demo_backend/catalog/windows.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/domain/versions.py",
+        "src/demo_backend/ports/recommendation.py",
+        "src/demo_backend/safety/gate.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/simulation/trajectory_contract.py",
+      "phase": 5,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "63dc35ece12aea6025659f49ef989e494a2471a96f8297907c50cb9d179501c1",
+      "dependencies": [
+        "src/demo_backend/domain/research.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/application/reference_trajectory.py",
+      "phase": 6,
+      "classification": "EXTRACTED/ADAPTED",
+      "sha256": "531a34f5d169f4e588cd4cd656ece02e6c2652c6e2e7f77792e16807ee816e10",
+      "dependencies": [
+        "src/demo_backend/catalog/windows.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/ports/recommendation.py",
+        "src/demo_backend/recommendation/feedback.py",
+        "src/demo_backend/safety/gate.py",
+        "src/demo_backend/simulation/profile_adapter.py",
+        "src/demo_backend/simulation/structured.py",
+        "src/demo_backend/simulation/trajectory_contract.py",
+        "src/demo_backend/simulation/transition.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/domain/provenance.py",
+      "phase": 2,
+      "classification": "NEW",
+      "sha256": "6225c62f47062f4964313e32c5b9fb638a8ebf1f598726aa04f3c51e0158cfeb",
+      "dependencies": [],
+      "creation_document": "docs/02.md"
+    },
+    {
+      "path": "src/demo_backend/domain/roots.py",
+      "phase": 6,
+      "classification": "NEW",
+      "sha256": "51f504fe2a28845969ed223a68384e1c79116c26bbb0db077319f36bf61e1500",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/domain/research.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/ports/prediction.py",
+      "phase": 6,
+      "classification": "NEW",
+      "sha256": "6cb54d8cf37981f65a9d87b282c8d9598925a006c1e17e47efb89b82357229d2",
+      "dependencies": [],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/application/policies.py",
+      "phase": 4,
+      "classification": "NEW",
+      "sha256": "7b1aeb71e8b08a81c348f26513476cd9559c1242f04f7cc84191c0caf19944a4",
+      "dependencies": [
+        "src/demo_backend/recommendation/baselines.py",
+        "src/demo_backend/recommendation/feedback.py",
+        "src/demo_backend/recommendation/guarded.py"
+      ],
+      "creation_document": "docs/04.md"
+    },
+    {
+      "path": "src/demo_backend/adapters/recorded.py",
+      "phase": 4,
+      "classification": "NEW",
+      "sha256": "672d471c0aa44f0aaf032909f3cf7e0cd9b58eb81c3f3e2165649d4f88bbb80b",
+      "dependencies": [
+        "src/demo_backend/ports/errors.py",
+        "src/demo_backend/recommendation/prompt.py"
+      ],
+      "creation_document": "docs/04.md"
+    },
+    {
+      "path": "src/demo_backend/adapters/resources.py",
+      "phase": 5,
+      "classification": "NEW",
+      "sha256": "7181ccb11afe30b69fc38faf25fe8950f30dc6e10ea937f25733acd7bd19709a",
+      "dependencies": [
+        "src/demo_backend/adapters/catalog.py",
+        "src/demo_backend/adapters/live.py",
+        "src/demo_backend/adapters/recorded.py",
+        "src/demo_backend/application/policies.py",
+        "src/demo_backend/prediction/features.py",
+        "src/demo_backend/prediction/population.py",
+        "src/demo_backend/recommendation/guarded.py"
+      ],
+      "creation_document": "docs/05.md"
+    },
+    {
+      "path": "src/demo_backend/domain/service.py",
+      "phase": 7,
+      "classification": "NEW",
+      "sha256": "18a0ce790fadf2cf96085ba0497b85d093b8d2213392860571a605f72fe7df3c",
+      "dependencies": [
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/domain/research.py"
+      ],
+      "creation_document": "docs/07.md"
+    },
+    {
+      "path": "src/demo_backend/adapters/sqlite.py",
+      "phase": 7,
+      "classification": "NEW",
+      "sha256": "b33ef72cc81c2ecbfd18afb8c3cbde02a8ac8d8442bfdaa9874d169a8181d6b8",
+      "dependencies": [
+        "src/demo_backend/domain/service.py"
+      ],
+      "creation_document": "docs/07.md"
+    },
+    {
+      "path": "src/demo_backend/application/prediction.py",
+      "phase": 7,
+      "classification": "NEW",
+      "sha256": "fc99c834a4a1444d72bceb622a32c0b06b446b569b496eac6d3d21fdbcb33583",
+      "dependencies": [
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/prediction/contextual.py",
+        "src/demo_backend/prediction/population.py",
+        "src/demo_backend/prediction/records.py",
+        "src/demo_backend/uncertainty/conformal.py"
+      ],
+      "creation_document": "docs/07.md"
+    },
+    {
+      "path": "src/demo_backend/application/roots.py",
+      "phase": 6,
+      "classification": "NEW",
+      "sha256": "fb49c8fcd6b35f1d67590a4125862e70cc37b213e90b77f663ef54f65356226a",
+      "dependencies": [
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/domain/roots.py",
+        "src/demo_backend/simulation/profile_adapter.py"
+      ],
+      "creation_document": "docs/06.md"
+    },
+    {
+      "path": "src/demo_backend/application/sessions.py",
+      "phase": 7,
+      "classification": "NEW",
+      "sha256": "e9d95054680733771b3ba7c65cd5fb58e31f87bc74c7e7c75b078ad3c0a9f88d",
+      "dependencies": [
+        "src/demo_backend/application/policies.py",
+        "src/demo_backend/application/prediction.py",
+        "src/demo_backend/catalog/windows.py",
+        "src/demo_backend/domain/canonical.py",
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/domain/provenance.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/domain/service.py",
+        "src/demo_backend/domain/versions.py",
+        "src/demo_backend/ports/recommendation.py",
+        "src/demo_backend/safety/gate.py",
+        "src/demo_backend/simulation/agenda.py",
+        "src/demo_backend/simulation/profile_adapter.py",
+        "src/demo_backend/simulation/structured.py",
+        "src/demo_backend/simulation/transition.py"
+      ],
+      "creation_document": "docs/07.md"
+    },
+    {
+      "path": "src/demo_backend/application/comparisons.py",
+      "phase": 7,
+      "classification": "NEW",
+      "sha256": "93b5c7651924083a1b0624d824eaae22f4a8eafc7322d4d17c135b20fd00e33b",
+      "dependencies": [
+        "src/demo_backend/adapters/resources.py",
+        "src/demo_backend/application/policies.py",
+        "src/demo_backend/application/roots.py",
+        "src/demo_backend/branching/allocators.py",
+        "src/demo_backend/branching/engine.py",
+        "src/demo_backend/branching/predictor.py",
+        "src/demo_backend/branching/simulator.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/domain/service.py",
+        "src/demo_backend/evaluation/comparison.py",
+        "src/demo_backend/evaluation/oracle.py",
+        "src/demo_backend/recommendation/prompt.py",
+        "src/demo_backend/simulation/agenda.py"
+      ],
+      "creation_document": "docs/07.md"
+    },
+    {
+      "path": "src/demo_backend/application/backend.py",
+      "phase": 7,
+      "classification": "NEW",
+      "sha256": "61600b85538551f1ef75fe2312a2fc65f4f01e17327e3086f79e4870831f2776",
+      "dependencies": [
+        "src/demo_backend/adapters/resources.py",
+        "src/demo_backend/application/comparisons.py",
+        "src/demo_backend/application/policies.py",
+        "src/demo_backend/application/sessions.py",
+        "src/demo_backend/domain/service.py"
+      ],
+      "creation_document": "docs/07.md"
+    },
+    {
+      "path": "src/demo_backend/api/server.py",
+      "phase": 8,
+      "classification": "NEW",
+      "sha256": "40e53c6965b6b48768a85724e310798e8d3a98999cf912a565ef57e081476dc2",
+      "dependencies": [
+        "src/demo_backend/adapters/live.py",
+        "src/demo_backend/adapters/resources.py",
+        "src/demo_backend/adapters/sqlite.py",
+        "src/demo_backend/application/backend.py",
+        "src/demo_backend/domain/service.py",
+        "src/demo_backend/ports/errors.py",
+        "src/demo_backend/recommendation/feedback.py"
+      ],
+      "creation_document": "docs/08.md"
+    },
+    {
+      "path": "src/demo_backend/adapters/live.py",
+      "phase": 4,
+      "classification": "NEW",
+      "sha256": "d547e397997e361bf2bad674efad627873846f38ee622a61d91896f599aeb003",
+      "dependencies": [
+        "src/demo_backend/ports/errors.py",
+        "src/demo_backend/recommendation/guarded.py",
+        "src/demo_backend/recommendation/prompt.py",
+        "src/demo_backend/recommendation/shortlist.py"
+      ],
+      "creation_document": "docs/04.md"
+    },
+    {
+      "path": "tests/support.py",
+      "phase": 9,
+      "classification": "NEW",
+      "sha256": "4f9ff803bf24b7f8379a6acb7495fa88986dd57ff9612f34228bac1710e95714",
+      "dependencies": [
+        "src/demo_backend/adapters/resources.py",
+        "src/demo_backend/domain/platform.py",
+        "src/demo_backend/domain/research.py",
+        "src/demo_backend/ports/recommendation.py",
+        "src/demo_backend/simulation/structured.py"
+      ],
+      "creation_document": "docs/09.md"
+    },
+    {
+      "path": "tests/test_science.py",
+      "phase": 9,
+      "classification": "NEW",
+      "sha256": "069dc9abe43863116b1bdf4ae7b13e65b22ebb9157f3e4867a399d21cedf8221",
+      "dependencies": [
+        "src/demo_backend/application/policies.py",
+        "src/demo_backend/application/prediction.py",
+        "src/demo_backend/application/reference_trajectory.py",
+        "src/demo_backend/application/roots.py",
+        "src/demo_backend/branching/allocators.py",
+        "src/demo_backend/branching/contracts.py",
+        "src/demo_backend/branching/engine.py",
+        "src/demo_backend/branching/predictor.py",
+        "src/demo_backend/branching/simulator.py",
+        "src/demo_backend/domain/canonical.py",
+        "src/demo_backend/domain/ontology.py",
+        "src/demo_backend/domain/seeds.py",
+        "src/demo_backend/evaluation/comparison.py",
+        "src/demo_backend/evaluation/oracle.py",
+        "src/demo_backend/ports/errors.py",
+        "src/demo_backend/prediction/contextual.py",
+        "src/demo_backend/prediction/features.py",
+        "src/demo_backend/prediction/population.py",
+        "src/demo_backend/prediction/records.py",
+        "src/demo_backend/recommendation/baselines.py",
+        "src/demo_backend/recommendation/deterministic.py",
+        "src/demo_backend/recommendation/feedback.py",
+        "src/demo_backend/recommendation/guard_contracts.py",
+        "src/demo_backend/recommendation/json_extract.py",
+        "src/demo_backend/recommendation/prompt.py",
+        "src/demo_backend/recommendation/shortlist.py",
+        "src/demo_backend/safety/gate.py",
+        "src/demo_backend/simulation/agenda.py",
+        "src/demo_backend/simulation/numeric.py",
+        "src/demo_backend/simulation/transition.py",
+        "src/demo_backend/uncertainty/aps.py",
+        "src/demo_backend/uncertainty/conformal.py"
+      ],
+      "creation_document": "docs/09.md"
+    },
+    {
+      "path": "tests/test_service.py",
+      "phase": 9,
+      "classification": "NEW",
+      "sha256": "ecc81eae5477e1bc91c4295883d346b347098a537dbd506762a70e361f1c9732",
+      "dependencies": [
+        "src/demo_backend/adapters/sqlite.py",
+        "src/demo_backend/api/server.py",
+        "src/demo_backend/application/backend.py",
+        "src/demo_backend/application/roots.py",
+        "src/demo_backend/domain/provenance.py",
+        "src/demo_backend/domain/service.py",
+        "src/demo_backend/recommendation/feedback.py"
+      ],
+      "creation_document": "docs/09.md"
+    },
+    {
+      "path": "tests/test_live_journal.py",
+      "phase": 9,
+      "classification": "NEW",
+      "sha256": "e459ffda612f547c59ca4bbc0245bc751342d177362a91aac693fe9e732f50ef",
+      "dependencies": [
+        "src/demo_backend/adapters/live.py",
+        "src/demo_backend/ports/errors.py",
+        "src/demo_backend/recommendation/guard_contracts.py",
+        "src/demo_backend/recommendation/guarded.py",
+        "src/demo_backend/recommendation/prompt.py",
+        "src/demo_backend/recommendation/shortlist.py"
+      ],
+      "creation_document": "docs/09.md"
+    },
+    {
+      "path": "tools/copy_assets.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "545e9da60d999eda3b8bb2664d9d216642af05ea726008d65271ffe4be316304",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "tools/verify_source.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "08b621bd67dcdc15b3c17f718384298b1e1bb7959a703441d7179d8d7b9ee3ea",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/application/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "tests/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/branching/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/adapters/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/domain/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/safety/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/simulation/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/prediction/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/ports/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/recommendation/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/evaluation/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/uncertainty/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/catalog/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "src/demo_backend/api/__init__.py",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "pyproject.toml",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "8ea1d4e3b98b7e71a09ff1074c43b3af8ffac0fb74590ff3ccd41e033d2f01a1",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": "requirements.txt",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "ce4276a9d65d0a96786a62046def663165a0578b35168632af5a775ba90a44c9",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    },
+    {
+      "path": ".gitignore",
+      "phase": 1,
+      "classification": "NEW",
+      "sha256": "859d75a3bf4f11c1376acca0b78eaebb35e95bc3c2fa39e9ff377056ebe632bf",
+      "dependencies": [],
+      "creation_document": "docs/01.md"
+    }
+  ]
+}

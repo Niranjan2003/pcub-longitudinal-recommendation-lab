@@ -1,0 +1,1 @@
+{"completed_records":5100,"cost":"COST NOT AVAILABLE FROM PROVIDER METADATA","experiment":"V3-R1 only","failure_reasons":{"provider_error":1},"fallbacks":1,"mean_latency_ms":20696.41738209805,"median_latency_ms":19960.740299982717,"reserved_attempts":5100,"unknown_requests":0,"usage":{"input_tokens":11928890,"output_tokens":7193594,"total_tokens":19122484}}
