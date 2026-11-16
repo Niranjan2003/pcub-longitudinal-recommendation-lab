@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Local research application for the PCUB Longitudinal Multi-Agent Conversational Recommendation System (frontend only).",
+  "description": "Research application for the PCUB Longitudinal Multi-Agent Conversational Recommendation System (frontend only).",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

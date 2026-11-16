@@ -25,7 +25,7 @@ implements a **controlled, bounded research testbed** derived from that idea.
 | A model of the user's psychology | Six **engineered** state variables moved by a fixed rule. They are not measurements of anyone. |
 | Validated behaviour prediction | Frozen statistical predictors trained on **synthetic** reference data. No human validation has been done. |
 | An oracle for recommendation quality | **No human oracle exists.** The only "oracle" is an exhaustive calculation inside the synthetic simulator. |
-| Deployed multi-user service | A single-machine local application with no accounts. See §9. |
+| Production-scale multi-user service | A research release with no accounts. The public demo is a research deployment with bounded resources and controlled live-provider access. See §9. |
 
 ---
 
@@ -325,12 +325,13 @@ Each workflow lists what to do and what to look for. Exact pass criteria are in 
 - **Functional, not scientific.** Passing tests show the software behaves as specified. They are **not empirical
   validation** of any scientific claim. No human study, no external behavioural validation and no clinical assessment
   has been performed.
-- **Local, not production.** Success on one machine does **not** establish:
-  - readiness for public hosting;
+- **Research release, not production.** Passing tests does **not** establish:
   - multi-user isolation (there are no accounts, and a session id is an identifier, not a credential);
-  - production security, backups, rate limiting, or cancellable asynchronous jobs.
+  - production security, or cancellable asynchronous jobs.
 
-  None of these has been built or reviewed.
+  The release itself contains no hosting, backup or rate-limiting components. The public demo is a research
+  deployment with bounded resources and controlled live-provider access; it has not been reviewed as a production
+  service.
 - **Offline by default; live guarded mode is optional and bounded.** On a live-capable backend the app:
   - sends a guarded-LLM recommendation only after explicit per-session permission, at most one provider request per click;
   - disables multi-turn runs and guarded branch comparisons;

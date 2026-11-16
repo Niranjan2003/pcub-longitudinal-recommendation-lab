@@ -248,13 +248,13 @@ describe('recovery in live mode', () => {
 describe('Overview connection label and live permission panel', () => {
   it('the Overview never calls a live-capable backend "offline"', async () => {
     mount('/', { session: session0 });
-    expect(await screen.findByText(/Connected to a local backend with live LLM scoring available/)).toBeInTheDocument();
-    expect(screen.queryByText(/Connected to the local backend \(offline mode/)).not.toBeInTheDocument();
+    expect(await screen.findByText(/Connected to the backend, with live LLM scoring available/)).toBeInTheDocument();
+    expect(screen.queryByText(/Connected to the backend \(offline mode/)).not.toBeInTheDocument();
   });
 
   it('the Overview still says offline for an offline backend', async () => {
     mount('/', { session: session0, caps: capabilities });
-    expect(await screen.findByText(/Connected to the local backend \(offline mode/)).toBeInTheDocument();
+    expect(await screen.findByText(/Connected to the backend \(offline mode/)).toBeInTheDocument();
   });
 
   it('after permission the explanation collapses, while the permission status stays visible', async () => {

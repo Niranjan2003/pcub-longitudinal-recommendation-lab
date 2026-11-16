@@ -79,7 +79,7 @@ export function AppShell() {
         <Outlet />
       </main>
       <footer className="border-t border-rule px-4 py-4 text-center text-xs text-muted">
-        Local research application. Interactive sessions are an engineering simulation, not a human study, and not clinical or allergy-safety advice.
+        Research demonstration. Interactive sessions are an engineering simulation, not a human study, and not clinical or allergy-safety advice.
       </footer>
     </div>
   );

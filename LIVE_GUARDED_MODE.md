@@ -1,4 +1,4 @@
-# Live guarded LLM scoring (optional, operator-attended)
+# Live guarded LLM scoring (optional)
 
 The backend has always contained an optional live path for one policy, `guarded_llm_score_vector@1`: a language model scores a safe shortlist that the backend has already produced. This release adds a safe, explicit frontend workflow for that path, an operator launcher, a fake-provider test harness and a smoke check. **No backend file was changed.** `backend/` is still byte-identical to its sealed implementation ledger, so parsing, request hashing, journal semantics, cost accounting, the no-retry rule and `live_guarded` provenance are exactly the original ones.
 
@@ -140,7 +140,7 @@ python scripts\live_smoke.py --base-url http://127.0.0.1:8785 --expect real --ph
 
 - **One request per click.** There are no bulk multi-turn live runs.
 - **No live guarded branch comparisons** (up to 21 decisions per comparison; synchronous and not cancellable).
-- **Operator-attended, local, Windows-only.** There is no hosting, multi-user isolation or rate limiting.
+- **The launcher is operator-started and Windows-only.** The release itself adds no hosting, multi-user isolation or rate limiting. The public demo runs the unchanged backend in a separate research deployment, with a global call limit and per-session permission.
 - **The limit counts every reservation in the journal.** There is no provider-wide quota and no price calculation.
 - **One OpenAI-compatible transport** with the model and decoding settings sealed in `inheritance.json` (temperature 0, no seed).
 - **Conservative failure handling.** An HTTP or transport error becomes an unknown completion, never a retry.

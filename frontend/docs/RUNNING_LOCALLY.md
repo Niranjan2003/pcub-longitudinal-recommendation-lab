@@ -1,7 +1,7 @@
 # Running the PCUB lab locally
 
-A local research application. It talks to a **separately started, offline** PCUB backend through a same-origin Vite
-proxy. This frontend never starts, stops or modifies the backend.
+Run locally, the research application talks to a **separately started, offline** PCUB backend through a same-origin
+Vite proxy. This frontend never starts, stops or modifies the backend.
 
 ## 1. Prerequisites
 
@@ -26,8 +26,8 @@ Set-Location -LiteralPath $Backend
 
 Check it in PowerShell: `Invoke-RestMethod http://127.0.0.1:8765/v1/capabilities` must show `mode` = `offline` and
 `live_guarded` = `False`.
-The application itself also shows this in its status bar, and shows a red **LIVE** banner (and blocks every guarded-LLM
-command) if the backend is ever live-capable.
+The application's header also shows this: **Backend connected** for an offline backend, **Live backend connected** for
+a live-capable one.
 
 ## 3. Start the frontend
 
@@ -134,5 +134,5 @@ and seeds.
 * The frontend computes no scientific value (probabilities, utilities, estimates, regret, oracle values, set
   membership, costs). It renders backend responses and keeps human, synthetic, hypothetical, oracle and historical
   evidence visibly separate.
-* Not a hosted or multi-user service: no accounts; a session id is an identifier, not a credential. Local success does
-  not establish public-hosting readiness, multi-user isolation or production security.
+* Not a production-scale or multi-user service: no accounts; a session id is an identifier, not a credential. Local
+  success does not establish public-hosting readiness, multi-user isolation or production security.

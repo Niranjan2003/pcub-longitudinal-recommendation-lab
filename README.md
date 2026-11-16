@@ -30,7 +30,7 @@ This repository implements a **controlled, bounded testbed** derived from that v
 | A model of user psychology | Six engineered state variables moved by a fixed transition rule. They are not measurements of anyone. |
 | Validated behavior prediction | Frozen predictors fitted to synthetic reference data. No human validation has been done. |
 | A ground-truth oracle | No human oracle. The only oracle is an exhaustive calculation inside the synthetic simulators. |
-| A deployed service | A single-machine local application with no accounts. |
+| A production-scale deployed service | A research release with no accounts. The public demo is a research deployment with bounded resources and controlled live-provider access. |
 
 [`backend/docs/MASTER_SYSTEM_REPORT.md`](backend/docs/MASTER_SYSTEM_REPORT.md) §3 and [`frontend/docs/USER_GUIDE.md`](frontend/docs/USER_GUIDE.md) §1 explain this boundary in detail.
 
@@ -42,7 +42,7 @@ This repository implements a **controlled, bounded testbed** derived from that v
 - **Two synthetic outcome backends:** a structured simulator and an agenda-derived food-domain adaptation (not the official UserSimCRS runtime).
 - **Paired depth-2 counterfactual branching** with four allocators (`equal`, `greedy`, `uncertainty`, `pcub`) and budgets 2, 4, 8 and 12.
 - **A separate exhaustive synthetic oracle**, plus conformal prediction-set diagnostics.
-- **A transactional local service:** SQLite store, idempotency keys, session revisions, and a durable provider journal for live LLM calls.
+- **A transactional backend service:** SQLite store, idempotency keys, session revisions, and a durable provider journal for live LLM calls.
 - **The frozen historical R1 results**, served read-only and kept separate from new interactive sessions.
 
 ## What it does not claim
@@ -52,7 +52,7 @@ This repository implements a **controlled, bounded testbed** derived from that v
 - No universal superiority of PCUB. The repository keeps a captured adverse case in which PCUB chose the worse policy.
 - Conformal sets are frozen synthetic diagnostics. They give no human coverage guarantee and never prune branches.
 - The historical R1 program is **not formally closed**.
-- The server is a loopback research tool, not a hosted or multi-user service. It has no accounts, rate limiting or TLS.
+- The backend is not a production-scale or multi-user service. It binds to loopback and has no accounts, rate limiting or TLS of its own; the public demo is a research deployment that serves it behind an HTTPS reverse proxy, with bounded resources and controlled live-provider access.
 
 [`backend/docs/MASTER_SYSTEM_REPORT.md`](backend/docs/MASTER_SYSTEM_REPORT.md) §29 and [`frontend/docs/SCIENTIFIC_INTERPRETATION.md`](frontend/docs/SCIENTIFIC_INTERPRETATION.md) §9 give the full list of limitations.
 
@@ -82,7 +82,7 @@ npm run dev                                     # open http://localhost:5173
 
 - **Offline (the supported mode).** Without `--live`, the backend makes no network calls. Every policy except the guarded LLM scorer runs normally, and `GET /v1/capabilities` reports `"mode": "offline"`.
 - **Recorded guarded decisions.** Offline, the guarded LLM scorer can answer only the **77 exact decision contexts** recorded from earlier provider calls. Those requests return the recorded decision with execution mode `recorded_guarded` and zero live calls. Any other guarded request returns `RECORDED_CONTEXT_UNAVAILABLE`, and no other policy is substituted. The golden tests use these recordings to reproduce the historical guarded behavior.
-- **Live guarded mode (optional, operator-attended).** Started with `scripts/start_live_backend.ps1`, which uses the backend's own `--live`, `--journal` and `--live-call-limit` options with an operator-supplied endpoint and token. The guarded LLM then scores the safe shortlist of contexts that are neither recorded nor journaled, with **one provider request per explicit click**. The interface:
+- **Live guarded mode (optional).** From this repository it is started with `scripts/start_live_backend.ps1`, which uses the backend's own `--live`, `--journal` and `--live-call-limit` options with an operator-supplied endpoint and token. The guarded LLM then scores the safe shortlist of contexts that are neither recorded nor journaled, with **one provider request per explicit click**. The interface:
   - requires per-session permission before the first request;
   - shows provider accounting and cache reuse for every recommendation;
   - disables multi-turn runs and guarded branch comparisons in live mode;

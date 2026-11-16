@@ -25,4 +25,4 @@ Tests, build, non-default ports and the guided demonstration: [`../SETUP.md`](..
 
 ---
 
-*Publication note:* this file replaces the original `README_SETUP.md` of the frontend source commit. The original was a workstation-specific setup guide. The replacement keeps the file name because the application's status bar refers to it. See `SOURCE_IDENTITY.json`.
+*Publication note:* this file replaces the original `README_SETUP.md` of the frontend source commit. The original was a workstation-specific setup guide. The replacement keeps the file name because the application's backend-unreachable notice refers to it. See `SOURCE_IDENTITY.json`.

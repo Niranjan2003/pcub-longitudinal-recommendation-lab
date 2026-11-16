@@ -90,7 +90,7 @@ const LIMITS: string[] = [
   'Live guarded mode makes real provider calls. This application sends a guarded recommendation only after explicit per-session consent, runs live guarded sessions one turn at a time, does not send guarded branch comparisons (their preparation pass could need up to 21 provider decisions), and never retries an unknown completion.',
   'A synchronous comparison cannot report progress or be cancelled, and it holds a write transaction while it runs.',
   'Historical R1 results are frozen aggregates. Positive guarded gain and strict PCUB superiority were not established, and the R1 program is not formally closed. No new human study is established by this application.',
-  'This is a single-machine local application. There are no user accounts, and a session id is an identifier, not a credential. It is not a hosted multi-user service.',
+  'There are no user accounts, and a session id is an identifier, not a credential. This is not a production-scale recommendation service: the public demo is a research deployment with bounded resources and controlled live-provider access.',
 ];
 
 const TERMS: [string, string][] = [

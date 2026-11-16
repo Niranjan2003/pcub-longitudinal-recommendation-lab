@@ -95,8 +95,8 @@ export const NODES: ArchNode[] = [
     w: 260,
     h: 52,
     summary:
-      'The browser application you are using. It sends commands to the local API and renders exactly what the backend returns, keeping each kind of evidence on its own labelled surface.',
-    implementation: 'React + TypeScript single-page application, served locally by Vite; same-origin proxy to the API.',
+      'The browser application you are using. It sends commands to the backend API and renders exactly what the backend returns, keeping each kind of evidence on its own labelled surface.',
+    implementation: 'React + TypeScript single-page application built with Vite; it reaches the API through a same-origin proxy.',
     inputs: ['Your structured choices (persona, constraints, reaction, comparison settings)', 'Backend JSON responses'],
     outputs: ['HTTP commands with an idempotency key and the expected revision', 'Rendered evidence surfaces'],
     reads: ['All public API responses', 'Browser-local command journal and session index'],
@@ -132,7 +132,7 @@ export const NODES: ArchNode[] = [
     persistence: 'None of its own.',
     evidence: 'Transports evidence; does not create it.',
     limits: [
-      'Local-only (binds 127.0.0.1). No user accounts or per-resource authorisation; a session id is an identifier, not a credential.',
+      'Binds 127.0.0.1 only; browsers reach it through a same-origin proxy (the Vite dev server locally, an HTTPS reverse proxy on the public demo). No user accounts or per-resource authorisation; a session id is an identifier, not a credential.',
       'Comparisons are synchronous: no progress reporting, no cancellation endpoint.',
       'There is no endpoint to list sessions, comparisons or synthetic fixtures.',
     ],

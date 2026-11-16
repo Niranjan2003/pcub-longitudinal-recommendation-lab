@@ -104,10 +104,10 @@ export function OverviewPage() {
           </div>
           <p className="mt-3 text-sm text-muted">
             {status.kind === 'live'
-              ? 'Connected to a local backend with live LLM scoring available. A guarded-LLM session asks for your permission before any provider request.'
+              ? 'Connected to the backend, with live LLM scoring available. A guarded-LLM session asks for your permission before any provider request.'
               : ready
-                ? 'Connected to the local backend (offline mode: the guarded LLM answers from recorded decisions).'
-                : 'Waiting for the local backend. Start it, then re-check from the status bar.'}
+                ? 'Connected to the backend (offline mode: the guarded LLM answers from recorded decisions).'
+                : 'Waiting for the backend.'}
           </p>
         </div>
         <figure className="surface-pending m-0 p-5" aria-label="Example forecast illustration">
@@ -271,7 +271,7 @@ export function OverviewPage() {
             What this is
           </h2>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
-            <li>An engineering testbed for longitudinal recommendation, run locally on a frozen, hash-verified backend.</li>
+            <li>An engineering testbed for longitudinal recommendation, backed by a frozen, hash-verified research release.</li>
             <li>Four recommendation policies, three prediction modes, two simulator backends, four allocators.</li>
             <li>Structured human feedback and independent synthetic outcomes, with explicit provenance on every result.</li>
             <li>A frozen historical R1 results view, kept apart from anything produced here.</li>
@@ -284,7 +284,8 @@ export function OverviewPage() {
             <li>Allergy or clinical safety advice. The filter is an imperfect metadata rule.</li>
             <li>Proof that guarded-LLM scoring improves outcomes, or that PCUB is universally better. The frozen R1 evidence says neither was established.</li>
             <li>A human oracle. The exhaustive oracle exists only for synthetic sessions and is simulator-dependent.</li>
-            <li>Formally closed research, or a hosted multi-user service. It runs on one machine.</li>
+            <li>Formally closed research.</li>
+            <li>A production-scale recommendation service. The public demo is a research deployment with bounded resources and controlled live-provider access.</li>
           </ul>
         </div>
       </section>
