@@ -1,8 +1,8 @@
 # PCUB Research Testbed: Longitudinal Food Recommendation
 
-A research testbed for studying how food-recommendation policies behave when a recommendation has consequences beyond the current turn. Each recommendation gets a reaction. The reaction becomes history and changes an explicit simulated state, so later recommendations and forecasts operate on a different context. The object of study is a **trajectory** of interactions, not a single ranking.
+A research testbed for studying how food recommendation policies behave when a recommendation has consequences beyond the current turn. Each recommendation gets a reaction. The reaction becomes history and changes an explicit simulated state, so later recommendations and forecasts operate on a different context. The object of study is a **trajectory** of interactions, not a single ranking.
 
-The research method is **Personalized Calibrated User Branching (PCUB)**. Given a limited budget, PCUB decides which hypothetical user reactions to expand when comparing two existing recommendation policies. It does not generate recipes.
+The research method is **Personalized Calibrated User Branching (PCUB)**. PCUB decides which hypothetical user reactions to expand when comparing two existing recommendation policies. It does not generate recipes.
 
 The recipe catalog is a project-prepared subset of the HUMMUS / Food.com dataset (Bölz et al., RecSys 2023). The research release also includes recorded model outputs. See [Data, third-party material and licensing](#data-third-party-material-and-licensing) for provenance, citation and terms.
 
