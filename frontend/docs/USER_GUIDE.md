@@ -25,7 +25,7 @@ implements a **controlled, bounded research testbed** derived from that idea.
 | A model of the user's psychology | Six **engineered** state variables moved by a fixed rule. They are not measurements of anyone. |
 | Validated behaviour prediction | Frozen statistical predictors trained on **synthetic** reference data. No human validation has been done. |
 | An oracle for recommendation quality | **No human oracle exists.** The only "oracle" is an exhaustive calculation inside the synthetic simulator. |
-| Production-scale multi-user service | A research release with no accounts. The public demo is a research deployment with bounded resources and controlled live-provider access. See §9. |
+| Production-scale multi-user service | A research release with no accounts. See §9. |
 
 ---
 

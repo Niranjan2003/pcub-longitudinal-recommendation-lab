@@ -77,7 +77,7 @@ export const POLICY_LABEL: Readonly<Record<string, { label: string; blurb: strin
   },
   guarded_llm_score_vector: {
     label: 'Guarded LLM scorer',
-    blurb: 'A language model scores a safe shortlist (integers 0–100, not probabilities). Offline, only 77 exact recorded contexts are available.',
+    blurb: 'A language model scores a safe shortlist (integers 0–100, not probabilities).',
   },
 };
 

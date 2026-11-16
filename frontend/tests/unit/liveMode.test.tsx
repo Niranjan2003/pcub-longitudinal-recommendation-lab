@@ -246,15 +246,18 @@ describe('recovery in live mode', () => {
 });
 
 describe('Overview connection label and live permission panel', () => {
-  it('the Overview never calls a live-capable backend "offline"', async () => {
+  it('the Overview leaves a live-capable connection to the header indicator', async () => {
     mount('/', { session: session0 });
-    expect(await screen.findByText(/Connected to the backend, with live LLM scoring available/)).toBeInTheDocument();
-    expect(screen.queryByText(/Connected to the backend \(offline mode/)).not.toBeInTheDocument();
+    expect(await screen.findByText('Live backend connected')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Recommendations have/ })).toBeInTheDocument();
+    expect(document.body.textContent).not.toMatch(/Connected to the backend|offline mode|Waiting for the backend/);
   });
 
-  it('the Overview still says offline for an offline backend', async () => {
+  it('the Overview leaves an offline connection to the header indicator', async () => {
     mount('/', { session: session0, caps: capabilities });
-    expect(await screen.findByText(/Connected to the backend \(offline mode/)).toBeInTheDocument();
+    expect(await screen.findByText('Backend connected')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Recommendations have/ })).toBeInTheDocument();
+    expect(document.body.textContent).not.toMatch(/Connected to the backend|offline mode|Waiting for the backend/);
   });
 
   it('after permission the explanation collapses, while the permission status stays visible', async () => {

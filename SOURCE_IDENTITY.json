@@ -10,6 +10,7 @@
   "publication_update": "2026-11-16",
   "status_indicator_update": "2026-11-16",
   "hosted_wording_update": "2026-11-16",
+  "demo_wording_refinement": "2026-11-17",
   "method": "Read-only extraction. Frontend files taken from Git objects with core.autocrlf=false (committed bytes); backend files byte-copied. Neither source directory was modified. Frontend files changed or added for publication are listed in frontend.modified and frontend.added, each with its reason; every backend file is byte-identical to its source."
  },
  "frontend": {
@@ -21,7 +22,7 @@
   "commit_subject": "feat: interactive Architecture Explorer with four linked views",
   "tracked_files": 138,
   "published_files": 138,
-  "published_unmodified": 80,
+  "published_unmodified": 79,
   "line_endings": "Committed blobs (LF). The source working tree had CRLF due to core.autocrlf=true; content is otherwise identical.",
   "modified": [
    {
@@ -56,8 +57,8 @@
     "path": "docs/USER_GUIDE.md",
     "source_git_blob": "bee9ef6fecb653af4af603ca2b2dc20d0a05be9a",
     "source_sha256": "e5b6df2d19fcb7bfb4bcdfb1eae699f19c4da2d4077694bfb73c71e13a0c3a32",
-    "published_sha256": "e12a9c663c44f0d5f485fc9d9c6708cc7b3fd72e608f2a89fc955f44a6674119",
-    "reason": "Demo interface update (2026-11-15): navigation label \"Lab\" renamed \"Live Session\"; run-all and trajectory summary described; stale test counts replaced by a pointer to the verification record. Live guarded release (2026-11-15): guarded scorer and limitations describe the optional live mode. Interface refinement (2026-11-15): policies and the constraint filter described as implemented; disabled controls; soft request and requested-change effects. Hosted demo wording update (2026-11-16): the vision table row and the section 9 limitation describe a research release and its public research deployment instead of a single-machine local application."
+    "published_sha256": "ab4bbf5e5f8b97f277cacc8b07b0b9bf36c96506da5f9474a4c3ede18d85e2ba",
+    "reason": "Demo interface update (2026-11-15): navigation label \"Lab\" renamed \"Live Session\"; run-all and trajectory summary described; stale test counts replaced by a pointer to the verification record. Live guarded release (2026-11-15): guarded scorer and limitations describe the optional live mode. Interface refinement (2026-11-15): policies and the constraint filter described as implemented; disabled controls; soft request and requested-change effects. Hosted demo wording update (2026-11-16): the vision table row and the section 9 limitation describe a research release and its public research deployment instead of a single-machine local application. Demo wording refinement (2026-11-17): the section 1 table row refers to section 9 instead of repeating its public-demo sentence."
    },
    {
     "path": "docs/reference/README.md",
@@ -112,8 +113,8 @@
     "path": "src/app/StatusStrip.tsx",
     "source_git_blob": "1d1420539fa4cad0d240a23a070f8a054f2ccc43",
     "source_sha256": "f4ee9b576bc65c1f283624f961f809cef3207ecc80a60b3637d54c33919e73b8",
-    "published_sha256": "ae0e6c9da9c3142402e3665c54c421bf3c2d722c75663057b5666ae9f8d4c48b",
-    "reason": "Live guarded release (2026-11-15): LIVE banner text describes the gated live workflow instead of a blanket block. Interface refinement (2026-11-15): shorter LIVE banner on narrow screens. Presentation update (2026-11-15): the red live banner is replaced by a neutral status label that still distinguishes offline, live-capable and unreachable backends. Status indicator update (2026-11-16): the full-width status strip (capability label, API version, asset fingerprint and re-check control) is replaced by a small header connection indicator: \"Live backend connected\" for a live-capable backend, \"Backend connected\" offline, and the existing short error states. The error banners are unchanged."
+    "published_sha256": "fad6d97af8e6cec238263423ef9618bd1a71c7153e463103911457dda631c7d9",
+    "reason": "Live guarded release (2026-11-15): LIVE banner text describes the gated live workflow instead of a blanket block. Interface refinement (2026-11-15): shorter LIVE banner on narrow screens. Presentation update (2026-11-15): the red live banner is replaced by a neutral status label that still distinguishes offline, live-capable and unreachable backends. Status indicator update (2026-11-16): the full-width status strip (capability label, API version, asset fingerprint and re-check control) is replaced by a small header connection indicator: \"Live backend connected\" for a live-capable backend, \"Backend connected\" offline, and the existing short error states. The error banners are unchanged. Demo wording refinement (2026-11-17): the backend-unreachable banner reads \"Backend temporarily unavailable. Please try again shortly.\" instead of developer start-up instructions (offline backend, 127.0.0.1:8765, README_SETUP.md)."
    },
    {
     "path": "src/components/comparison/EstimatesPanel.tsx",
@@ -189,8 +190,8 @@
     "path": "src/domain/ontology.ts",
     "source_git_blob": "cb27fad083271d83762e0f33b0813b72b4885eee",
     "source_sha256": "c393440655945a088da7d1c518cb627aaec62d9bd9e3975ca157b000aca6e944",
-    "published_sha256": "02acf89908fe644194f8a47b46f828d80bdf1321c6b3ae6dda425e9cfc3fc27e",
-    "reason": "Demo interface update (2026-11-15): world label for human_interaction changed from \"Human-submitted\" to \"Human interaction\" (it labels the world, including hypothetical comparison jobs). Interface refinement (2026-11-15): policy descriptions match the implemented scoring (48-recipe window; health/effort requests; no exact-repeat claim)."
+    "published_sha256": "ceb03982b465584899f8e91df4af1a75fcc5a19b7afdb8eb961266bb25e05e69",
+    "reason": "Demo interface update (2026-11-15): world label for human_interaction changed from \"Human-submitted\" to \"Human interaction\" (it labels the world, including hypothetical comparison jobs). Interface refinement (2026-11-15): policy descriptions match the implemented scoring (48-recipe window; health/effort requests; no exact-repeat claim). Demo wording refinement (2026-11-17): the guarded LLM scorer description drops the fixed offline sentence; the Live Session form, the branch explorer and Method state the offline recorded-context limit where it applies."
    },
    {
     "path": "src/features/architecture/CounterfactualView.tsx",
@@ -238,15 +239,15 @@
     "path": "src/features/method/MethodPage.tsx",
     "source_git_blob": "28a3069b24156dd6eef362956e20cdddaedd93b2",
     "source_sha256": "7502ca2d04148609dda9e9a5f967455263904e165554e4174811d2b2e8a10c6f",
-    "published_sha256": "fac2df7979ea12e6a3aae8c0956227cfd83d23be2286a8f2118e435ef24a1750",
-    "reason": "Live guarded release (2026-11-15): limitation text describes the gated live workflow. Interface refinement (2026-11-15): limitations list the constraint-filter defects, the predictor audit findings and the simulator zero-health fallback. Hosted demo wording update (2026-11-16): the last limitation no longer calls the system a single-machine local application; it keeps the no-accounts and session-id points and says it is not a production-scale recommendation service."
+    "published_sha256": "498c4569e6ca31f1014e9d2ced3c5fc76a0da336408bd6ce0fef8586d0c3cb92",
+    "reason": "Live guarded release (2026-11-15): limitation text describes the gated live workflow. Interface refinement (2026-11-15): limitations list the constraint-filter defects, the predictor audit findings and the simulator zero-health fallback. Hosted demo wording update (2026-11-16): the last limitation no longer calls the system a single-machine local application; it keeps the no-accounts and session-id points and says it is not a production-scale recommendation service. Demo wording refinement (2026-11-17): step 2 of \"How a comparison works\" states that no branch comparison reaches the live provider (guarded comparisons are disabled in live mode, deterministic pairs make no provider request, offline the guarded LLM answers from recorded decisions only) instead of \"In live mode this step could use provider calls\"."
    },
    {
     "path": "src/features/overview/OverviewPage.tsx",
     "source_git_blob": "1c1b842e4604346d34e09ef917190858d68403ed",
     "source_sha256": "c6e690b1e320c236eeea83ad83e4dd80aab283554c89bbc5e943ea191fabe94c",
-    "published_sha256": "78f1e53d325f22e70ce06b503461cb1959787b7c2be3e7dba1dda0e4b556624e",
-    "reason": "Demo interface update (2026-11-15): call-to-action renamed \"Open Live Session\". Interface refinement (2026-11-15): no longer says offline for a live-capable backend; 48-candidate window and approximate screening wording. Presentation update (2026-11-15): three principal workflows; neutral connection text. Hosted demo wording update (2026-11-16): the backend status lines no longer say \"local backend\" or point to the removed status bar; \"What this is\" describes a testbed backed by a frozen, hash-verified research release; \"What this is not\" lists formally closed research and a production-scale recommendation service separately, noting that the public demo is a research deployment with bounded resources and controlled live-provider access."
+    "published_sha256": "91e8d2347e394c777506ee496d4ea886cc5de6128451c73fee4bdfeaee8eada7",
+    "reason": "Demo interface update (2026-11-15): call-to-action renamed \"Open Live Session\". Interface refinement (2026-11-15): no longer says offline for a live-capable backend; 48-candidate window and approximate screening wording. Presentation update (2026-11-15): three principal workflows; neutral connection text. Hosted demo wording update (2026-11-16): the backend status lines no longer say \"local backend\" or point to the removed status bar; \"What this is\" describes a testbed backed by a frozen, hash-verified research release; \"What this is not\" lists formally closed research and a production-scale recommendation service separately, noting that the public demo is a research deployment with bounded resources and controlled live-provider access. Demo wording refinement (2026-11-17): the hero no longer repeats the backend connection status shown by the header indicator."
    },
    {
     "path": "src/features/r1/R1Page.tsx",
@@ -308,8 +309,8 @@
     "path": "tests/unit/statusStrip.test.tsx",
     "source_git_blob": "7d3820ccceeff6fa22b6996d322adcf674da3041",
     "source_sha256": "2d8c4b3037776e9dab5113c0f543179d7abd2c6dc59a394228b83a367e7e785d",
-    "published_sha256": "b3d582e1825bb476f83c5a24e4acad3516a2340e4a91eecfaf69ed7212dbb690",
-    "reason": "Presentation update (2026-11-15): asserts the neutral live and offline labels and no alert banner. Status indicator update (2026-11-16): asserts the header indicator labels and the absence of the API version, asset fingerprint, capability text and re-check control."
+    "published_sha256": "0773d912d14e173c325cdc71d37052d00aab22fbc33181bc185d55e92c0355d9",
+    "reason": "Presentation update (2026-11-15): asserts the neutral live and offline labels and no alert banner. Status indicator update (2026-11-16): asserts the header indicator labels and the absence of the API version, asset fingerprint, capability text and re-check control. Demo wording refinement (2026-11-17): expects the visitor-safe unreachable notice and no developer instructions."
    },
    {
     "path": "tests/unit/synthetic.test.tsx",
@@ -345,6 +346,13 @@
     "source_sha256": "f5ddcc599913112944d1459f1465fa87321bd49c87df77d1c7a86a396ffba3bb",
     "published_sha256": "c861c77665b3aa370a1d3b83d385412aceb3aa35f7868a86a64d8cc403d6406e",
     "reason": "Hosted demo wording update (2026-11-16): meta description \"A research demonstration of ...\" instead of \"A local research application for ...\"."
+   },
+   {
+    "path": "src/components/ui/ErrorPanel.tsx",
+    "source_git_blob": "141bdc3225c4d48ebc72d9d390bb8d2f6e89242d",
+    "source_sha256": "a25df461665195d4df0f4601218a6976575d5f9406abff6dd784d1abac11ddf7",
+    "published_sha256": "016fa324ebc2474112b40de0c7fe1709ee3ff639d0c5856fa36513cfbab33fdb",
+    "reason": "Demo wording refinement (2026-11-17): a network error is titled \"Backend temporarily unavailable\" and explained as \"Please try again shortly.\" instead of \"Check that the offline backend is running on 127.0.0.1:8765.\""
    }
   ],
   "added": [
@@ -375,8 +383,8 @@
    },
    {
     "path": "tests/unit/liveMode.test.tsx",
-    "sha256": "e4d7e37176e2af71ac20ccab4bb47f658dd20fae0b83627ac7c85b909ba0bf57",
-    "reason": "Live guarded release (2026-11-15): unit tests of the live workflow (banner, permission gate, accounting views, unknown completion, synthetic single turns, Live Session form, Branch Explorer, recovery note). Interface refinement (2026-11-15): Overview live label and collapsed live panel. Presentation update (2026-11-15): neutral live status and updated wording. Status indicator update (2026-11-16): expects the header indicator \"Live backend connected\" instead of the live capability label. Hosted demo wording update (2026-11-16): expects the Overview backend status lines without \"local\"."
+    "sha256": "3639ddc58a688af27f755e53f10bea9aa3df637b127a2c8e4c18408006415d81",
+    "reason": "Live guarded release (2026-11-15): unit tests of the live workflow (banner, permission gate, accounting views, unknown completion, synthetic single turns, Live Session form, Branch Explorer, recovery note). Interface refinement (2026-11-15): Overview live label and collapsed live panel. Presentation update (2026-11-15): neutral live status and updated wording. Status indicator update (2026-11-16): expects the header indicator \"Live backend connected\" instead of the live capability label. Hosted demo wording update (2026-11-16): expects the Overview backend status lines without \"local\". Demo wording refinement (2026-11-17): expects the Overview to leave the connection status to the header indicator."
    },
    {
     "path": "tests/live-fake/live_guarded.test.ts",
@@ -471,7 +479,7 @@
     "git_blob": "1ead9fba57c55cce24b4546b1b637ee93e368b08",
     "sha256": "363a8f7cb4f84cb28cb3957c300b3b5a7b7549981991a154d30c0df7ab72a25c",
     "size": 6980,
-    "reason": "Development environment setup guide with workstation-specific paths. Replaced by a publication version at the same path, because src/app/StatusStrip.tsx refers to it."
+    "reason": "Development environment setup guide with workstation-specific paths. Replaced by a publication version at the same path, which src/app/StatusStrip.tsx referred to at publication."
    },
    {
     "path": "docs/reference/CRS_CONTINUATION_HANDOFF.md",
@@ -708,8 +716,8 @@
    "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/docs/USER_GUIDE.md": {
-   "sha256": "e12a9c663c44f0d5f485fc9d9c6708cc7b3fd72e608f2a89fc955f44a6674119",
-   "size": 24136,
+   "sha256": "ab4bbf5e5f8b97f277cacc8b07b0b9bf36c96506da5f9474a4c3ede18d85e2ba",
+   "size": 24035,
    "source_git_blob": "bee9ef6fecb653af4af603ca2b2dc20d0a05be9a",
    "origin": "frontend@989acf6, modified for publication"
   },
@@ -840,8 +848,8 @@
    "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/src/app/StatusStrip.tsx": {
-   "sha256": "ae0e6c9da9c3142402e3665c54c421bf3c2d722c75663057b5666ae9f8d4c48b",
-   "size": 3896,
+   "sha256": "fad6d97af8e6cec238263423ef9618bd1a71c7153e463103911457dda631c7d9",
+   "size": 3704,
    "source_git_blob": "1d1420539fa4cad0d240a23a070f8a054f2ccc43",
    "origin": "frontend@989acf6, modified for publication"
   },
@@ -924,10 +932,10 @@
    "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/src/components/ui/ErrorPanel.tsx": {
-   "sha256": "a25df461665195d4df0f4601218a6976575d5f9406abff6dd784d1abac11ddf7",
-   "size": 3267,
-   "git_blob": "141bdc3225c4d48ebc72d9d390bb8d2f6e89242d",
-   "origin": "frontend@989acf6"
+   "sha256": "016fa324ebc2474112b40de0c7fe1709ee3ff639d0c5856fa36513cfbab33fdb",
+   "size": 3242,
+   "source_git_blob": "141bdc3225c4d48ebc72d9d390bb8d2f6e89242d",
+   "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/src/components/ui/Notice.tsx": {
    "sha256": "ffb5f9cf4a1318ef8332065ae6c82831f2e02cde57a9c348ce3b4a9ed20ddad0",
@@ -978,8 +986,8 @@
    "origin": "frontend@989acf6"
   },
   "frontend/src/domain/ontology.ts": {
-   "sha256": "02acf89908fe644194f8a47b46f828d80bdf1321c6b3ae6dda425e9cfc3fc27e",
-   "size": 4357,
+   "sha256": "ceb03982b465584899f8e91df4af1a75fcc5a19b7afdb8eb961266bb25e05e69",
+   "size": 4301,
    "source_git_blob": "cb27fad083271d83762e0f33b0813b72b4885eee",
    "origin": "frontend@989acf6, modified for publication"
   },
@@ -1068,14 +1076,14 @@
    "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/src/features/method/MethodPage.tsx": {
-   "sha256": "fac2df7979ea12e6a3aae8c0956227cfd83d23be2286a8f2118e435ef24a1750",
-   "size": 16792,
+   "sha256": "498c4569e6ca31f1014e9d2ced3c5fc76a0da336408bd6ce0fef8586d0c3cb92",
+   "size": 16929,
    "source_git_blob": "28a3069b24156dd6eef362956e20cdddaedd93b2",
    "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/src/features/overview/OverviewPage.tsx": {
-   "sha256": "78f1e53d325f22e70ce06b503461cb1959787b7c2be3e7dba1dda0e4b556624e",
-   "size": 15606,
+   "sha256": "91e8d2347e394c777506ee496d4ea886cc5de6128451c73fee4bdfeaee8eada7",
+   "size": 15018,
    "source_git_blob": "1c1b842e4604346d34e09ef917190858d68403ed",
    "origin": "frontend@989acf6, modified for publication"
   },
@@ -1392,8 +1400,8 @@
    "origin": "frontend@989acf6, modified for publication"
   },
   "frontend/tests/unit/statusStrip.test.tsx": {
-   "sha256": "b3d582e1825bb476f83c5a24e4acad3516a2340e4a91eecfaf69ed7212dbb690",
-   "size": 5321,
+   "sha256": "0773d912d14e173c325cdc71d37052d00aab22fbc33181bc185d55e92c0355d9",
+   "size": 5576,
    "source_git_blob": "7d3820ccceeff6fa22b6996d322adcf674da3041",
    "origin": "frontend@989acf6, modified for publication"
   },
@@ -1459,8 +1467,8 @@
    "origin": "added for publication"
   },
   "frontend/tests/unit/liveMode.test.tsx": {
-   "sha256": "e4d7e37176e2af71ac20ccab4bb47f658dd20fae0b83627ac7c85b909ba0bf57",
-   "size": 14953,
+   "sha256": "3639ddc58a688af27f755e53f10bea9aa3df637b127a2c8e4c18408006415d81",
+   "size": 15242,
    "origin": "added for publication"
   },
   "frontend/tests/live-fake/live_guarded.test.ts": {

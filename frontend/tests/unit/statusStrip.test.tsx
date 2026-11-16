@@ -49,11 +49,13 @@ describe('header connection indicator and banners', () => {
     expect(screen.queryByRole('alert')).not.toBeInTheDocument();
   });
 
-  it('shows an unreachable state with instructions (no invented data)', async () => {
+  it('shows a visitor-safe unreachable state (no invented data, no developer instructions)', async () => {
     server.use(http.get(`${B}/v1/capabilities`, () => HttpResponse.error()));
     mount();
-    expect(await screen.findAllByText(/Backend not reachable/)).not.toHaveLength(0);
-    expect(screen.getByText(/Start the/)).toBeInTheDocument();
+    expect(await screen.findByText('Backend temporarily unavailable')).toBeInTheDocument();
+    expect(screen.getByText('Please try again shortly.')).toBeInTheDocument();
+    expect(screen.getByRole('status', { name: 'Backend status' })).toHaveTextContent(/^Backend not reachable$/);
+    expect(document.body.textContent).not.toMatch(/127\.0\.0\.1|localhost|README_SETUP|offline/);
   });
 
   it('explains 401 (token configured) without ever asking for a token', async () => {

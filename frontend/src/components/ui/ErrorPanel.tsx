@@ -23,7 +23,7 @@ export function ErrorPanel({ error, title, children }: { error: unknown; title?:
     (error.kind === 'contract'
       ? 'Contract mismatch'
       : error.kind === 'network'
-        ? 'Backend not reachable'
+        ? 'Backend temporarily unavailable'
         : error.kind === 'uncertain'
           ? 'No confirmed answer'
           : clientBug
@@ -35,7 +35,7 @@ export function ErrorPanel({ error, title, children }: { error: unknown; title?:
       : error.kind === 'uncertain'
         ? 'The request may or may not have been committed. Do not repeat the action; use Recover below (it replays the identical request safely).'
         : error.kind === 'network'
-          ? 'Check that the offline backend is running on 127.0.0.1:8765.'
+          ? 'Please try again shortly.'
           : error.code
             ? (ERROR_EXPLANATIONS[error.code] ?? '')
             : '';

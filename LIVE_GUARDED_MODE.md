@@ -57,7 +57,7 @@ No monetary cost is computed.
 
 ## 4. Operator procedure (Windows)
 
-The journal's single-writer lock uses `msvcrt`, so live mode runs on Windows only.
+As released, live mode is Windows-only: the journal's single-writer lock uses `msvcrt`.
 
 Prerequisites:
 

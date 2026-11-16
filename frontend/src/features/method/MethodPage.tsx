@@ -215,7 +215,7 @@ export function MethodPage() {
       <Card title="How a comparison works">
         <ol className="list-decimal space-y-2 pl-5 text-sm">
           <li>Start from a <strong>pending</strong> recommendation. Both policies recompute their own root action from the same factual root.</li>
-          <li>The backend prepares the full 20-node observable forest. In live mode this step could use provider calls; offline it reads recorded decisions only.</li>
+          <li>The backend prepares the full 20-node observable forest. No branch comparison reaches the live provider: comparisons that include the guarded LLM are disabled in live mode, deterministic pairs make no provider request, and offline the guarded LLM answers from recorded decisions only.</li>
           <li>The allocator expands up to your budget of nodes, one at a time. Each node pairs both policies’ downstream recipes and utilities under the same reaction path.</li>
           <li>Limited estimates average only visited probability mass per depth, and the larger estimate selects a policy.</li>
           <li>For synthetic sessions, the oracle independently enumerates all four-by-four reaction paths with the simulator’s private probabilities and reports regret.</li>

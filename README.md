@@ -30,7 +30,7 @@ This repository implements a **controlled, bounded testbed** derived from that v
 | A model of user psychology | Six engineered state variables moved by a fixed transition rule. They are not measurements of anyone. |
 | Validated behavior prediction | Frozen predictors fitted to synthetic reference data. No human validation has been done. |
 | A ground-truth oracle | No human oracle. The only oracle is an exhaustive calculation inside the synthetic simulators. |
-| A production-scale deployed service | A research release with no accounts. The public demo is a research deployment with bounded resources and controlled live-provider access. |
+| A production-scale deployed service | A research release with no accounts (see [What it does not claim](#what-it-does-not-claim)). |
 
 [`backend/docs/MASTER_SYSTEM_REPORT.md`](backend/docs/MASTER_SYSTEM_REPORT.md) §3 and [`frontend/docs/USER_GUIDE.md`](frontend/docs/USER_GUIDE.md) §1 explain this boundary in detail.
 
@@ -80,7 +80,7 @@ npm run dev                                     # open http://localhost:5173
 
 ## Offline, recorded and live behavior
 
-- **Offline (the supported mode).** Without `--live`, the backend makes no network calls. Every policy except the guarded LLM scorer runs normally, and `GET /v1/capabilities` reports `"mode": "offline"`.
+- **Offline (the default mode).** Without `--live`, the backend makes no network calls. Every policy except the guarded LLM scorer runs normally, and `GET /v1/capabilities` reports `"mode": "offline"`.
 - **Recorded guarded decisions.** Offline, the guarded LLM scorer can answer only the **77 exact decision contexts** recorded from earlier provider calls. Those requests return the recorded decision with execution mode `recorded_guarded` and zero live calls. Any other guarded request returns `RECORDED_CONTEXT_UNAVAILABLE`, and no other policy is substituted. The golden tests use these recordings to reproduce the historical guarded behavior.
 - **Live guarded mode (optional).** From this repository it is started with `scripts/start_live_backend.ps1`, which uses the backend's own `--live`, `--journal` and `--live-call-limit` options with an operator-supplied endpoint and token. The guarded LLM then scores the safe shortlist of contexts that are neither recorded nor journaled, with **one provider request per explicit click**. The interface:
   - requires per-session permission before the first request;
@@ -135,7 +135,7 @@ The recorded evidence was produced with CPython 3.12.10 on Windows. On other pla
 
 This tree was assembled from two working directories without modifying them:
 
-- **Frontend:** Git commit `989acf6d34096b438723f5b13f387e8f73b8fcb6` (branch `integration/pcub-frontend`), extracted from Git objects. 81 published files are byte-identical to their committed blobs. 45 files were changed and 12 added for publication: a test-locator fix, optional port overrides, a generalized ignore pattern, documentation updates, the demo interface changes (the "Live Session" label, the synthetic-simulation explanation, *Run all remaining turns* and the trajectory summary), the gated live guarded workflow (`LIVE_GUARDED_MODE.md`), interface refinements (disabled allergy/exclusion inputs and unsupported diets, display-only presentation fixes; `frontend/docs/SCIENTIFIC_INTERPRETATION.md` §10) and a presentation update (neutral connection status, regrouped forms, recipe-first layout, comparison summary), with their tests. `SOURCE_IDENTITY.json` lists each one, with its source blob where there is one, and the reason.
+- **Frontend:** Git commit `989acf6d34096b438723f5b13f387e8f73b8fcb6` (branch `integration/pcub-frontend`), extracted from Git objects. 79 published files are byte-identical to their committed blobs. 47 files were changed and 12 added for publication: a test-locator fix, optional port overrides, a generalized ignore pattern, documentation updates, the demo interface changes (the "Live Session" label, the synthetic-simulation explanation, *Run all remaining turns* and the trajectory summary), the gated live guarded workflow (`LIVE_GUARDED_MODE.md`), interface refinements (disabled allergy/exclusion inputs and unsupported diets, display-only presentation fixes; `frontend/docs/SCIENTIFIC_INTERPRETATION.md` §10), a presentation update (regrouped forms, recipe-first layout, comparison summary), a small header connection indicator in place of the full-width status strip, and wording for the hosted demo, with their tests. `SOURCE_IDENTITY.json` lists each one, with its source blob where there is one, and the reason.
 - **Backend:** not a Git repository. It is identified by its own sealed manifests. Every published backend file is byte-identical to its source:
   - implementation ledger SHA-256 `6c3c614b…4086` (87 files);
   - operational asset subset fingerprint `9ec70fca…f093` (320 files);

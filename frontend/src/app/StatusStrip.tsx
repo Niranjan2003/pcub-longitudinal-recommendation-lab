@@ -54,9 +54,8 @@ export function GlobalBanners() {
     <div>
       {status.kind === 'unreachable' && (
         <div className="mx-auto max-w-[1400px] px-4 pt-4">
-          <Notice tone="danger" alert title="Backend not reachable">
-            {status.detail}. Start the <strong>offline</strong> backend separately (see <code>README_SETUP.md</code>) on <code>127.0.0.1:8765</code>; this
-            interface proxies <code>/v1</code> to it and cannot function without it.
+          <Notice tone="danger" alert title="Backend temporarily unavailable">
+            Please try again shortly.
           </Notice>
         </div>
       )}

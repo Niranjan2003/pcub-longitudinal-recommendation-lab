@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
-import { useBackendStatus } from '@/state/hooks';
 import { EvidenceLabel } from '@/components/evidence/EvidenceLabel';
 import { ProbabilityBars } from '@/components/viz/ProbabilityBars';
 
@@ -73,9 +72,7 @@ const SURFACES: { cls: string; label: string; tone: Parameters<typeof EvidenceLa
 
 export function OverviewPage() {
   const [active, setActive] = useState(0);
-  const status = useBackendStatus();
   const stage = STAGES[active]!;
-  const ready = status.kind === 'offline' || status.kind === 'live';
 
   return (
     <div className="space-y-12">
@@ -102,13 +99,6 @@ export function OverviewPage() {
               Method and limits
             </Link>
           </div>
-          <p className="mt-3 text-sm text-muted">
-            {status.kind === 'live'
-              ? 'Connected to the backend, with live LLM scoring available. A guarded-LLM session asks for your permission before any provider request.'
-              : ready
-                ? 'Connected to the backend (offline mode: the guarded LLM answers from recorded decisions).'
-                : 'Waiting for the backend.'}
-          </p>
         </div>
         <figure className="surface-pending m-0 p-5" aria-label="Example forecast illustration">
           <figcaption className="mb-2 flex items-center justify-between gap-2">
